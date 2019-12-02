@@ -1,0 +1,122 @@
+page {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #848484;
+  --grey: #848484;
+  --gray-dark: #424242;
+  --primary: #007bff;
+  --secondary: #848484;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #F2F2F2;
+  --dark: #424242;
+
+  --lightblue: #CCE5FC;
+  --lightgray: #BDBDBD;
+  --lightgrey: #BDBDBD;
+  --lightred: #F8D7DA;
+  --lightyellow: #FDF3CD;
+  --lightgreen: #D4EDDA;
+  --lightgray: #BDBDBD;
+  --lightgrey: #BDBDBD;
+  --lightgray-dark: #D6D8D9;
+  --lightprimary: #CCE5FC;
+  --lightsecondary: #E2E3E4;
+  --lightsuccess  :#D4EDDA;
+  --lightinfo: #D1ECF1;
+  --lightwarning: #FDF3CD;
+  --lightdanger: #F8D7DA;
+  --lightlight: #FAFAFA;
+  --lightdark: #BDBDBD;
+
+  --darkprimary: #082752;
+  --darksecondary: #1F2326;
+  --darksuccess: #491217;
+  --darkinfo: #0F2C33;
+  --darkwarning: #533F12;
+  --darkdanger: #491217;
+  --darklight: #424242;
+  --darkdark: #1C1C1C;
+
+	/* Gradients */
+	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+
+  /* Greyscale */
+  --white: #FFFFFF;
+  --notwhite: #FAFAFA;
+  --lightlightgrey: #F2F2F2;
+  --lightgrey:  #BDBDBD;
+  --grey:#848484;
+  --darkgrey: #424242;
+  --darkdarkgrey: #1C1C1C;
+  --white: #000000;
+
+
+  /* Bluescale */
+  --lightblue: #CCE5FC;
+  --blue: #007bff;
+  --darkblue: #082752;
+
+}
+
+/* BACKGROUND COLOR */
+
+.bgc-white {
+  background-color: var(--white);
+}
+
+.bgc-notwhite {
+  background-color: var(--notwhite)
+}
+
+.bgc-lightlightgrey {
+  background-color: var(--lightlightgrey);
+}
+
+.bgc-lightgrey {
+  background-color: var(--lightgrey);
+}
+
+.bgc-grey {
+  background-color: var(--grey);
+}
+
+.bgc-darkgrey {
+  background-color: var(--darkgrey);
+}
+
+.bgc-darkdarkgrey {
+  background-color: var(--darkdarkgrey);
+}
+
+.bgc-black {
+  background-color: var(--black);
+}
+
+.bgc-lightblue {
+  background-color: var(--lightblue);
+}
+
+.bgc-blue {
+  background-color: var(--blue);
+}
+
+.bgc-darkblue {
+  background-color: var(--darkblue);
+}

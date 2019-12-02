@@ -1,6 +1,14 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/usershow/usershow",
+    "pages/usercreate/usercreate",
+    "pages/useredit/useredit",
+    "pages/confirmations/confirmations",
+    "pages/eventcreate/eventcreate",
+    "pages/eventshow/eventshow",
+    "pages/eventedit/eventedit",
+    "pages/eventsindex/eventsindex",
+    "pages/resultsindex/resultsindex",  
     "pages/logs/logs",
     "pages/landing/landing"
   ],

@@ -1,0 +1,16 @@
+<swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <view style="background-image: url({{item}}); background-size: cover; height: 100%; width: 100%; background-position: center;"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+
+<view class="container">
+  <view animation="{{animation}}" class="view">Let's Play</view>
+<button class="btn-cust" type="primary" bindtap="rotate" url="#">Get Started</button>
+</view>
+

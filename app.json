@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/eventsindex/eventsindex",
+    "pages/eventsindex/eventsindex", 
+    "pages/logs/logs",
+    "pages/myactivities/myactivities",
     "pages/eventshow/eventshow",
-    "pages/logs/logs"
+    "pages/usershow/usershow"
   ],
 
   "window": {
@@ -19,7 +21,7 @@
       "backgroundColor": "#bbbbbb",
       "list": [
         {
-          "pagePath": "pages/eventcreate/eventcreate",
+          "pagePath": "pages/eventshow/eventshow",
           "text": "Add",
           "iconPath": "images/shopping-list.png",
           "selectedIconPath": "images/shopping-list-red.png"

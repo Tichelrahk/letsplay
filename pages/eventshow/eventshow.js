@@ -1,5 +1,6 @@
 // pages/eventshow/eventshow.js
 // pages/myactivities/myactivities.js
+let app = getApp()
 Page({
 
   /**
@@ -13,9 +14,11 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      event: getApp().globalData.events[parseInt(options.id) - 1]
-    })
+    // this.setData({
+    //   event: getApp().globalData.events[parseInt(options.id) - 1]
+    // })
+    this.options = options
+    console.log(2, options)
   },
 
   /**
@@ -28,8 +31,27 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function (options) {
+    let page = this;
+    console.log(1, page.options)
 
+    wx.request({
+      url: app.globalData.url+`event/${options.id}`,
+      success(res) {
+
+        console.log(res)
+        const event = res.data
+
+        // Update local data
+        page.setData({
+          event: event
+        });
+
+        console.log(event)
+
+        wx.hideToast();
+      }
+    });
   },
 
   /**

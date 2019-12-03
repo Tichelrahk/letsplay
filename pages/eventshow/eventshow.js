@@ -1,13 +1,12 @@
 // pages/eventshow/eventshow.js
 Page({
 
+    data: {
+    
+  },
   /**
    * Page initial data
    */
-  data: {
-
-  },
-
   /**
    * Lifecycle function--Called when page load
    */

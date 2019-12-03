@@ -10,7 +10,8 @@
     "pages/eventsindex/eventsindex",
     "pages/resultsindex/resultsindex",  
     "pages/logs/logs",
-    "pages/landing/landing"
+    "pages/landing/landing",
+    "pages/myactivities/myactivities"
   ],
   "window": {
     "navigationStyle":"custom",

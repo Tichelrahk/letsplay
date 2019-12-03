@@ -1,3 +1,4 @@
+const app = getApp()
 // pages/eventsindex/eventsindex.js
 Page({
 
@@ -8,13 +9,18 @@ Page({
 
   },
 
+  goToEventsShow: function (event) {
+    // console.log(event)
+    let id = event.currentTarget.dataset.id
+    wx.switchTab({
+      url: `/pages/eventshow/eventshow?id=${id}`,
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      events: getApp().globalData.events
-    })
+    
   },
   /**
    * Lifecycle function--Called when page is initially rendered
@@ -27,7 +33,21 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    let page = this;
 
+    wx.request({
+      url: app.globalData.url + "events",
+      method: 'GET',
+      success(res) {
+        console.log(10,res)
+        const events = res.data
+        // page.setData({events})
+        page.setData(
+          events
+        );
+        console.log(10, events)
+      }
+    })
   },
 
   /**

@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
+    url: "http://localhost:3000/api/v1/",
     userInfo: null,
     events: [
       {

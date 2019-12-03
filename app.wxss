@@ -22,9 +22,11 @@ page{
 }
 .page__hd {
     padding: 40px;
+    
 }
 .page__bd {
-    padding-bottom: 40px;
+  position:relative;
+  bottom:0;
 }
 .page__bd_spacing {
     padding-left: 15px;
@@ -54,3 +56,133 @@ page{
 .weui-cell_example:before{
     left:52px;
 }
+
+.btn{
+  padding: 30rpx 60rpx;
+  /* border: solid 1rpx; */
+  border-radius: 20rpx;
+  text-align: center;
+  margin: 20rpx;
+}
+
+.greenbg {
+  background-color: var(--green);
+}
+
+.redbg {
+  background-color: var(--red);
+}
+
+.orange bg {
+  background-color: var(--orange);
+}
+.lbluebg {
+  background-color: var(--lblue) ;
+}
+
+.orangebg {
+  background-color: var(--orange);
+}
+
+.greybg {
+  background-color: var(--grey);
+
+}
+
+.tag {
+    border: none;
+    padding: 10rpx 20rpx;
+    /* margin: 10rpx; */
+    border-radius: 5rpx;
+}
+
+/* AVATARS AND IMAGES */
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-bottom: 20rpx;
+}
+
+.username {
+  color: rgba(51, 50, 50, 0.658);
+  font-weight: 600;
+  font-size: 35rpx;
+}
+
+.price {
+  color: rgba(255, 8, 0, 0.76);
+  font-weight: bold;
+  text-align: right;
+  font-size: 35rpx;
+}
+
+.spacehuge {
+  padding: 50rpx;
+}
+
+.spacelarge {
+  padding: 30rpx;
+}
+
+.space {
+  padding: 20rpx;
+}
+
+.spacesmall {
+  padding: 10rpx;
+}
+
+.spacetiny {
+  padding: 5rpx;
+}
+
+.btn-ghost {
+  color:var(--dgrey);
+  border: 2px solid ;
+  border-radius: 50px;
+  font-weight: heavy;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin-top: 125px;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+.btn-cust{
+  color:black;
+  border: 1px solid ;
+  border-radius:10px;
+  font-weight: heavy;
+  transition: opacity 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-cust:hover{
+border: 1px solid rgba(255, 8, 0, 0.76);
+color:rgba(255, 8, 0, 0.76);
+background-color: rgba(0, 0, 0, 0.253);
+}
+
+.line {
+  border-bottom: solid 2rpx rgba(100, 100, 100, .5);
+  margin: 20rpx 0;  
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.178);
+  color: white;
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 45rpx;
+  font-weight: 600;
+  box-shadow: 2px 2px 2px 0px rgba(100, 100, 100, .5);
+  /* position: fixed; */
+  width: 100%;
+  line-height: 50rpx;
+  box-sizing: border-box; 
+  }

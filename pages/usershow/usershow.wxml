@@ -1,0 +1,49 @@
+<!--pages/usershow/usershow.wxml-->
+<view class="container">
+<view class="header">My Profile</view>
+<view class="contain"> 
+  <view class="spacehuge"></view>
+  <view class="space"></view>
+  <view class="align-center"><image class="avatar1" src="{{userInfo.user.profile_picture}}"/></view>
+    <view class="name"> Name </view>
+    <view class="h4 line pb">{{userInfo.user.name}}</view>
+
+    <view wx:if="{{userInfo.user.location}}" class="name"> Location </view>
+    <view wx:if="{{userInfo.user.location}}" class="h4 line pb">{{userInfo.user.location}}</view>
+    <view wx:if="{{userInfo.user.location}}" class="spacelarge"></view>
+ 
+    <view wx:if="{{userInfo.service}}" class="card">
+      <view class="h2 spacehuge align-center" >My Service</view>
+      <view classs="spacehuge">
+        <view class="strong blue">Service Name </view>
+        <view class="h3 line pb">{{userInfo.service.name}}</view>
+        <view class="strong blue">Service Description </view>
+        <view class="h3 line pb">{{userInfo.service.description}}</view>
+      </view>
+
+    </view>
+
+
+<view class="container">
+  <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
+
+
+  
+
+<!-- DISPLAY IF SERVICE IS PRESENT -->
+    <!-- <view class="strong blue">Service{{user.service}}</view>
+    <view class="h3 line pb"></view>
+
+    <view class="strong blue">Service{{user.service}}</view>
+    <view class="h3 line pb"></view> -->
+
+
+  <view  class="spacelarge">
+  <button bindtap="goToEdit" data-id="{{service.id}}" class="btn-cust">Create an Activicity</button>
+   <button bindtap="goToAddServ" data-id="{{service.id}}" class="btn-cust">My activity</button>
+  </view>
+  </view>
+ 
+</view>
+</view>
+

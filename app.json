@@ -1,15 +1,57 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/usershow/usershow",
+    "pages/usercreate/usercreate",
+    "pages/useredit/useredit",
+    "pages/confirmations/confirmations",
+    "pages/eventcreate/eventcreate",
+    "pages/eventshow/eventshow",
+    "pages/eventedit/eventedit",
+    "pages/eventsindex/eventsindex",
+    "pages/resultsindex/resultsindex",  
     "pages/logs/logs",
     "pages/landing/landing"
   ],
   "window": {
+    "navigationStyle":"custom",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+
+    "tabBar": {
+      "color": "#fff",
+      "selectedColor": "#ff0800",
+      "backgroundColor": "#bbbbbb",
+      "list": [
+        {
+          "pagePath": "pages/eventcreate/eventcreate",
+          "text": "Add",
+          "iconPath": "images/shopping-list.png",
+          "selectedIconPath": "images/shopping-list-red.png"
+        },
+        {
+          "pagePath": "pages/eventsindex/eventsindex",
+          "text": "Search",
+          "iconPath": "images/search.png",
+          "selectedIconPath": "images/confirm-schedule-red.png"
+        },
+        {
+          "pagePath": "pages/eventshow/eventshow",
+          "text": "My Events",
+          "iconPath": "images/confirm-schedule.png",
+          "selectedIconPath": "images/confirm-schedule-red.png"
+        },
+        {
+          "pagePath": "pages/usershow/usershow",
+          "text": "Me",
+          "iconPath": "images/avatar.png",
+          "selectedIconPath": "images/avatar-red.png"
+        }
+      ]
+    },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

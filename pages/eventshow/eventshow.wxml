@@ -10,7 +10,7 @@
       <view class="weui-cell__bd">{{event.description}}</view>
     </view>
     <view class="weui-cell">
-      <view class="weui-cell__bd">Organiser</view>
+      <view class="weui-cell__bd">Organizer</view>
       <view class="weui-cell__ft">{{event.host}}</view>
     </view>
   </view>

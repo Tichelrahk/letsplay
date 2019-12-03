@@ -2,16 +2,18 @@
 Page({
 
     data: {
-    
+
   },
   /**
    * Page initial data
-   */
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      event: getApp().globalData.events[parseInt(options.id) - 1]
+    })
   },
 
   /**

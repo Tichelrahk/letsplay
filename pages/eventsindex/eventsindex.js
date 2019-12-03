@@ -12,9 +12,10 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      events: getApp().globalData.events
+    })
   },
-
   /**
    * Lifecycle function--Called when page is initially rendered
    */

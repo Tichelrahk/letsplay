@@ -1,2 +1,42 @@
 <!--pages/eventsindex/eventsindex.wxml-->
-<text>pages/eventsindex/eventsindex.wxml</text>
+<view class="page__hd">
+  <view class="page__title">Let's Play</view>
+  <view class="page__desc">Meet | Play | Repeat</view>
+</view>
+
+<view class="page__bd">
+
+  <view class="weui-panel weui-panel_access">
+  <!-- White Background Start -->
+
+    <view class="weui-panel__hd">All Events</view>
+    <!-- Panel Header -->
+
+      <view class="weui-panel__bd">
+      <!-- Panel Body Start -->
+        <view wx:for="{{events}}" wx:for-item="event">
+          <navigator url="/pages/eventshow/eventshow?id={{event.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{event.img_url}}" />
+            </view>
+            
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="weui-media-box__title">{{event.name}}</view>
+                <view class="weui-media-box__desc">
+                  <view>{{event.date}}</view>
+                  <view>{{event.time}}</view>
+                  <view>{{event.location}}</view>
+                </view>
+                <view class="weui-media-box__info">
+                  <view class="weui-media-box__info__meta">{{event.price}}</view>
+                  <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{event.level}}</view>
+                </view>
+            </view>
+
+          </navigator>
+
+        </view>
+
+      </view>
+  </view>
+</view>

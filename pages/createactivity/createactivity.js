@@ -6,9 +6,11 @@ Page({
    * Page initial data
    */
   data: {
-
+    st_date: '2019-11-27',
+    st_time: '12:00',
+    end_date: '2019-12-30',
+    end_time: '1:00'
   },
-
   // formSubmit: function (event) {
   //   const form = {}
   //   console.log(event);
@@ -38,6 +40,8 @@ Page({
   onLoad: function (options) {
 
   },
+
+  
 
   /**
    * Lifecycle function--Called when page is initially rendered

@@ -16,3 +16,7 @@
 .swiper-box view{  
     text-aligngit : center;  
 }  
+.emergcard {
+  background-color: white;
+  padding: 30rpx;
+}

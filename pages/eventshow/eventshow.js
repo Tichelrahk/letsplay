@@ -54,7 +54,9 @@ Page({
     console.log(55, page.data.event.id)
     console.log(9, app.globalData)
     wx.request({
-      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${app.globalData.userId}`,
+
+      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${app.globalData.userInfo.id}`,
+
       method: 'POST',
       data: join,
       success(res) {

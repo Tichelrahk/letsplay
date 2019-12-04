@@ -1,3 +1,5 @@
+const app = getApp()
+
 Page({
 
   goToIndex: function () {
@@ -85,7 +87,19 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const page = this
+    wx.request({
+      url: app.globalData.url + "users/" + `${"1"}`,
+      method: 'GET',
+      success(res) {
+        console.log(11, res)
+        const user = res.data
+        page.setData({
+          user: user
+        });
+        console.log(10, user)
+      }
+    })
   },
 
   /**

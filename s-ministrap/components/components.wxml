@@ -1,0 +1,11 @@
+<!--s-ministrap/components/components.wxml-->
+<view> </view>
+<text>s-ministrap/components/components.wxml</text>
+
+
+<view class="custom-navbar">
+  <view class="navbar-section"><view class="navbar-container"><image class="navbar-icon" src="/images/shopping-list.png"></image></view></view>
+  <view class="navbar-section" bindtap="goToEventsIndex"><view class="navbar-container"><icon size="43" type="search" color="white"></icon></view></view>
+  <view class="navbar-section" bindtap="goToMyActivities"><view class="navbar-container"><image class="navbar-icon" src="/images/confirm-schedule.png"></image></view></view>
+  <view class="navbar-section active" bindtap="goToUserShow"><view class="navbar-container"><image class="navbar-icon" src="/images/avatar-red.png"></image></view></view>
+</view>

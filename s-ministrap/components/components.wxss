@@ -1,0 +1,35 @@
+/* s-ministrap/components/components.wxss */
+.custom-navbar {
+  height: 100rpx;
+  background-color: #bbbbbb;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-icon {
+  height: 80rpx;
+  width: 80rpx;
+  color: white;
+}
+
+.navbar-container {
+  height: 80rpx;
+}
+
+.navbar-section {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: #EDEDED;
+  /* border-bottom-left-radius: 0px; */
+}

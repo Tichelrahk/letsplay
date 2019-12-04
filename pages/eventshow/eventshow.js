@@ -6,7 +6,6 @@ Page({
  
   },
 
-
   goToIndex: function () {
     wx.navigateTo({
       url: '/pages/eventsindex/eventsindex',
@@ -34,6 +33,21 @@ Page({
   goToMyActivities: function () {
     wx.navigateTo({
       url: '/pages/myactivities/myactivities',
+    })
+  },
+
+  joining: function () {
+    
+    const page = this
+    const join = {}
+    console.log(55, page.data.event.id)
+    wx.request({
+      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${"1"}`,
+      method: 'POST',
+      data: join,
+      success(res) {
+        console.log(res)
+      }
     })
   },
 
@@ -70,7 +84,7 @@ Page({
       success(res) {
 
         console.log(res)
-        const event = res.data
+        const event = res.data.event
 
         // Update local data
         page.setData({

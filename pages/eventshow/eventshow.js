@@ -3,7 +3,7 @@
 let app = getApp()
 Page({
     data: {
-
+ 
   },
   /**
    * Page initial data
@@ -34,7 +34,7 @@ Page({
     console.log(1, page.options)
 
     wx.request({
-      url: app.globalData.url+`event/${options.id}`,
+      url: app.globalData.url+`events/${page.options.id}`,
       success(res) {
 
         console.log(res)

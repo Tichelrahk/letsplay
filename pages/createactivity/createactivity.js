@@ -40,7 +40,7 @@ Page({
     st_date: '2019-11-27',
     st_time: '12:00',
     end_date: '2019-12-30',
-    end_time: '1:00',
+    end_time: '13:00',
 
     // map data use, start from here
 
@@ -98,7 +98,7 @@ Page({
     // console.log(10, form.user_id)
     // console.log(77, form);
     wx.request({
-      url: `app.globalData.url`,
+      url: app.globalData.url + `events`,
       method: 'POST',
       data: form,
       success(res) {
@@ -117,7 +117,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({options: options})
   },
 
 

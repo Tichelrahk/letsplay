@@ -16,7 +16,7 @@
       <!-- attending cards start -->
        <view class="weui-panel__bd">
       <!-- Panel Body Start -->
-        <view class="emergcard" wx:for="{{user.user.confirmations}}" wx:for-item="confirmation">     
+        <view class="emergcard" wx:for="{{user.confirmations}}" wx:for-item="confirmation">     
   <view bindtap="goToEventsShow" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" >
   </view>
            
@@ -28,8 +28,8 @@
                 
       <view class="weui-media-box__title">{{confirmation.event.name}}</view>
                 <view class="weui-media-box__desc">
-                  <!-- <view>{{user.user.confirmations.event.start}}</view>
-                  <view>{{user.user.confirmations.event.end}}</view> -->
+                  <view>{{confirmation.event.start}}</view>
+                  <view>{{confirmation.event.end}}</view>
                 </view>
             </view>
 

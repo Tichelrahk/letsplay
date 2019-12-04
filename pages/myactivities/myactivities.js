@@ -88,12 +88,13 @@ Page({
    */
   onShow: function () {
     const page = this
+    console.log(app.globalData)
     wx.request({
-      url: app.globalData.url + "users/" + `${"1"}`,
+      url: app.globalData.url + "users/" + `${app.globalData.userId}`,
       method: 'GET',
       success(res) {
         console.log(11, res)
-        const user = res.data
+        const user = res.data.user
         page.setData({
           user: user
         });

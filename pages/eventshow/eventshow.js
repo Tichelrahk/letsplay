@@ -6,6 +6,17 @@ Page({
  
   },
 
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    // app.globalData.login = true
+    // this.setData({
+    //   userInfo: e.detail.userInfo
+
+    // })
+   
+  },
+
   goToIndex: function () {
     wx.navigateTo({
       url: '/pages/eventsindex/eventsindex',
@@ -41,8 +52,9 @@ Page({
     const page = this
     const join = {}
     console.log(55, page.data.event.id)
+    console.log(9, app.globalData)
     wx.request({
-      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${"1"}`,
+      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${app.globalData.userId}`,
       method: 'POST',
       data: join,
       success(res) {

@@ -1,13 +1,25 @@
-<!--pages/eventsindex/eventsindex.wxml-->
-<view class="page__hd">
+<!-- <view class="page__hd">
   <view class="page__title">Let's Play</view>
   <view class="page__desc">Meet | Play | Repeat</view>
-</view>
+</view> -->
+<view class="space-6 bg-black"></view>
+<view class="space-3 bg-black"></view>
 
-<view class="page__bd">
+
+<view class="page__bd"> 
+
+  <!-- White Background Start -->
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="Search for a sport" confirm-type="search" bindinput="searchAPICall"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow-blur round">Search</button>
+    </view>
+  </view>
 
   <view class="weui-panel weui-panel_access">
-  <!-- White Background Start -->
    <view class="weui-panel__hd"><input bindinput="searchAPICall" placeholder="Search" class="inp"></input></view>
 
     <view class="weui-panel__hd">All Events</view>
@@ -40,5 +52,34 @@
         </view>
 
       </view>
+
+
+    </view>
+
   </view>
+        <!-- BOTTOM NAVBAR START -->
+  <view class="cu-bar tabbar bg-black">
+    <view class="action text-green">
+      <view class="cuIcon-search"></view> Search
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-similar"></view> Browse
+    </view>
+    <view class="action text-gray add-action">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+      Create
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">2</view>
+      </view>
+      My Activities
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      Profile
+    </view>
+      <!-- BOTTOM NAVBAR END -->
 </view>

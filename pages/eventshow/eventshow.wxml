@@ -1,32 +1,32 @@
 
 <view class="page__hd">
-  <view class="page__title">{{event.event.name}}</view>
+<image class="banner" src="{{event.image}}"/>
+
+<button class="join" bindtap="joining">Join</button>
+  <view class="page__title">{{event.name}}</view>
 </view>
  
 <view class="page__bd">
   <view class="weui-cells__title">Event Description</view>
     <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell">
-      <view class="weui-cell__bd">{{event.event.description}}</view>
+      <view class="weui-cell__bd">{{event.description}}</view>
     </view>
     <view class="weui-cell">
       <view class="weui-cell__bd">Organizer</view>
-      <view class="weui-cell__ft">{{event.event.host}}</view>
+      <view class="weui-cell__ft">{{event.host}}</view>
     </view>
   </view>
 
   <view class="weui-cells__title">Event Details</view>
   <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
-          <view class="weui-cell__bd">Date</view>
-          <view class="weui-cell__ft">{{event.event.start}}</view>
-          <view class="weui-cell__ft">{{event.event.end}}</view>
+          <view class="weui-cell__bd">Time</view>
+          <view class="weui-cell__ft">{{event.start}}</view>
+          <view class="weui-cell__ft">{{event.end}}</view>
       </view>
 
-      <view class="weui-cell">
-          <view class="weui-cell__bd">Time </view>
-          <view class="weui-cell__ft">{{event.time}}</view>
-      </view>
+     
 
       <!-- <view class="weui-cell">
           <view class="weui-cell__bd">Cost</view>

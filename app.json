@@ -27,7 +27,7 @@
         "selectedIconPath": "images/confirm-schedule-red.png"
       },
       {
-        "pagePath": "pages/eventsindex/eventsindex",
+        "pagePath": "pages/myactivities/myactivities",
         "text": "My Events",
         "iconPath": "images/confirm-schedule.png",
         "selectedIconPath": "images/confirm-schedule-red.png"

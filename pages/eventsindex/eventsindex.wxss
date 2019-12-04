@@ -1,1 +1,4 @@
 /* pages/eventsindex/eventsindex.wxss */
+.page__hd{
+  background-image: 
+}

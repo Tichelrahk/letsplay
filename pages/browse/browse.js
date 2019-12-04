@@ -1,10 +1,6 @@
-// pages/eventshow/eventshow.js
-// pages/myactivities/myactivities.js
-let app = getApp()
+// pages/browse/browse.js
 Page({
-    data: {
- 
-  },
+
 
   goToIndex: function () {
     wx.navigateTo({
@@ -36,33 +32,18 @@ Page({
     })
   },
 
-  joining: function () {
-    
-    const page = this
-    const join = {}
-    console.log(55, page.data.event.id)
-    wx.request({
-      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${"1"}`,
-      method: 'POST',
-      data: join,
-      success(res) {
-        console.log(res)
-      }
-    })
-  },
-
   /**
    * Page initial data
+   */
+  data: {
+
+  },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    // this.setData({
-    //   event: getApp().globalData.events[parseInt(options.id) - 1]
-    // })
-    this.options = options
-    console.log(2, options)
+
   },
 
   /**
@@ -75,27 +56,8 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function (options) {
-    let page = this;
-    console.log(1, page.options)
+  onShow: function () {
 
-    wx.request({
-      url: app.globalData.url+`events/${page.options.id}`,
-      success(res) {
-
-        console.log(res)
-        const event = res.data.event
-
-        // Update local data
-        page.setData({
-          event: event
-        });
-
-        console.log(event)
-
-        wx.hideToast();
-      }
-    });
   },
 
   /**

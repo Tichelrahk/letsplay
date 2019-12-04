@@ -1,8 +1,26 @@
 //app.js
 App({
+
   onLaunch: function () {
     const url = 'http://localhost:3000/api/v1/'
     console.log('beginning login')
+
+    // Colour UI navbar
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        let custom = wx.getMenuButtonBoundingClientRect();
+        this.globalData.Custom = custom;
+        this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+      }
+    })
+
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
+    // 登录
     wx.login({
       success: (res) => {
         console.log(45, res)

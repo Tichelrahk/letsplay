@@ -4,28 +4,25 @@
 <view class="contain"> 
   <view class="spacehuge"></view>
   <view class="space"></view>
-  <view class="align-center"><image class="avatar1" src="{{userInfo.user.profile_picture}}"/></view>
+  <view class="align-center"><image class="avatar1" src="{{user.user.profile_picture}}"/></view>
     <view class="name"> Name </view>
-    <view class="h4 line pb">{{userInfo.user.name}}</view>
+    <view class="h4 line pb">{{user.user.name}}</view>
 
-    <view wx:if="{{userInfo.user.location}}" class="name"> Location </view>
-    <view wx:if="{{userInfo.user.location}}" class="h4 line pb">{{userInfo.user.location}}</view>
-    <view wx:if="{{userInfo.user.location}}" class="spacelarge"></view>
+    <view wx:if="{{user.user.location}}" class="name"> Location </view>
+    <view wx:if="{{user.user.location}}" class="h4 line pb">{{user.user.location}}</view>
+    <view wx:if="{{user.user.location}}" class="spacelarge"></view>
  
-    <view wx:if="{{userInfo.service}}" class="card">
-      <view class="h2 spacehuge align-center" >My Service</view>
+    <view wx:if="{{user.user.description}}" class="card">
       <view classs="spacehuge">
-        <view class="strong blue">Service Name </view>
-        <view class="h3 line pb">{{userInfo.service.name}}</view>
-        <view class="strong blue">Service Description </view>
-        <view class="h3 line pb">{{userInfo.service.description}}</view>
+        <view class="name">My Description </view>
+        <view class="h3 line pb">{{user.user.description}}</view>
       </view>
 
     </view>
 
 
 <view class="container">
-  <map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
+  <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
 
 
   
@@ -39,11 +36,37 @@
 
 
   <view  class="spacelarge">
-  <button bindtap="goToEdit" data-id="{{service.id}}" class="btn-cust">Create an Activicity</button>
-   <button bindtap="goToAddServ" data-id="{{service.id}}" class="btn-cust">My activity</button>
+  <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">Create an Activicity</button>
+   <button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">My activity</button>
   </view>
   </view>
  
 </view>
 </view>
 
+<view class="cu-bar tabbar bg-black">
+    <view class="action text-gray" bindtap="goToIndex">
+      <view class="cuIcon-search"></view> 
+      Search
+    </view>
+    <view class="action text-gray" bindtap="goToBrowse">
+      <view class="cuIcon-similar"></view> 
+      Browse
+    </view>
+    <view class="action text-gray add-action" bindtap="goToCreate">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+      Create
+    </view>
+    <view class="action text-gray" bindtap="goToMyActivities">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">2</view>
+      </view>
+      My Activities
+    </view>
+    <view class="action text-gray" bindtap="goToProfile">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      Profile
+    </view>
+  </view>

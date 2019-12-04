@@ -1,4 +1,7 @@
-<!--pages/createactivity/createactivity.wxml-->
+<cu-custom bgColor="bg-black" isCustom="{{true}}">
+  <view slot="content">Let's Play!</view>
+</cu-custom>
+
 <view class="banner">
 <view class="header">Create My Activity</view>
 <view class="container_cust">
@@ -68,8 +71,9 @@
 			</view>
 		</picker>
 	</view>
-
+<view class="cu-bar bg-white margin-top width:100vh">
    <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
+</view>
 
 
 
@@ -135,4 +139,29 @@
 </view>
 </view> 
 
-
+<view class="cu-bar tabbar bg-black">
+    <view class="action text-gray" bindtap="goToIndex">
+      <view class="cuIcon-search"></view> 
+      Search
+    </view>
+    <view class="action text-gray" bindtap="goToBrowse">
+      <view class="cuIcon-similar"></view> 
+      Browse
+    </view>
+    <view class="action text-gray add-action" bindtap="goToCreate">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+      Create
+    </view>
+    <view class="action text-gray" bindtap="goToMyActivities">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">2</view>
+      </view>
+      My Activities
+    </view>
+    <view class="action text-gray" bindtap="goToProfile">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      Profile
+    </view>
+  </view>

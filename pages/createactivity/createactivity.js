@@ -2,9 +2,40 @@
 const app = getApp()
 Page({
 
+  goToIndex: function () {
+    wx.navigateTo({
+      url: '/pages/eventsindex/eventsindex',
+    })
+  },
+
+  goToBrowse: function () {
+    wx.navigateTo({
+      url: '/pages/browse/browse',
+    })
+  },
+
+  goToCreate: function () {
+    wx.navigateTo({
+      url: '/pages/createactivity/createactivity',
+    })
+  },
+
+  goToProfile: function () {
+    wx.navigateTo({
+      url: '/pages/usershow/usershow',
+    })
+  },
+
+  goToMyActivities: function () {
+    wx.navigateTo({
+      url: '/pages/myactivities/myactivities',
+    })
+  },
+
   /**
    * Page initial data
    */
+
   data: {
     st_date: '2019-11-27',
     st_time: '12:00',

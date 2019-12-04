@@ -1,5 +1,37 @@
 // pages/usershow/usershow.js
+const app = getApp()
 Page({
+
+
+  goToIndex: function () {
+    wx.navigateTo({
+      url: '/pages/eventsindex/eventsindex',
+    })
+  },
+
+  goToBrowse: function () {
+    wx.navigateTo({
+      url: '/pages/browse/browse',
+    })
+  },
+
+  goToCreate: function () {
+    wx.navigateTo({
+      url: '/pages/createactivity/createactivity',
+    })
+  },
+
+  goToProfile: function () {
+    wx.navigateTo({
+      url: '/pages/usershow/usershow',
+    })
+  },
+
+  goToMyActivities: function () {
+    wx.navigateTo({
+      url: '/pages/myactivities/myactivities',
+    })
+  },
 
   goToAddServ: function (e) {
     console.log(e)
@@ -13,20 +45,20 @@ Page({
    */
   data: {
     markers: [{
-      iconPath: "/resources/others.png",
+      iconPath: "https://image.flaticon.com/icons/svg/787/787535.svg",
       id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
-      width: 50,
-      height: 50
+      latitude: 31.2235,
+      longitude: 121.4453,
+      width: 30,
+      height: 30
     }],
     polyline: [{
       points: [{
-        longitude: 113.3245211,
-        latitude: 23.10229
+        longitude: 121.4453,
+        latitude: 31.2235
       }, {
-        longitude: 113.324520,
-        latitude: 23.21229
+          longitude: 121.4453,
+          latitude: 31.2235
       }],
       color: "#FF0000DD",
       width: 2,
@@ -34,7 +66,7 @@ Page({
     }],
     controls: [{
       id: 1,
-      iconPath: '/resources/location.png',
+      iconPath: 'https://image.flaticon.com/icons/svg/787/787535.svg',
       position: {
         left: 0,
         top: 300 - 50,
@@ -72,7 +104,20 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    const page = this
+    wx.request({
+      url: app.globalData.url + "users/" + `${"1"}`,
+      method: 'GET',
+      success(res) {
+        console.log(11, res)
+        const user = res.data
+        // page.setData({events})
+        page.setData({
+          user: user
+        });
+        console.log(10, user)
+      }
+    })
   },
 
   /**

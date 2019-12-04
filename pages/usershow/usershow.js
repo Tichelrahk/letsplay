@@ -42,7 +42,7 @@ Page({
   },
   /**
    * Page initial data
-   */
+   */ 
   data: {
     markers: [{
       iconPath: "https://image.flaticon.com/icons/svg/787/787535.svg",
@@ -90,7 +90,9 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   },
 
   /**

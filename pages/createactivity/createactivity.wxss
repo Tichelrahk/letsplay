@@ -1,0 +1,55 @@
+/* pages/createactivity/createactivity.wxss */
+/* .container_cust{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding-top: 114rpx;
+box-sizing: border-box;
+ 
+}
+.banner{
+  background-color: #eff0f1;
+  height: 100%;
+} 
+.section{
+  background-color:white;
+  margin: 13px 0;
+  width: 265px;
+  border-radius: 3px;
+  height: 20px;
+}
+
+.submit{
+  color:black;
+  border: 1px solid ;
+  border-radius:10px;
+  font-weight: heavy;
+  transition: opacity 0.3s ease;
+  margin-top: 54px;
+}
+
+.submit:hover{
+  border: 1px solid rgba(255, 8, 0, 0.76);
+  color:rgba(255, 8, 0, 0.76);
+  background-color: rgba(0, 0, 0, 0.253);
+}
+ 
+.section__title{
+  
+  text-align: center;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.text{
+  background-color: white;
+  margin: 13px 0;
+  width: 286px;
+  border-radius: 4px;
+}
+
+.form{
+  margin-top: 60px;
+} */

@@ -1,28 +1,8 @@
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
   <view slot="content">Let's Play!</view>
 </cu-custom>
-
-<!--pages/eventshow/eventshow.wxml-->
-<view class="container">
-
-<view class="swiper-tab">  
-    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">Attending</view>  
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">Organizing</view>  
-</view>  
-  
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
-    <swiper-item>  
-      <view>Hi there</view>  
-    </swiper-item>  
-    
-    <swiper-item>  
-      <view>HOST</view>  
-    </swiper-item>  
-</swiper>  
-</view>
-
-
-<view class="cu-bar tabbar bg-black">
+        
+  <view class="cu-bar tabbar bg-black">
     <view class="action text-gray" bindtap="goToIndex">
       <view class="cuIcon-search"></view> 
       Search
@@ -48,3 +28,4 @@
       Profile
     </view>
   </view>
+      <!-- BOTTOM NAVBAR END -->

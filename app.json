@@ -5,8 +5,10 @@
     "pages/myactivities/myactivities",
     "pages/eventshow/eventshow",
     "pages/usershow/usershow",
+    "pages/browse/browse",
     "s-ministrap/components/components",
     "pages/createactivity/createactivity"
+    
   ],
   "window": {
     "navigationStyle": "custom",
@@ -15,32 +17,11 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "tabBar": {
-    "color": "#fff",
-    "selectedColor": "#ff0800",
-    "backgroundColor": "#bbbbbb",
-    "list": [
-      
-      {
-        "pagePath": "pages/eventsindex/eventsindex",
-        "text": "Search",
-        "iconPath": "images/search.png",
-        "selectedIconPath": "images/confirm-schedule-red.png"
-      },
-      {
-        "pagePath": "pages/eventsindex/eventsindex",
-        "text": "My Events",
-        "iconPath": "images/confirm-schedule.png",
-        "selectedIconPath": "images/confirm-schedule-red.png"
-      },
-      {
-        "pagePath": "pages/usershow/usershow",
-        "text": "Me",
-        "iconPath": "images/avatar.png",
-        "selectedIconPath": "images/avatar-red.png"
-      }
-    ]
+
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
   },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

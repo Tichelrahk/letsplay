@@ -3,6 +3,14 @@
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
 
+
+.cu-bar.tabbar.bg-black {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /**app.wxss**/
 .container {
   height: 100%;

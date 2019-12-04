@@ -47,3 +47,29 @@
 </view>
 </view>
 
+<view class="cu-bar tabbar bg-black">
+    <view class="action text-gray" bindtap="goToIndex">
+      <view class="cuIcon-search"></view> 
+      Search
+    </view>
+    <view class="action text-gray" bindtap="goToBrowse">
+      <view class="cuIcon-similar"></view> 
+      Browse
+    </view>
+    <view class="action text-gray add-action" bindtap="goToCreate">
+      <button class="cu-btn cuIcon-add bg-green shadow"></button>
+      Create
+    </view>
+    <view class="action text-gray" bindtap="goToMyActivities">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">2</view>
+      </view>
+      My Activities
+    </view>
+    <view class="action text-gray" bindtap="goToProfile">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      Profile
+    </view>
+  </view>

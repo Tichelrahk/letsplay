@@ -11,7 +11,7 @@
 
     <view class="weui-panel__hd">All Events</view>
     <!-- Panel Header -->
-
+ 
       <view class="weui-panel__bd">
       <!-- Panel Body Start -->
         <view wx:for="{{events}}" wx:for-item="event">

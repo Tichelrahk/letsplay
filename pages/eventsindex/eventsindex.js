@@ -6,13 +6,14 @@ Page({
    * Page initial data
    */
   data: {
-
+ 
   },
 
   goToEventsShow: function (event) {
-    // console.log(event)
+    console.log(20,event)
     let id = event.currentTarget.dataset.id
-    wx.switchTab({
+    console.log(21, id)
+    wx.navigateTo({
       url: `/pages/eventshow/eventshow?id=${id}`,
     })
   },

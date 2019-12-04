@@ -22,12 +22,12 @@
 <form>
 	<view class="cu-form-group margin-top">
 		<view class="title">Host</view>
-		<input placeholder="Hoster's Name"></input>
+		<input placeholder="Hoster's Name" name="name"></input>
 	</view>
 
 	<view class="cu-form-group">
 		<view class="title">Activity Name</view>
-		<input placeholder="write a good activity name"></input>
+		<input placeholder="write a good activity name" name="activityname"></input>
 	</view>
 
 	<!-- <view class="cu-form-group">
@@ -69,6 +69,9 @@
 		</picker>
 	</view>
 
+   <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
+
+
 
 <view class="cu-bar bg-white margin-top">
     <form class="form" bindsubmit="createNewBooking">
@@ -85,7 +88,7 @@
       </view>  
 
       <view class="time">
-        <text class="time_head strong line">to</text>
+        <text class="time_head strong line">To</text>
         <!-- <input class="section" name="name" placeholder="" /> -->
         <picker mode="date" name="end_date" value="{{end_date}}" start="2019-11-01" end="2030-12-30" bindchange="bindEndDateChange">
           <view class="picker">{{end_date}}</view>
@@ -93,14 +96,10 @@
         <picker mode="time" name="end_time" value="{{end_time}}" start="00:01" end="23:59" bindchange="bindEndTimeChange">
           <view class="picker">{{end_time}}</view>
         </picker>
+        </view>
       </view>
-
-    </view>
-    
-
-    <!-- <button form-type="submit" data-id="{{service.id}}" class="submit btn-cust">Confirm</button> -->
     </form>
-     </view>
+  </view>
 	
 	<view class="cu-bar bg-white margin-top">
 		<view class="action">
@@ -125,7 +124,7 @@
 	</view>
 	
 	<view class="cu-form-group margin-top">
-		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="Description"></textarea>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="Description" name="description"></textarea>
 	</view>
 </form>
 

@@ -9,6 +9,26 @@ Page({
  
   },
 
+  searchAPICall: function (event) {
+    const page = this
+    console.log(21, event)
+    const query = event.detail.value
+    console.log(22, query)
+    wx.request({
+      url: app.globalData.url + "events" + `?query=${query}`,
+      method: 'GET',
+      success(res) {
+        console.log(11, res)
+        const events = res.data.events
+        // page.setData({events})
+        page.setData({
+          events: events
+        });
+        console.log(10, events)
+      }
+    })
+  },
+
   goToEventsShow: function (event) {
     console.log(20,event)
     let id = event.currentTarget.dataset.id

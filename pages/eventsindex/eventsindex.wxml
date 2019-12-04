@@ -8,6 +8,7 @@
 
   <view class="weui-panel weui-panel_access">
   <!-- White Background Start -->
+   <view class="weui-panel__hd"><input bindinput="searchAPICall" placeholder="Search" class="inp"></input></view>
 
     <view class="weui-panel__hd">All Events</view>
     <!-- Panel Header -->

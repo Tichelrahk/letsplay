@@ -3,3 +3,16 @@
   border: solid black 1px;
   padding-left: 20rpx;
 }
+
+.cu-bar.tabbar.bg-black {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.action.text-gray.add-action,
+.cu-btn.cuIcon-add.bg-green.shadow {
+  min-width:;
+  max-height: 70rpx;
+}

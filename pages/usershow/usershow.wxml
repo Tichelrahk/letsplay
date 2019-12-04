@@ -4,13 +4,13 @@
 <view class="contain"> 
   <view class="spacehuge"></view>
   <view class="space"></view>
-  <view class="align-center"><image class="avatar1" src="{{user.user.profile_picture}}"/></view>
-    <view class="name"> Name </view>
-    <view class="h4 line pb">{{user.user.name}}</view>
-
-    <view wx:if="{{user.user.location}}" class="name"> Location </view>
-    <view wx:if="{{user.user.location}}" class="h4 line pb">{{user.user.location}}</view>
-    <view wx:if="{{user.user.location}}" class="spacelarge"></view>
+  <view class="align-center"><image class="avatar1" src="{{userInfo.avatarUrl}}"/></view>
+    <view class="name">Name</view>
+    <view class="h4 line pb">{{userInfo.nickName}}</view>
+ 
+    <view wx:if="{{userInfo.province}}" class="name"> Location </view>
+    <view wx:if="{{userInfo.province}}" class="h4 line pb">{{userInfo.country}}, {{userInfo.province}}, {{userInfo.city}}</view>
+    <view wx:if="{{userInfo.province}}" class="spacelarge"></view>
  
     <view wx:if="{{user.user.description}}" class="card">
       <view classs="spacehuge">

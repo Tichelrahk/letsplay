@@ -7,7 +7,7 @@
 <view class="page__hd">
 <image class="banner" src="{{event.image}}"/>
 
-<button class="join" bindtap="joining">Join</button>
+<button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
   <view class="page__title">{{event.name}}</view>
 </view>
  

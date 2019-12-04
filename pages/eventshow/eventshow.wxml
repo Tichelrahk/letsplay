@@ -1,4 +1,4 @@
-<!--pages/eventshow/eventshow.wxml-->
+
 <view class="page__hd">
   <view class="page__title">{{event.name}}</view>
 </view>

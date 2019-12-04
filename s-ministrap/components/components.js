@@ -1,22 +1,43 @@
-// pages/eventshow/eventshow.js
-// pages/myactivities/myactivities.js
-let app = getApp()
+// s-ministrap/components/components.js
 Page({
-    data: {
 
-  },
   /**
    * Page initial data
+   */
+  data: {
+
+  },
+
+  // Custom Nav-Bar Functions Start
+
+  goToEventsIndex: function() {
+    console.log('tapped')
+    wx.navigateTo({
+      url: '/pages/eventsindex/eventsindex',
+    })
+  },
+
+  goToMyActivities: function() {
+    console.log('tapped')
+    wx.navigateTo({
+      url: '/pages/myactivities/myactivities',
+    })
+  },
+
+  goToUserShow: function() {
+    console.log('tapas')
+    wx.navigateTo({
+      url: '/pages/usershow/usershow',
+    })
+  },
+
+  // Custom Nav-Bar Functions End
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    // this.setData({
-    //   event: getApp().globalData.events[parseInt(options.id) - 1]
-    // })
-    this.options = options
-    console.log(2, options)
+
   },
 
   /**
@@ -24,32 +45,21 @@ Page({
    */
   onReady: function () {
 
+    // Custom Nav-Bar Functions Start
+    const page = this
+    page.setData({
+      currentPage: page.route
+    })
+    console.log(page.data)
+
+    // Custom Nav-Bar Functions End
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function (options) {
-    let page = this;
-    console.log(1, page.options)
-
-    wx.request({
-      url: app.globalData.url+`event/${options.id}`,
-      success(res) {
-
-        console.log(res)
-        const event = res.data
-
-        // Update local data
-        page.setData({
-          event: event
-        });
-
-        console.log(event)
-
-        wx.hideToast();
-      }
-    });
+  onShow: function () {
+    
   },
 
   /**

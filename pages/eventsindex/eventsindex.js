@@ -9,6 +9,37 @@ Page({
  
   },
 
+  goToIndex: function () {
+    wx.navigateTo({
+      url: '/pages/eventsindex/eventsindex',
+    })
+  },
+
+  goToBrowse: function () {
+    wx.navigateTo({
+      url: '/pages/browse/browse',
+    })
+  },
+
+  goToCreate: function () {
+    wx.navigateTo({
+      url: '/pages/createactivity/createactivity',
+    })
+  },
+
+  goToProfile: function () {
+    wx.navigateTo({
+      url: '/pages/usershow/usershow',
+    })
+  },
+
+  goToMyActivities: function () {
+    wx.navigateTo({
+      url: '/pages/myactivities/myactivities',
+    })
+  },
+
+
   searchAPICall: function (event) {
     const page = this
     console.log(21, event)

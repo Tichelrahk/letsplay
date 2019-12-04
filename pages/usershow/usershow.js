@@ -2,6 +2,37 @@
 const app = getApp()
 Page({
 
+
+  goToIndex: function () {
+    wx.navigateTo({
+      url: '/pages/eventsindex/eventsindex',
+    })
+  },
+
+  goToBrowse: function () {
+    wx.navigateTo({
+      url: '/pages/browse/browse',
+    })
+  },
+
+  goToCreate: function () {
+    wx.navigateTo({
+      url: '/pages/createactivity/createactivity',
+    })
+  },
+
+  goToProfile: function () {
+    wx.navigateTo({
+      url: '/pages/usershow/usershow',
+    })
+  },
+
+  goToMyActivities: function () {
+    wx.navigateTo({
+      url: '/pages/myactivities/myactivities',
+    })
+  },
+
   goToAddServ: function (e) {
     console.log(e)
     const id = e.currentTarget.dataset.id

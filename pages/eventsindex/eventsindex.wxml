@@ -1,9 +1,7 @@
-<!-- <view class="page__hd">
-  <view class="page__title">Let's Play</view>
-  <view class="page__desc">Meet | Play | Repeat</view>
-</view> -->
-<view class="space-6 bg-black"></view>
-<view class="space-3 bg-black"></view>
+<cu-custom bgColor="bg-black" isCustom="{{true}}">
+  <view slot="content">Let's Play!</view>
+</cu-custom>
+
 
 
 <view class="page__bd"> 
@@ -15,12 +13,11 @@
       <input type="text" placeholder="Search for a sport" confirm-type="search" bindinput="searchAPICall"></input>
     </view>
     <view class="action">
-      <button class="cu-btn bg-green shadow-blur round">Search</button>
+      <!-- <button class="cu-btn bg-green round" bindinput="searchAPICall">Search</button> -->
     </view>
   </view>
 
   <view class="weui-panel weui-panel_access">
-   <view class="weui-panel__hd"><input bindinput="searchAPICall" placeholder="Search" class="inp"></input></view>
 
     <view class="weui-panel__hd">All Events</view>
     <!-- Panel Header -->
@@ -55,31 +52,33 @@
 
 
     </view>
-
+    <view class="space-6"></view>
   </view>
-        <!-- BOTTOM NAVBAR START -->
+        <!-- BOTTOM NAVBAR START -->        
   <view class="cu-bar tabbar bg-black">
-    <view class="action text-green">
-      <view class="cuIcon-search"></view> Search
+    <view class="action text-gray" bindtap="goToIndex">
+      <view class="cuIcon-search"></view> 
+      Search
     </view>
-    <view class="action text-gray">
-      <view class="cuIcon-similar"></view> Browse
+    <view class="action text-gray" bindtap="goToBrowse">
+      <view class="cuIcon-similar"></view> 
+      Browse
     </view>
-    <view class="action text-gray add-action">
+    <view class="action text-gray add-action" bindtap="goToCreate">
       <button class="cu-btn cuIcon-add bg-green shadow"></button>
       Create
     </view>
-    <view class="action text-gray">
+    <view class="action text-gray" bindtap="goToMyActivities">
       <view class="cuIcon-cart">
         <view class="cu-tag badge">2</view>
       </view>
       My Activities
     </view>
-    <view class="action text-gray">
+    <view class="action text-gray" bindtap="goToProfile">
       <view class="cuIcon-my">
         <view class="cu-tag badge"></view>
       </view>
       Profile
     </view>
+  </view>
       <!-- BOTTOM NAVBAR END -->
-</view>

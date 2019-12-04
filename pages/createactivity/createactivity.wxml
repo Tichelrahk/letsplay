@@ -68,8 +68,9 @@
 			</view>
 		</picker>
 	</view>
-
+<view class="cu-bar bg-white margin-top width:100vh">
    <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
+</view>
 
 
 

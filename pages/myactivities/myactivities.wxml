@@ -1,5 +1,5 @@
 <!--pages/myactivities/myactivities.wxml-->
-<text>pages/myactivities/myactivities.wxml</text>
+
 
 <!--pages/eventshow/eventshow.wxml-->
 <view class="container">
@@ -11,7 +11,7 @@
   
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
     <swiper-item>  
-      <view>Hi there</view>  
+      <view></view>  
     </swiper-item>  
     
     <swiper-item>  

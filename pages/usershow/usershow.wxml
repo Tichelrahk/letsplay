@@ -1,4 +1,9 @@
 <!--pages/usershow/usershow.wxml-->
+<cu-custom bgColor="bg-black" isCustom="{{true}}">
+  <view slot="content">Let's Play!</view>
+</cu-custom>
+
+
 <view class="container">
 <view class="header">My Profile</view>
 <view class="contain"> 
@@ -36,14 +41,18 @@
 
 
   <view  class="spacelarge">
-  <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">Create an Activicity</button>
-   <button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">My activity</button>
+  <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">
+    Create an Activity
+  </button>
+  <button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
+    My activity
+  </button>
   </view>
   </view>
  
 </view>
 </view>
-
+<view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
     <view class="action text-gray" bindtap="goToIndex">
       <view class="cuIcon-search"></view> 

@@ -1,5 +1,4 @@
 <!--pages/eventshow/eventshow.wxml-->
-
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
   <view slot="content">Let's Play!</view>
 </cu-custom>

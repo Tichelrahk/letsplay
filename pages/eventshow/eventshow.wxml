@@ -31,12 +31,6 @@
           <view class="weui-cell__ft">{{event.end}}</view>
       </view>
 
-     
-
-      <!-- <view class="weui-cell">
-          <view class="weui-cell__bd">Cost</view>
-          <view class="weui-cell__ft">Free</view>
-      </view> -->
   </view>
 
   <view class="weui-cells__title">Event Location</view>
@@ -46,16 +40,10 @@
         <view class="weui-cell__ft">{{event.location}}</view>
     </view>
 
-    <!-- <view class="weui-cell">
-        <view class="weui-cell__bd">Address</view>
-        <view class="weui-cell__ft">
-          <view>188 Wulumuqi Lu</view>
-          <view>Jing An District</view>
-        </view>
-    </view> -->
-
   </view>
 </view>
+<view class="space-6"></view>
+<view class="space-6"></view>
 
 <view class="cu-bar tabbar bg-black">
     <view class="action text-gray" bindtap="goToIndex">

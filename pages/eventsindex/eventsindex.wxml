@@ -2,83 +2,67 @@
   <view slot="content">Let's Play!</view>
 </cu-custom>
 
-
-
-<view class="page__bd"> 
-
-  <!-- White Background Start -->
-  <view class="cu-bar search bg-white">
-    <view class="search-form round">
-      <text class="cuIcon-search"></text>
-      <input type="text" placeholder="Search for a sport" confirm-type="search" bindinput="searchAPICall"></input>
-    </view>
-    <view class="action">
-      <!-- <button class="cu-btn bg-green round" bindinput="searchAPICall">Search</button> -->
-    </view>
+<!-- White Background Start -->
+<view class="cu-bar search bg-white">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="Search for a name, sport or location" confirm-type="search" bindinput="searchAPICall"></input>
   </view>
+  <view class="action">
+    <!-- <button class="cu-btn bg-green round" bindinput="searchAPICall">Search</button> -->
+  </view>
+</view>
 
-  <view class="weui-panel weui-panel_access">
-
-    <view class="weui-panel__hd">All Events</view>
-    <!-- Panel Header -->
- 
-      <view class="weui-panel__bd">
-      <!-- Panel Body Start -->
-        <view wx:for="{{events}}" wx:for-item="event">
-        
-          <view bindtap="goToEventsShow" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" data-id="{{event.id}}">
-            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                <image class="weui-media-box__thumb" src="{{event.image}}" />
-            </view>
-            
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                <view class="weui-media-box__title">{{event.name}}</view>
-                <view class="weui-media-box__desc">
-                  <view>{{event.start}}</view>
-                  <view>{{event.end}}</view>
-                  <!-- <view>{{event.location}}</view> -->
-                </view>
-                <view class="weui-media-box__info">
-                  <!-- <view class="weui-media-box__info__meta">{{event.price}}</view> -->
-                  <!-- <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{event.level}}</view> -->
-                </view>
-            </view>
-
+<!-- CARDS START -->
+<view wx:for="{{events}}" wx:for-item="event">
+  <view class="cu-card article {{isCard?'no-card':''}}" bindtap="goToEventsShow" data-id="{{event.id}}">
+    <view class="cu-item shadow">
+      <view class="title">
+        <view class="text-cut">{{event.name}}</view>
+      </view>
+      <view class="content">
+        <image src="{{event.image}}" mode="aspectFill"></image>
+        <view class="desc">
+          <view class="text-content"> 
+            <view>From: {{event.start}}</view>
+            <view>To: {{event.end}}</view>
           </view>
-
+          <view>
+            <view class="cu-tag bg-red light sm round">Jing An District</view>
+            <view class="cu-tag bg-green light sm round">Beginners</view>
+          </view>
         </view>
-
       </view>
-
-
     </view>
-    <view class="space-6"></view>
   </view>
+</view>
+
+<view class="space-6"></view>
         <!-- BOTTOM NAVBAR START -->        
-  <view class="cu-bar tabbar bg-black">
-    <view class="action text-gray" bindtap="goToIndex">
-      <view class="cuIcon-search"></view> 
-      Search
-    </view>
-    <view class="action text-gray" bindtap="goToBrowse">
-      <view class="cuIcon-similar"></view> 
-      Browse
-    </view>
-    <view class="action text-gray add-action" bindtap="goToCreate">
-      <button class="cu-btn cuIcon-add bg-green shadow"></button>
-      Create
-    </view>
-    <view class="action text-gray" bindtap="goToMyActivities">
-      <view class="cuIcon-cart">
-        <view class="cu-tag badge">2</view>
-      </view>
-      My Activities
-    </view>
-    <view class="action text-gray" bindtap="goToProfile">
-      <view class="cuIcon-my">
-        <view class="cu-tag badge"></view>
-      </view>
-      Profile
-    </view>
+<view class="cu-bar tabbar bg-black">
+  <view class="action text-gray" bindtap="goToIndex">
+    <view class="cuIcon-search"></view> 
+    Search
   </view>
+  <view class="action text-gray" bindtap="goToBrowse">
+    <view class="cuIcon-similar"></view> 
+    Browse
+  </view>
+  <view class="action text-gray add-action" bindtap="goToCreate">
+    <button class="cu-btn cuIcon-add bg-green shadow"></button>
+    Create
+  </view>
+  <view class="action text-gray" bindtap="goToMyActivities">
+    <view class="cuIcon-activity">
+      <view class="cu-tag badge">2</view>
+    </view>
+    My Activities
+  </view>
+  <view class="action text-gray" bindtap="goToProfile">
+    <view class="cuIcon-my">
+      <view class="cu-tag badge"></view>
+    </view>
+    Profile
+  </view>
+</view>
       <!-- BOTTOM NAVBAR END -->

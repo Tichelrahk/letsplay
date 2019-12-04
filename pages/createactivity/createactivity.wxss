@@ -1,0 +1,73 @@
+/* pages/createactivity/createactivity.wxss */
+.banner{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #EFF0F1;
+}
+
+.time_form{
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  padding: 40rpx;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+} 
+.time{
+  margin: 40rpx;
+}
+
+.time_head{
+  margin-bottom: 10px;
+  color:rgba(255, 8, 0, 0.76);
+}
+picker{
+  padding-top: 10px;
+  opacity: .5;
+}
+
+picker:hover{
+  opacity:1;
+}
+
+.userInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.code{
+  color:rgba(255, 8, 0, 0.76);
+  font-size:28px;
+  font-weight: lighter;
+}
+
+.submit{
+  color:black;
+  border: 1px solid ;
+  border-radius:10px;
+  font-weight: heavy;
+  transition: opacity 0.3s ease;
+  margin-top: 30px;
+}
+
+.submit:hover{
+  border: 1px solid rgba(255, 8, 0, 0.76);
+  color:rgba(255, 8, 0, 0.76);
+  background-color: rgba(0, 0, 0, 0.253);
+}
+
+.container_cust{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding-top: 70rpx;
+box-sizing: border-box;
+}

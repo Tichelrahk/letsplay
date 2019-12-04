@@ -1,5 +1,7 @@
 @import 's-weui/weui.wxss';
 @import 's-ministrap/ministrap.wxss';
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
 
 /**app.wxss**/
 .container {

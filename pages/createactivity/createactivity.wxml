@@ -30,7 +30,7 @@
 		<input placeholder="write a good activity name"></input>
 	</view>
 
-	<view class="cu-form-group">
+	<!-- <view class="cu-form-group">
 		<view class="title">Input your phone number</view>
 		<input placeholder="phone number"></input>
 		<view class="cu-capsule radius">
@@ -41,25 +41,25 @@
 				Mainland-China
 			</view>
 		</view>
-	</view>
+	</view> -->
 
 
-	<view class="cu-form-group">
+	<!-- <view class="cu-form-group">
 		<view class="title">Pick Your Time</view>
 		<picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="TimeChange">
 			<view class="picker">
 				{{time}}
 			</view>
 		</picker>
-	</view>
-	<view class="cu-form-group">
+	</view> -->
+	<!-- <view class="cu-form-group">
 		<view class="title">Pick your date</view>
 		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
 			<view class="picker">
 				{{date}}
 			</view>
 		</picker>
-	</view>
+	</view> -->
 	<view class="cu-form-group">
 		<view class="title">Choose Your Location</view>
 		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
@@ -68,10 +68,43 @@
 			</view>
 		</picker>
 	</view>
+
+
+<view class="cu-bar bg-white margin-top">
+    <form class="form" bindsubmit="createNewBooking">
+    <view class="time_form">
+      <view class="time">
+        <text class="time_head strong line">Start from</text>
+        <picker mode="date" name="start_date" value="{{st_date}}" start="2019-11-27" end="2030-12-30" bindchange="bindStartDateChange">
+          <view class="picker">{{st_date}}</view>
+        </picker>
+        <!-- <input class="section" name="name" placeholder="" /> -->
+        <picker mode="time" name="start_time" value="{{st_time}}" start="00:01" end="23:59" bindchange="bindStartTimeChange">
+          <view class="picker">{{st_time}}</view>
+        </picker>
+      </view>  
+
+      <view class="time">
+        <text class="time_head strong line">to</text>
+        <!-- <input class="section" name="name" placeholder="" /> -->
+        <picker mode="date" name="end_date" value="{{end_date}}" start="2019-11-01" end="2030-12-30" bindchange="bindEndDateChange">
+          <view class="picker">{{end_date}}</view>
+        </picker>
+        <picker mode="time" name="end_time" value="{{end_time}}" start="00:01" end="23:59" bindchange="bindEndTimeChange">
+          <view class="picker">{{end_time}}</view>
+        </picker>
+      </view>
+
+    </view>
+    
+
+    <!-- <button form-type="submit" data-id="{{service.id}}" class="submit btn-cust">Confirm</button> -->
+    </form>
+     </view>
 	
 	<view class="cu-bar bg-white margin-top">
 		<view class="action">
-			图片上传
+			Upload your pictures
 		</view>
 		<view class="action">
 			{{imgList.length}}/4

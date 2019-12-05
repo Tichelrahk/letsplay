@@ -5,66 +5,40 @@
  
 <view wx:if ="{{login}}">
 
+<!-- BASIC INFORMATION CARD -->
+<view class=" padding bg-white solid-bottom text-black">
+  <view class='cuIcon-titles mc-title'>My Basic Information</view> 
+</view>
 
-  <!-- BASIC INFORMATION CARD -->
-  <view class="cu-bar bg-white solid-bottom">
-    <view class='action'>
-      <text class='cuIcon-titles text-black'>Basic Information</text> 
-    </view>
-    <view class="bg-white flex padding">
-      <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
-      <view class="padding-left text-black content">
-        <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
-        <view>Bio: {{user.user.description}}</view>
-      </view>
-    </view>
-  </view> 
-
-
-  
-  
-  
-  <!-- LOCATION CARD -->
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class='action'>
-      <text class='cuIcon-titles text-black'>Location</text> 
-
-    </view>
-    <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
-  </view>
-
-
-
-  <!-- ACTIVITY SUMMARY CARD -->
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class='action'>
-      <text class='cuIcon-titles text-black'>Activity Summary</text>
-    </view>
-  </view>
-  <view class="cu-list menu">
-    <view class="cu-item">
-      <view class="content">Events Attended: </view>  
-    </view>
-    <view class="cu-item">
-      <view class="content">Events Organised:</view>
-
-    </view>
-    <view class="cu-list menu">
-      <view class="cu-item">
-        <view class="content">Events Attended: </view>  
-      </view>
-      <view class="cu-item">
-        <view class="content">Events Organised:</view>
-      </view>
-      <view class="cu-item">
-        <view class="content">Total Attendees:</view>
-      </view>
-    </view>
+<view class="bg-white flex padding">
+  <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+  <view class="padding-left text-black">
+    <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
+    <view>Bio: {{user.user.description}}</view>
   </view>
 </view>
+
+
+<!-- LOCATION CARD -->
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>My Location</view> 
+</view>
+<map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+<view class="bg-white space-3"></view>
+
+<!-- ACTIVITY SUMMARY CARD -->
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>My Activity Summary</view> 
+</view>
+<view class="padding bg-white solid-bottom mc-content">Events Attended:</view>
+<view class="padding bg-white solid-bottom mc-content">Events Oranised:</view>  
+<view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>  
+
+  
 <view wx:else>
     <button class="log" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
 </view>
+
 
 
 <!-- <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">

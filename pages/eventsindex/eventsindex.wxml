@@ -9,7 +9,7 @@
     <input type="text" placeholder="Search for a name, sport or location" confirm-type="search" bindinput="searchAPICall"></input>
   </view>
   <view class="action">
-    <!-- <button class="cu-btn bg-green round" bindinput="searchAPICall">Search</button> -->
+    <view class="cu-btn bg-green round" bindinput="searchAPICall">Search</view>
   </view>
 </view>
 
@@ -49,7 +49,7 @@
     Browse
   </view>
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <button class="cu-btn cuIcon-add bg-green shadow"></button>
+    <view class="cu-btn cuIcon-add bg-green"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">

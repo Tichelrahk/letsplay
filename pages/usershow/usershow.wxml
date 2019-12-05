@@ -1,81 +1,76 @@
 <!--pages/usershow/usershow.wxml-->
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
-  <view slot="content">Let's Play!</view>
+  <view slot="content">My Profile</view>
 </cu-custom>
 
-
-<view class="container">
-<view class="header">My Profile</view>
-<view class="contain"> 
-  <view class="spacehuge"></view>
-  <view class="space"></view>
-  <view class="align-center"><image class="avatar1" src="{{userInfo.avatarUrl}}"/></view>
-    <view class="name">Name</view>
-    <view class="h4 line pb">{{userInfo.nickName}}</view>
- 
-    <view wx:if="{{userInfo.province}}" class="name"> Location </view>
-    <view wx:if="{{userInfo.province}}" class="h4 line pb">{{userInfo.country}}, {{userInfo.province}}, {{userInfo.city}}</view>
-    <view wx:if="{{userInfo.province}}" class="spacelarge"></view>
- 
-    <view wx:if="{{user.user.description}}" class="card">
-      <view classs="spacehuge">
-        <view class="name">My Description </view>
-        <view class="h3 line pb">{{user.user.description}}</view>
-      </view>
-
-    </view>
-
-
-<view class="container">
-  <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
-
-
-  
-
-<!-- DISPLAY IF SERVICE IS PRESENT -->
-    <!-- <view class="strong blue">Service{{user.service}}</view>
-    <view class="h3 line pb"></view>
-
-    <view class="strong blue">Service{{user.service}}</view>
-    <view class="h3 line pb"></view> -->
-
-
-  <view  class="spacelarge">
-  <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">
-    Create an Activity
-  </button>
-  <button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
-    My activity
-  </button>
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='cuIcon-titles text-black'>Basic Information</text> 
   </view>
+</view>
+<view class="bg-white flex padding">
+  <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+  <view class="padding-left text-black content">
+    <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
+    <view>Bio: {{user.user.description}}</view>
   </view>
- 
 </view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='cuIcon-titles text-black'>Location</text> 
+  </view>
 </view>
+<map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='cuIcon-titles text-black'>Activity Summary</text>
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item">
+    <view class="content">Events Attended: </view>  
+  </view>
+  <view class="cu-item">
+    <view class="content">Events Organised:</view>
+  </view>
+  <view class="cu-item">
+    <view class="content">Total Attendees:</view>
+  </view>
+</view>
+
+<!-- <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">
+  Create an Activity
+</button>
+<button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
+  My activity
+</button> -->
+
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
-    <view class="action text-gray" bindtap="goToIndex">
-      <view class="cuIcon-search"></view> 
-      Search
-    </view>
-    <view class="action text-gray" bindtap="goToBrowse">
-      <view class="cuIcon-similar"></view> 
-      Browse
-    </view>
-    <view class="action text-gray add-action" bindtap="goToCreate">
-      <button class="cu-btn cuIcon-add bg-green shadow"></button>
-      Create
-    </view>
-    <view class="action text-gray" bindtap="goToMyActivities">
-      <view class="cuIcon-cart">
-        <view class="cu-tag badge">2</view>
-      </view>
-      My Activities
-    </view>
-    <view class="action text-gray" bindtap="goToProfile">
-      <view class="cuIcon-my">
-        <view class="cu-tag badge"></view>
-      </view>
-      Profile
-    </view>
+  <view class="action text-gray" bindtap="goToIndex">
+    <view class="cuIcon-search"></view> 
+    Search
   </view>
+  <view class="action text-gray" bindtap="goToBrowse">
+    <view class="cuIcon-similar"></view> 
+    Browse
+  </view>
+  <view class="action text-gray add-action" bindtap="goToCreate">
+    <button class="cu-btn cuIcon-add bg-green shadow"></button>
+    Create
+  </view>
+  <view class="action text-gray" bindtap="goToMyActivities">
+    <view class="cuIcon-cart">
+      <view class="cu-tag badge">2</view>
+    </view>
+    My Activities
+  </view>
+  <view class="action text-gray" bindtap="goToProfile">
+    <view class="cuIcon-my">
+      <view class="cu-tag badge"></view>
+    </view>
+    Profile
+  </view>
+</view>

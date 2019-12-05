@@ -2,9 +2,9 @@
   <view slot="content">Let's Play!</view>
 </cu-custom>
 
-<view class="banner">
+
 <view class="header">Create My Activity</view>
-<view class="container_cust">
+<view>
 
 <!-- <form bindsubmit="formSubmit" class="form">
   <view class="title">
@@ -22,15 +22,10 @@
   </view> -->
   
   
-<form>
+<form bindsubmit="formSubmit">
 	<view class="cu-form-group margin-top">
-		<view class="title">Host</view>
-		<input placeholder="Hoster's Name" name="name"></input>
-	</view>
-
-	<view class="cu-form-group">
 		<view class="title">Activity Name</view>
-		<input placeholder="write a good activity name" name="activityname"></input>
+		<input placeholder="write a good activity name" name="name"></input>
 	</view>
 
 	<!-- <view class="cu-form-group">
@@ -67,18 +62,18 @@
 		<view class="title">Choose Your Location</view>
 		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
 			<view class="picker">
-				{{region[0]}}，{{region[1]}}，{{region[2]}}
+				<!-- {{region[0]}}，{{region[1]}}，{{region[2]}} -->
 			</view>
 		</picker>
 	</view>
-<view class="cu-bar bg-white margin-top width:100vh">
-   <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map>
+<view bindtap="chooseLocation" class="cu-bar bg-white margin-top width:100vh">
+{{location.name}}
+   <!-- <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map> -->
 </view>
 
 
 
 <view class="cu-bar bg-white margin-top">
-    <form class="form" bindsubmit="createNewBooking">
     <view class="time_form">
       <view class="time">
         <text class="time_head strong line">Start from</text>
@@ -102,13 +97,12 @@
         </picker>
         </view>
       </view>
-    </form>
   </view>
-	
 	<view bindtap="chooseImage" class="cu-bar bg-white margin-top">
 		<view class="action">
 			Upload your pictures
 		</view>
+    <image src="{{pic}}"></image>
 		<view class="action">
 			{{imgList.length}}/4
 		</view>
@@ -126,18 +120,19 @@
 			</view>
 		</view>
 	</view>
-	
-	<view class="cu-form-group margin-top">
-		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="Description" name="description"></textarea>
-	</view>
-</form>
-
-<view class="btn-area">
+  <view class="btn-area">
     <button class="submit" form-type="submit">Submit</button>
   </view>
+  <view class="p-6"></view>
  
-</view>
-</view> 
+</form>
+
+ 
+ </view>
+
+ 
+
+
 
 <view class="cu-bar tabbar bg-black">
     <view class="action text-gray" bindtap="goToIndex">

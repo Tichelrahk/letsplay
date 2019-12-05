@@ -41,12 +41,12 @@
 
 
 
-<!-- <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">
-  Create an Activity
+<button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
+  Edit my Profile
 </button>
-<button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
+<!-- <button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
   My activity
-</button> -->
+</button>  -->
 
 
 <!-- BOTTOM NAVBAR START -->

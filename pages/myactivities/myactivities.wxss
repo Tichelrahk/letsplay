@@ -14,7 +14,7 @@
   
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
 .swiper-box view{  
-    text-aligngit : center;  
+    text-align: center;  
 }  
 .emergcard {
   background-color: white;

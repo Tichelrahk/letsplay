@@ -6,7 +6,9 @@
     "pages/usershow/usershow",
     "pages/browse/browse",
     "s-ministrap/components/components",
-    "pages/createactivity/createactivity"
+    "pages/createactivity/createactivity",
+    "pages/useredit/useredit"
+
   ],
   "window": {
     "navigationStyle": "custom",

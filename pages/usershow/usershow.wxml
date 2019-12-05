@@ -3,6 +3,7 @@
   <view slot="content">My Profile</view>
 </cu-custom>
 
+<!-- BASIC INFORMATION CARD -->
 <view class="cu-bar bg-white solid-bottom">
   <view class='action'>
     <text class='cuIcon-titles text-black'>Basic Information</text> 
@@ -16,6 +17,8 @@
   </view>
 </view>
 
+
+<!-- LOCATION CARD -->
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
     <text class='cuIcon-titles text-black'>Location</text> 
@@ -23,6 +26,8 @@
 </view>
 <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
 
+
+<!-- ACTIVITY SUMMARY CARD -->
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
     <text class='cuIcon-titles text-black'>Activity Summary</text>
@@ -47,6 +52,8 @@
   My activity
 </button> -->
 
+
+<!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
   <view class="action text-gray" bindtap="goToIndex">
@@ -58,11 +65,11 @@
     Browse
   </view>
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <button class="cu-btn cuIcon-add bg-green shadow"></button>
+    <view class="cu-btn cuIcon-add bg-green"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">
-    <view class="cuIcon-cart">
+    <view class="cuIcon-activity">
       <view class="cu-tag badge">2</view>
     </view>
     My Activities
@@ -74,3 +81,4 @@
     Profile
   </view>
 </view>
+<!-- BOTTOM NAVBAR END -->

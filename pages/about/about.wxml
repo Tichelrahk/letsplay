@@ -1,9 +1,20 @@
+<!--pages/about/about.wxml-->
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
-  <view slot="content">Browse</view>
+  <view slot="content">About us</view>
 </cu-custom>
+<view class="space-6"></view>
+<view class="space-6"></view>
 
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>About</view> 
+</view>
+<view class="padding bg-white solid-bottom mc-content">
+  <view>Welcome to Let's Playy, a platform that helps you get active and healthy by connecting you to other like-minded individuals!</view>
+  <view>Find events near you that are exciting and fun!</view>
+  <view>You can create your own events and invite your friends!</view>
+  <view>Sign up to our app now!</view>
+</view>
 
-<!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">

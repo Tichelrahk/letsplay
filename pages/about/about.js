@@ -1,13 +1,5 @@
-const app = getApp()
-// pages/eventsindex/eventsindex.js
+// pages/about/about.js
 Page({
-
-  /**
-   * Page initial data
-   */
-  data: {
- 
-  },
 
   goToIndex: function () {
     wx.navigateTo({
@@ -45,41 +37,20 @@ Page({
     })
   },
 
+  /**
+   * Page initial data
+   */
+  data: {
 
-  searchAPICall: function (event) {
-    const page = this
-    console.log(21, event)
-    const query = event.detail.value
-    console.log(22, query)
-    wx.request({
-      url: app.globalData.url + "events" + `?query=${query}`,
-      method: 'GET',
-      success(res) {
-        console.log(11, res)
-        const events = res.data.events
-        // page.setData({events})
-        page.setData({
-          events: events
-        });
-        console.log(10, events)
-      }
-    })
   },
 
-  goToEventsShow: function (event) {
-    console.log(20,event)
-    let id = event.currentTarget.dataset.id
-    console.log(21, id)
-    wx.navigateTo({
-      url: `/pages/eventshow/eventshow?id=${id}`,
-    })
-  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
+
   },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -91,21 +62,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    let page = this;
 
-    wx.request({
-      url: app.globalData.url + "events",
-      method: 'GET',
-      success(res) {
-        console.log(10,res)
-        const events = res.data
-        // page.setData({events})
-        page.setData(
-          events
-        );
-        console.log(10, events)
-      }
-    })
   },
 
   /**

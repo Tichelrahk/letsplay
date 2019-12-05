@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/eventsindex/eventsindex",
+    "pages/about/about",
     "pages/myactivities/myactivities",
     "pages/eventshow/eventshow",
     "pages/usershow/usershow",

@@ -40,12 +40,12 @@
   </view>
 </view>
 
-<!-- <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">
-  Create an Activity
+<button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
+  Edit my Profile
 </button>
-<button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
+<!-- <button bindtap="goToMyActivity" data-id="{{user.id}}" class="btn-cust">
   My activity
-</button> -->
+</button>  -->
 
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">

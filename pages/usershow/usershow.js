@@ -27,6 +27,12 @@ Page({
     })
   },
 
+  goToEdit: function () {
+    wx.navigateTo({
+      url: '/pages/useredit/useredit',
+    })
+  },
+
   goToMyActivities: function () {
     wx.navigateTo({
       url: '/pages/myactivities/myactivities',

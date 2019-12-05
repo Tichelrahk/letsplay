@@ -90,24 +90,29 @@ Page({
 //  map data use, ends here
   // pass form info(host name, activity name, description) starts from here
   formSubmit: function (event) {
+    const page = this
     const form = {}
     console.log(event);
-    form.name = event.detail.value.name
-    form.activityname = event.detail.value.activityname
-    form.description = event.detail.value.description
-    form.date = event.detail.value.date
-    form.user_id = app.globalData.userId
+    form.event = {}
+    form.location = {}
+    form.event.name = event.detail.value.name
+    form.event.start = `${event.detail.value.start_date} ${event.detail.value.start_time}`
+    form.event.end = `${event.detail.value.end_date} ${event.detail.value.end_time}`
+    form.location.address = page.data.location.address
+    form.location.latitude = page.data.location.latitude
+    form.location.longitude = page.data.location.longitude
+    form.event.image = page.data.pic
     // console.log(10, form.user_id)
-    // console.log(77, form);
+    console.log(77, form);
     wx.request({
-      url: app.globalData.url + `events`,
+      url: app.globalData.url + `events?user_id=${app.globalData.userId}`,
       method: 'POST',
       data: form,
       success(res) {
         console.log(res)
         // redirect to index page when done
         wx.reLaunch({
-          url: '/pages/myactivities/myactivities',
+          url: `/pages/eventshow/eventshow?id=${res.data.event.id}`,
         })
       }
     });
@@ -174,9 +179,19 @@ Page({
 
   },
 
+  chooseLocation: function () {
+    const page = this
+    wx.chooseLocation({
+      success: function(res) {
+        page.setData({location: res})
+      },
+    })
+  },
+
 
   //starts here, choose image
   chooseImage() {
+    const page = this
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],
@@ -188,7 +203,10 @@ Page({
             uri: tempFilePath,
           },
         }).save().then(
-          file => console.log(1111, file.url())
+          file => {
+            console.log(1111, file.url())
+            page.setData({pic: file.url()})
+            }
         ).catch(console.error);
       }
     });

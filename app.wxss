@@ -3,6 +3,26 @@
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
 
+.scroll {
+  overflow: scroll !important;
+}
+
+.mc-title {
+  font-weight: 600;
+  font-size: 40rpx;
+}
+
+.mc-content {
+  font-weight: 400;
+  font-size: 35rpx;
+  padding: 30rpx;
+  padding-left: 40rpx;
+}
+
+.mc-small {
+  font-weight: 300; 
+  font-size: 20rpx;
+}
 
 .cu-bar.tabbar.bg-black {
   position: fixed;

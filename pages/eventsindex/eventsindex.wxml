@@ -5,7 +5,7 @@
 <!-- White Background Start -->
 <view class="cu-bar search bg-white">
   <view class="search-form round">
-    <text class="cuIcon-search"></text>
+    <view class="cuIcon-search"></view>
     <input type="text" placeholder="Search for a name, sport or location" confirm-type="search" bindinput="searchAPICall"></input>
   </view>
   <view class="action">
@@ -56,6 +56,7 @@
 </view>
 
 <!-- BOTTOM NAVBAR START -->
+<view class="space-6"></view>
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
   <view class="action text-gray" bindtap="goToIndex">

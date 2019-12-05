@@ -3,48 +3,60 @@
   <view slot="content">Let's Play!</view>
 </cu-custom>
 
-
-<view class="page__hd">
-<image class="banner" src="{{event.image}}"/>
-
-<button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
-  <view class="page__title">{{event.name}}</view>
+<view class="showbanner">
+<image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
+<view class="text-white">{{event.name}}</view>
 </view>
- 
-<view class="page__bd">
-  <view class="weui-cells__title">Event Description</view>
-    <view class="weui-cells weui-cells_after-title">
-    <view class="weui-cell">
-      <view class="weui-cell__bd">{{event.description}}</view>
-    </view>
-    <view class="weui-cell">
-      <view class="weui-cell__bd">Organizer</view>
-      <view class="weui-cell__ft">{{event.host}}</view>
-    </view>
-  </view>
 
-  <view class="weui-cells__title">Event Details</view>
-  <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell">
-          <view class="weui-cell__bd">Time</view>
-          <view class="weui-cell__ft">{{event.start}}</view>
-          <view class="weui-cell__ft">{{event.end}}</view>
-      </view>
-
-  </view>
-
-  <view class="weui-cells__title">Event Location</view>
-  <view class="weui-cells weui-cells_after-title">
-    <view class="weui-cell">
-        <view class="weui-cell__bd">Location</view>
-        <view class="weui-cell__ft">{{event.location}}</view>
-    </view>
-
-  </view>
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>Attendees</view> 
 </view>
-<view class="space-6"></view>
+<view class="bg-white solid-bottom mc-content flex scroll align-center">
+
+  <!-- <view class="flex align-center scroll">
+    <view>
+      Organiser:
+      <text class="text-bold">{{event.organizer.name}}</text>
+    </view>
+    <view class="cu-avatar lg round margin-left" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);">
+    </view>
+  </view> -->
+
+    <view class="cu-avatar-group scroll">
+      <view class="cu-avatar round lg" wx:for="{{4}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
+    </view>
+
+
+</view>
+
+
+
+
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>Event Details</view> 
+</view>
+<view class="bg-white solid-bottom mc-content">
+  <view class="text-bold">{{event.description}}</view>
+</view>
+
+<view class="bg-white solid-bottom mc-content">
+  <view>Date: <text class="text-bold">{{event.start}}</text></view>
+  <view>Time: <text class="text-bold">{{event.end}}</text></view>
+</view>  
+
+
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>Event Location</view> 
+</view>
+<map id="map" longitude="{{event.location.longitude}}" latitude="{{event.location.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+<view class="bg-white space-3"></view>
+
+<view class="space-4"></view>
+
+<button class="join bg-green margin-top" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
 
 <!-- BOTTOM NAVBAR START -->
+<view class="space-6"></view>
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
   <view class="action text-gray" bindtap="goToIndex">

@@ -1,9 +1,18 @@
 //app.js
+const AV = require('./utils/av-weapp-min.js')
+const config = require('./keys')
+// Initialization of the app
+
 App({
 
   onLaunch: function () {
     const url = 'http://localhost:3000/api/v1/'
     console.log('beginning login')
+
+    AV.init({
+      appId: config.appId,
+      appKey: config.appKey,
+    });
 
     // Colour UI navbar
     wx.getSystemInfo({
@@ -40,7 +49,7 @@ App({
       }
     })
   },
- 
+
   globalData: {
     url: "http://localhost:3000/api/v1/",
     userInfo: null,
@@ -83,5 +92,5 @@ App({
       },
     ]
   }
-  
+
 })

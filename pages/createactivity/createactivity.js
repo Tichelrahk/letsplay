@@ -1,5 +1,7 @@
 // pages/createactivity/createactivity.js
 const app = getApp()
+const AV = require('../../utils/av-weapp-min.js')
+const config = require('../../keys')
 Page({
 
   goToIndex: function () {
@@ -174,23 +176,38 @@ Page({
 
 
   //starts here, choose image
-  ChooseImage() {
-      wx.chooseImage({
-      count: 4, 
-      sizeType: ['original', 'compressed'], 
-      sourceType: ['album'], 
-      success: (res) => {
-        if (this.data.imgList.length != 0) {
-          this.setData({
-            imgList: this.data.imgList.concat(res.tempFilePaths)
-          })
-        } else {
-          this.setData({
-            imgList: res.tempFilePaths
-          })
-        }
+  chooseImage() {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        let tempFilePath = res.tempFilePaths[0];
+        new AV.File('file-name', {
+          blob: {
+            uri: tempFilePath,
+          },
+        }).save().then(
+          file => console.log(1111, file.url())
+        ).catch(console.error);
       }
     });
+    //   wx.chooseImage({
+    //   count: 4, 
+    //   sizeType: ['original', 'compressed'], 
+    //   sourceType: ['album'], 
+    //   success: (res) => {
+    //     if (this.data.imgList.length != 0) {
+    //       this.setData({
+    //         imgList: this.data.imgList.concat(res.tempFilePaths)
+    //       })
+    //     } else {
+    //       this.setData({
+    //         imgList: res.tempFilePaths
+    //       })
+    //     }
+    //   }
+    // });
   },
   ViewImage(e) {
     wx.previewImage({

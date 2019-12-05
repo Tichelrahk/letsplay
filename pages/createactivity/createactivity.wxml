@@ -105,7 +105,7 @@
     </form>
   </view>
 	
-	<view class="cu-bar bg-white margin-top">
+	<view bindtap="chooseImage" class="cu-bar bg-white margin-top">
 		<view class="action">
 			Upload your pictures
 		</view>
@@ -121,7 +121,7 @@
 					<text class="cuIcon-close"></text>
 				</view>
 			</view>
-			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+			<view class="solids" bindtap="chooseImage" wx:if="{{imgList.length<4}}">
 				<text class="cuIcon-cameraadd"></text>
 			</view>
 		</view>

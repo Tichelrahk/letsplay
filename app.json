@@ -7,7 +7,6 @@
     "pages/browse/browse",
     "s-ministrap/components/components",
     "pages/createactivity/createactivity"
-    
   ],
   "window": {
     "navigationStyle": "custom",
@@ -16,11 +15,9 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

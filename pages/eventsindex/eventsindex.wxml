@@ -13,32 +13,50 @@
   </view>
 </view>
 
-<!-- CARDS START -->
+<!-- CARDS SECTION -->
 <view wx:for="{{events}}" wx:for-item="event">
-  <view class="cu-card article {{isCard?'no-card':''}}" bindtap="goToEventsShow" data-id="{{event.id}}">
-    <view class="cu-item shadow">
-      <view class="title">
-        <view class="text-cut">{{event.name}}</view>
+  <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
+
+<!-- CARD TITLE -->
+    <view class="cu-item">
+      <view class="flex">
+        <view class="cuIcon-activity text-green"></view>
+        <view class="text-bold text-cut padding-left">{{event.name}}</view>
       </view>
-      <view class="content">
-        <image src="{{event.image}}" mode="aspectFill"></image>
-        <view class="desc">
+      <view class="action">
+        <view class="text-bold">8/12</view>  
+      </view>
+    </view>
+
+<!-- CARD INFO -->
+    <view class="cu-item">
+      <view class="content flex padding-top padding-bottom">
+        <image src="{{event.image}}" style="height: 200rpx; width: 200rpx;" class="rounded" mode="aspectFill"></image>
+        <view class="desc padding-left">
           <view class="text-content"> 
             <view>From: {{event.start}}</view>
             <view>To: {{event.end}}</view>
-          </view>
-          <view>
-            <view class="cu-tag bg-red light sm round">Jing An District</view>
-            <view class="cu-tag bg-green light sm round">Beginners</view>
+            <view>Location: {{event.location.address}}</view>
           </view>
         </view>
       </view>
     </view>
+
+<!-- CARD TAGS -->
+    <view class="cu-item tags">
+      <view class="content">
+        <view>
+          <view class="cu-tag bg-red light round">Jing An District</view>
+          <view class="cu-tag bg-green light round">Beginners</view>
+        </view>
+      </view>
+      <view class="action cuIcon-right"></view>
+    </view>
   </view>
 </view>
 
+<!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
-        <!-- BOTTOM NAVBAR START -->        
 <view class="cu-bar tabbar bg-black">
   <view class="action text-gray" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
@@ -65,4 +83,4 @@
     Profile
   </view>
 </view>
-      <!-- BOTTOM NAVBAR END -->
+<!-- BOTTOM NAVBAR END -->

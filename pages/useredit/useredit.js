@@ -1,4 +1,6 @@
 const app = getApp()
+const AV = require('../../utils/av-weapp-min.js')
+const config = require('../../keys')
 // pages/useredit/useredit.js
 Page({
 
@@ -17,14 +19,16 @@ Page({
     },
 
   formSubmit: function (event) {
+    const page = this
     const form = {}
     console.log(event);
     form.name = user.detail.value.name
     form.bio = user.detail.value.description
     form.image = event.detail.value.profile_picture
     form.user_id = app.globalData.userId
+
     wx.request({
-      url: app.globalData.url + `users`,
+      url: app.globalData.url + `users?user_id=${app.globalData.userId}`,
       method: 'GET',
       data: form,
       success(res) {
@@ -38,8 +42,7 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-    this.setData({ options: options })
+  onLoad: function () {
     },
 
   /**
@@ -52,25 +55,25 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
+
   onShow: function () {
+    let page = this;
+    console.log(app.globalData.userId)
+    wx.request({
+      url: app.globalData.url + `users/${app.globalData.userId}`,
+      success(res) {
 
-    // const loginData = wx.getStorageSync("login");
-    // Utils.requestFn({
-    //   url: '/index.php/modifygetuser?server=1',
-    //   data: {
-    //     sdk: loginData.sdk,
-    //     uid: loginData.uid
-    //   },
-    //   success: function (res) {
-    //     const data = res.user;
-    //     const imgsrc = res.image != null ? Utils.url + res.image : this.data.images;
-    //        this.setData({
-    //         name: res.nickname,
-    //         images: imgsrc,
-    //       })
-    //   }
-    // })
+        console.log(res)
+        const user = res.data.user
 
+        // Update local data
+        page.setData({
+          user: user
+        });
+
+        wx.hideToast();
+      }
+    });
   },
 
   /**
@@ -120,7 +123,10 @@ Page({
             uri: tempFilePath,
           },
         }).save().then(
-          file => console.log(1111, file.url())
+          file => {
+            console.log(1111, file.url())
+            page.setData({ pic: file.url() })
+          }
         ).catch(console.error);
       }
     }); 

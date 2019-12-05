@@ -51,31 +51,33 @@
   </view>
 </view>
 <view class="space-6"></view>
-<view class="space-6"></view>
 
+<!-- BOTTOM NAVBAR START -->
+<view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
-    <view class="action text-gray" bindtap="goToIndex">
-      <view class="cuIcon-search"></view> 
-      Search
-    </view>
-    <view class="action text-gray" bindtap="goToBrowse">
-      <view class="cuIcon-similar"></view> 
-      Browse
-    </view>
-    <view class="action text-gray add-action" bindtap="goToCreate">
-      <button class="cu-btn cuIcon-add bg-green shadow"></button>
-      Create
-    </view>
-    <view class="action text-gray" bindtap="goToMyActivities">
-      <view class="cuIcon-cart">
-        <view class="cu-tag badge">2</view>
-      </view>
-      My Activities
-    </view>
-    <view class="action text-gray" bindtap="goToProfile">
-      <view class="cuIcon-my">
-        <view class="cu-tag badge"></view>
-      </view>
-      Profile
-    </view>
+  <view class="action text-gray" bindtap="goToIndex">
+    <view class="cuIcon-search"></view> 
+    Search
   </view>
+  <view class="action text-gray" bindtap="goToBrowse">
+    <view class="cuIcon-similar"></view> 
+    Browse
+  </view>
+  <view class="action text-gray add-action" bindtap="goToCreate">
+    <view class="cu-btn cuIcon-add bg-green"></view>
+    Create
+  </view>
+  <view class="action text-gray" bindtap="goToMyActivities">
+    <view class="cuIcon-activity">
+      <view class="cu-tag badge">2</view>
+    </view>
+    My Activities
+  </view>
+  <view class="action text-gray" bindtap="goToProfile">
+    <view class="cuIcon-my">
+      <view class="cu-tag badge"></view>
+    </view>
+    Profile
+  </view>
+</view>
+<!-- BOTTOM NAVBAR END -->

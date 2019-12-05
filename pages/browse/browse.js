@@ -1,7 +1,6 @@
 // pages/browse/browse.js
 Page({
 
-
   goToIndex: function () {
     wx.navigateTo({
       url: '/pages/eventsindex/eventsindex',
@@ -11,6 +10,12 @@ Page({
   goToBrowse: function () {
     wx.navigateTo({
       url: '/pages/browse/browse',
+    })
+  },
+
+  goToAbout: function () {
+    wx.navigateTo({
+      url: '/pages/about/about',
     })
   },
 

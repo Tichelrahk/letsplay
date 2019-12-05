@@ -3,69 +3,83 @@
   <view slot="content">My Activities</view>
 </cu-custom>
 
-
 <view wx:if ="{{login}}">
-
-  
-
- 
 
 <view class="swiper-tab bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">Attending</view>  
       <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">Organizing</view> 
 </view>  
 
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight  - 31}}px" bindchange="bindChange">  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
 
-  <swiper-item>  
+<swiper-item>  
     <!-- Attending Cards -->
-    <view class="weui-panel__bd">
+  <view>
 
     <!-- Panel Body Start -->
-      <view class="emergcard" wx:for="{{user.confirmations}}" wx:for-item="confirmation">     
-        <view bindtap="goToEventsShow" class="weui-media-box weui-media-box_appmsg"         hover-class="weui-cell_active" data-id="{{event.id}}">
-              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                <image class="weui-media-box__thumb" src="{{confirmation.event.image}}" />
-              </view>
 
-              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">       
-                  <view class="weui-media-box__title">
-                    {{confirmation.event.name}}
-                  </view>
-                  <view class="weui-media-box__desc">
-                    <view>{{confirmation.event.start}}</view>
-                    <view>{{confirmation.event.end}}</view>
-                  </view>
-              </view>
+    <!-- CARDS SECTION -->
+    <view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation">
+      <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
+
+    <!-- CARD TITLE -->
+        <view class="cu-item">
+          <view class="flex">
+            <view class="cuIcon-activity text-green"></view>
+            <view class="text-bold text-cut padding-left">{{confirmation.event.name}}           </view>
+          </view>
+          <view class="action">
+            <view class="text-bold">8/12</view>  
+          </view>
         </view>
+
+    <!-- CARD INFO -->
+        <view class="cu-item">
+          <view class="flex padding-top padding-bottom">
+            <image src="{{confirmation.event.image}}" style="height: 200rpx; width: 200rpx;" class="rounded" mode="aspectFill"></image>
+            <view class="padding-left">
+              <view>Date: {{confirmation.date}}</view>
+              <view>Time: {{confirmation.start}}-{{confirmation.end}}</view>
+            </view>
+          </view>
+        </view>
+
+    <!-- CARD TAGS -->
+        <view class="cu-item tags">
+          <view class="content">
+            <view>
+              <view class="cu-tag bg-red light round">Jing An District</view>
+              <view class="cu-tag bg-green light round">Beginners</view>
+            </view>
+          </view>
+          <view class="action cuIcon-right"></view>
+        </view>
+      </view>
     </view>
-  </view>
+    </view>
+<!-- OLD CARD -->
   </swiper-item>  
 
 <!-- attending ends here -->
   
   <swiper-item>  
     <!-- organize starts here -->
-    <view class="weui-panel__bd">
-     Host
+    <view>
     <!-- Panel Body Start -->
-    <view class="emergcard" wx:for="{{user.events}}" wx:for-item="event">     
-    <view bindtap="goToEventsShow" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" data-id="{{event.id}}">
-          
-            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-              <image class="weui-media-box__thumb" src="{{event.image}}" />
-            </view>   
-
-
-            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">     
-              <view class="weui-media-box__title">
-                {{event.name}}
-              </view>      
-              <view class="weui-media-box__desc">
-                <view>{{event.start}}</view>
-                <view>{{event.end}}</view>
-              </view>
-            </view>
+    <view wx:for="{{user.events}}" wx:key wx:for-item="event">     
+      <view bindtap="goToEventsShow" data-id="{{event.id}}">     
+        <view>
+          <image src="{{event.image}}" />
+        </view>   
+        <view>     
+          <view>
+            {{event.name}}
+          </view>      
+          <view>
+            <view>{{event.start}}</view>
+            <view>{{event.end}}</view>
+          </view>
+        </view>
       </view>
     </view>
   </view>  
@@ -79,15 +93,21 @@
 
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
+<view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
   <view class="action text-gray" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>
-  <view class="action text-gray" bindtap="goToBrowse">
+  <!-- <view class="action text-gray" bindtap="goToBrowse">
     <view class="cuIcon-similar"></view> 
     Browse
+  </view> -->
+  <view class="action text-gray" bindtap="goToAbout">
+    <view class="cuIcon-info"></view> 
+    About
   </view>
+
   <view class="action text-gray add-action" bindtap="goToCreate">
     <view class="cu-btn cuIcon-add bg-green"></view>
     Create

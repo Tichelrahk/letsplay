@@ -34,7 +34,7 @@
 <view class="padding bg-white solid-bottom mc-content">Events Oranised:</view>  
 <view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>  
 
-  
+</view>
 <view wx:else>
     <button class="log" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
 </view>

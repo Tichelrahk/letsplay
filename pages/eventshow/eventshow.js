@@ -5,17 +5,25 @@ Page({
     data: {
  
   },
+  toastWelcome: function () {
+    wx.showToast({
+      title: 'Joined!',
+    })
+  },
 
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    // app.globalData.login = true
-    // this.setData({
-    //   userInfo: e.detail.userInfo
-
-    // })
-   
+    app.globalData.login = true
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
   },
+
+   logInUser: function () {
+      this.setData({ loggedIn: true })
+    },
+
 
   goToIndex: function () {
     wx.navigateTo({
@@ -61,6 +69,8 @@ Page({
       data: join,
       success(res) {
         console.log(res)
+        page.setData({joined: true})
+        page.toastWelcome()
       }
     })
   },

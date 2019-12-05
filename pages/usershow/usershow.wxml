@@ -2,29 +2,33 @@
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
   <view slot="content">My Profile</view>
 </cu-custom>
+ 
+<view wx:if ="{{login}}">
+
 
 <!-- BASIC INFORMATION CARD -->
 <view class="cu-bar bg-white solid-bottom">
   <view class='action'>
     <text class='cuIcon-titles text-black'>Basic Information</text> 
+
   </view>
-</view>
-<view class="bg-white flex padding">
-  <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
-  <view class="padding-left text-black content">
-    <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
-    <view>Bio: {{user.user.description}}</view>
+  <view class="bg-white flex padding">
+    <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+    <view class="padding-left text-black content">
+      <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
+      <view>Bio: {{user.user.description}}</view>
+    </view>
   </view>
-</view>
 
 
 <!-- LOCATION CARD -->
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
     <text class='cuIcon-titles text-black'>Location</text> 
+
   </view>
-</view>
-<map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+  <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+
 
 
 <!-- ACTIVITY SUMMARY CARD -->
@@ -39,11 +43,24 @@
   </view>
   <view class="cu-item">
     <view class="content">Events Organised:</view>
+
   </view>
-  <view class="cu-item">
-    <view class="content">Total Attendees:</view>
+  <view class="cu-list menu">
+    <view class="cu-item">
+      <view class="content">Events Attended: </view>  
+    </view>
+    <view class="cu-item">
+      <view class="content">Events Organised:</view>
+    </view>
+    <view class="cu-item">
+      <view class="content">Total Attendees:</view>
+    </view>
   </view>
 </view>
+<view wx:else>
+    <button class="log" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
+</view>
+
 
 <!-- <button bindtap="goToCreate" data-id="{{user.id}}" class="btn-cust">
   Create an Activity

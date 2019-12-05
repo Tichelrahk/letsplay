@@ -3,6 +3,13 @@
   <view slot="content">My Activities</view>
 </cu-custom>
 
+
+<view wx:if ="{{login}}">
+
+  
+
+ 
+
 <view class="swiper-tab bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">Attending</view>  
       <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">Organizing</view> 
@@ -49,6 +56,7 @@
               <image class="weui-media-box__thumb" src="{{event.image}}" />
             </view>   
 
+
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">     
               <view class="weui-media-box__title">
                 {{event.name}}
@@ -64,6 +72,10 @@
 </swiper-item>  
   <!-- organize host ends here -->
 </swiper>  
+</view>
+<view wx:else>
+    <button class="log" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
+</view>
 
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>

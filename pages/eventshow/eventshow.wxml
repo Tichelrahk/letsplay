@@ -7,10 +7,18 @@
 <view class="page__hd">
 <image class="banner" src="{{event.image}}"/>
 
-<button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
+<!-- <button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button> -->
+<view wx:if="{{joined}}">
+  <button class="joined" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Joined</button>
+</view>
+
+<view wx:else>
+  <button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
+</view>
+
   <view class="page__title">{{event.name}}</view>
 </view>
- 
+  
 <view class="page__bd">
   <view class="weui-cells__title">Event Description</view>
     <view class="weui-cells weui-cells_after-title">

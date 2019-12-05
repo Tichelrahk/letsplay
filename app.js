@@ -91,6 +91,11 @@ App({
         level: "Beginner"
       },
     ]
+    // logInUser: function () {
+    //   this.setData({ loggedIn: true })
+    // },
+
+    
   }
 
 })

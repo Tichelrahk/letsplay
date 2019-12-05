@@ -53,6 +53,10 @@ Page({
         });
       },
     });
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      login: app.globalData.login
+    })
   },
 
   bindChange: function (e) {
@@ -75,6 +79,45 @@ Page({
       })
     }
   },
+
+  updateUser: function (e) {
+    const page = this
+    const userId = app.globalData.userId
+
+    const info = {
+      name: e.detail.userInfo.nickName,
+
+      profile_picture: e.detail.userInfo.avatarUrl,
+      location: e.detail.userInfo.city
+    }
+
+    wx.request({
+      url: app.globalData.url + `users/${userId}`,
+      method: "PUT",
+      data: info,
+      success(res) {
+        console.log(res)
+        console.log(`Updated user ${userId}`)
+
+
+        page.setData({ login: true })
+
+
+      }
+    })
+  },
+
+
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    app.globalData.login = true
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+    this.updateUser(e)
+  },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered
@@ -109,6 +152,8 @@ Page({
   onHide: function () {
 
   },
+
+
 
   /**
    * Lifecycle function--Called when page unload

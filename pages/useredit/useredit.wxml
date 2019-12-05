@@ -2,7 +2,7 @@
 <!-- <view class="modify-form"> -->
     <form bindsubmit="formSubmit" bindreset="formReset">
 
-<view wx:for="{{users}}" wx:for-item="user">
+<view>
 
         <view class="label-list label-lists">
             <view class="label">Profile Picture</view>

@@ -1,1 +1,4 @@
 /* pages/eventshow/eventshow.wxss */
+.joined{
+  background-color: green;
+}

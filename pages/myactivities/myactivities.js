@@ -32,6 +32,15 @@ Page({
     })
   },
 
+  goToEventsShow: function (event) {
+    console.log(20, event)
+    let id = event.currentTarget.dataset.id
+    console.log(21, id)
+    wx.navigateTo({
+      url: `/pages/eventshow/eventshow?id=${id}`,
+    })
+  },
+
   data: {
     winWidth: 0,
     winHeight: 0,
@@ -53,6 +62,10 @@ Page({
         });
       },
     });
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      login: app.globalData.login
+    })
   },
 
   bindChange: function (e) {
@@ -75,6 +88,45 @@ Page({
       })
     }
   },
+
+  updateUser: function (e) {
+    const page = this
+    const userId = app.globalData.userId
+
+    const info = {
+      name: e.detail.userInfo.nickName,
+
+      profile_picture: e.detail.userInfo.avatarUrl,
+      location: e.detail.userInfo.city
+    }
+
+    wx.request({
+      url: app.globalData.url + `users/${userId}`,
+      method: "PUT",
+      data: info,
+      success(res) {
+        console.log(res)
+        console.log(`Updated user ${userId}`)
+
+
+        page.setData({ login: true })
+
+
+      }
+    })
+  },
+
+
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    app.globalData.login = true
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+    this.updateUser(e)
+  },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered
@@ -109,6 +161,8 @@ Page({
   onHide: function () {
 
   },
+
+
 
   /**
    * Lifecycle function--Called when page unload

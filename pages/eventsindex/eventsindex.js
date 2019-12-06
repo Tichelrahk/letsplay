@@ -10,7 +10,7 @@ Page({
   },
 
   goToIndex: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/eventsindex/eventsindex',
     })
   },
@@ -28,13 +28,13 @@ Page({
   },
 
   goToCreate: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/createactivity/createactivity',
     })
   },
 
   goToProfile: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/usershow/usershow',
     })
   },

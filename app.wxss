@@ -216,3 +216,7 @@ background-color: rgba(0, 0, 0, 0.253);
   line-height: 50rpx;
   box-sizing: border-box; 
   }
+
+.log {
+  margin:20px;
+}

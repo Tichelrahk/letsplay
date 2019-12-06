@@ -43,7 +43,7 @@ Page({
     console.log(20, event)
     let id = event.currentTarget.dataset.id
     console.log(21, id)
-    wx.navigateTo({
+    wx.redirectTo({
       url: `/pages/eventshow/eventshow?id=${id}`,
     })
   },

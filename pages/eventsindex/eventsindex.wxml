@@ -2,7 +2,7 @@
   <view slot="content">Let's Play!</view>
 </cu-custom>
 
-<!-- White Background Start -->
+<!-- SEARCH BAR -->
 <view class="cu-bar search bg-white">
   <view class="search-form round">
     <view class="cuIcon-search"></view>
@@ -14,7 +14,7 @@
 </view>
 
 <!-- CARDS SECTION -->
-<view wx:for="{{events}}" wx:for-item="event">
+<view wx:for="{{events}}" wx:key wx:for-item="event">
   <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
 
 <!-- CARD TITLE -->
@@ -32,12 +32,10 @@
     <view class="cu-item">
       <view class="content flex padding-top padding-bottom">
         <image src="{{event.image}}" style="height: 200rpx; width: 200rpx;" class="rounded" mode="aspectFill"></image>
-        <view class="desc padding-left">
-          <view class="text-content"> 
-            <view>From: {{event.start}}</view>
-            <view>To: {{event.end}}</view>
-            <view>Location: {{event.location.address}}</view>
-          </view>
+        <view class="mc-content"> 
+          <view>Date: {{event.date}}</view>
+          <view>To: {{event.start}}-{{event.end}}</view>
+          <view>Location: {{event.location.address}}</view>
         </view>
       </view>
       <!-- <view class="favorites">
@@ -71,10 +69,15 @@
     <view class="cuIcon-search"></view> 
     Search
   </view>
-  <view class="action text-gray" bindtap="goToBrowse">
+  <!-- <view class="action text-gray" bindtap="goToBrowse">
     <view class="cuIcon-similar"></view> 
     Browse
+  </view> -->
+  <view class="action text-gray" bindtap="goToAbout">
+    <view class="cuIcon-info"></view> 
+    About
   </view>
+
   <view class="action text-gray add-action" bindtap="goToCreate">
     <view class="cu-btn cuIcon-add bg-green"></view>
     Create

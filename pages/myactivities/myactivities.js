@@ -14,6 +14,12 @@ Page({
     })
   },
 
+  goToAbout: function () {
+    wx.navigateTo({
+      url: '/pages/about/about',
+    })
+  },
+
   goToCreate: function () {
     wx.navigateTo({
       url: '/pages/createactivity/createactivity',
@@ -31,6 +37,7 @@ Page({
       url: '/pages/myactivities/myactivities',
     })
   },
+
 
   goToEventsShow: function (event) {
     console.log(20, event)

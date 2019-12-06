@@ -27,12 +27,12 @@
 <view class="bg-white space-3"></view>
 
 <!-- ACTIVITY SUMMARY CARD -->
-<view class="padding bg-white solid-bottom margin-top text-black">
+<!-- <view class="padding bg-white solid-bottom margin-top text-black">
   <view class='cuIcon-titles mc-title'>My Activity Summary</view> 
 </view>
 <view class="padding bg-white solid-bottom mc-content">Events Attended:</view>
 <view class="padding bg-white solid-bottom mc-content">Events Oranised:</view>  
-<view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>  
+<view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>   -->
 
 </view>
 <view wx:else>
@@ -51,15 +51,21 @@
 
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
+<view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
   <view class="action text-gray" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>
-  <view class="action text-gray" bindtap="goToBrowse">
+  <!-- <view class="action text-gray" bindtap="goToBrowse">
     <view class="cuIcon-similar"></view> 
     Browse
+  </view> -->
+  <view class="action text-gray" bindtap="goToAbout">
+    <view class="cuIcon-info"></view> 
+    About
   </view>
+
   <view class="action text-gray add-action" bindtap="goToCreate">
     <view class="cu-btn cuIcon-add bg-green"></view>
     Create

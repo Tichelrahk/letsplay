@@ -4,6 +4,7 @@
 </cu-custom>
 
 <view class="showbanner">
+
   <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
   <view class="text-white">{{event.name}}</view>
   <view class="favorites">
@@ -14,12 +15,23 @@
       <button bindtap="makeFavorites" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cuIcon-like lg text-red"></button>
     </view>
   </view>
+
+
+<!-- JOIN BUTTON -->
+<view wx:if="{{joined}}">
+  <button class="joined bg-gray text-white">Joined</button>
 </view>
+
+<view wx:else>
+  <button class="join bg-green" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
+</view>
+
+<!-- ATTENDEES SECTION -->
 
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class='cuIcon-titles mc-title'>Attendees</view> 
 </view>
-<view class="bg-white solid-bottom mc-content flex scroll align-center">
+
 
 <view wx:if="{{joined}}">
   <button class="joined" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Joined</button>
@@ -30,12 +42,24 @@
 </view>
  
     </view>
+
+<view class="bg-white solid-bottom mc-content flex scroll align-center">
+  <!-- <view class="flex align-center scroll">
+    <view>
+      Organiser:
+      <text class="text-bold">{{event.organizer.name}}</text>
+
+
+
     <view class="cu-avatar lg round margin-left" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);">
     </view>
 
     <view class="cu-avatar-group scroll">
-      <view class="cu-avatar round lg" wx:for="{{4}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
+      <view class="cu-avatar round lg" wx:for="{{4}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);">
+      </view>
     </view>
+
+  </view>
 
 
 
@@ -44,30 +68,26 @@
   <view class='cuIcon-titles mc-title'>Event Details</view> 
 </view>
 <view class="bg-white solid-bottom mc-content">
-  <view class="text-bold">{{event.description}}</view>
+  <view class="">{{event.description}}</view>
 </view>
 
 <view class="bg-white solid-bottom mc-content">
-  <view>Date: <text class="text-bold">{{event.start}}</text></view>
-  <view>Time: <text class="text-bold">{{event.end}}</text></view>
+  <view class="text-bold">{{event.date}}</view>
+  <view class="text-bold">{{event.start}}-{{event.end}}</view>
 </view>  
 
 
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class='cuIcon-titles mc-title'>Event Location</view> 
 </view>
-<map id="map" longitude="{{event.location.longitude}}" latitude="{{event.location.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
+<map id="map" longitude="{{event.location.longitude}}" latitude="{{event.location.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location style="width: 100%;"></map>
 <view class="bg-white space-3"></view>
 
 <view class="space-4"></view>
-
-<button class="join bg-green margin-top" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
-
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
-<view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
-  <view class="action text-gray" bindtap="goToIndex">
+  <view class="action {{isactive ? text-green : text-gray}}" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>

@@ -3,16 +3,28 @@
   background-color: green;
 }
 
+
 .favorites{
   display: block;
   float: right;
   margin-right: 70rpx;
 }
 
-.showbanner{
-  height: 582rpx;
-}
 
 button{
   background-color: transparent;
+
+.showbanner {
+  position: relative;
+  height: 300rpx;
+  width: 100vw;
+}
+
+.showtitle {
+  position: absolute;
+  bottom: 50rpx;
+  left: 35rpx;
+  font-size: 70rpx;
+  text-shadow: 1px 1px 20px rgba(0,0,0,1);
+
 }

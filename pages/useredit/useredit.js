@@ -21,20 +21,18 @@ Page({
   formSubmit: function (event) {
     const page = this
     const form = {}
-    console.log(event);
-    form.name = user.detail.value.name
-    form.bio = user.detail.value.description
+    console.log(2, event);
+    form.name = event.detail.value.name
+    form.bio = event.detail.value.bio
     form.image = event.detail.value.profile_picture
     form.user_id = app.globalData.userId
 
     wx.request({
-      url: app.globalData.url + `users?user_id=${app.globalData.userId}`,
-      method: 'GET',
+      url: app.globalData.url + `users/${app.globalData.userId}`,
+      method: 'PUT',
       data: form,
       success(res) {
-        this.setData({
-          user: res.data         
-        })
+          console.log(555, res)
       }
     });
   },

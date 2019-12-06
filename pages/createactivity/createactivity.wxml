@@ -2,10 +2,6 @@
   <view slot="content">Create</view>
 </cu-custom>
 
-
-
-<view>
-
 <view wx:if ="{{login}}">
 
 <!-- <form bindsubmit="formSubmit" class="form">

@@ -20,7 +20,7 @@
 
     <!-- CARDS SECTION -->
     <view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation">
-      <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
+      <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{confirmation.event.id}}">
 
     <!-- CARD TITLE -->
         <view class="cu-item">

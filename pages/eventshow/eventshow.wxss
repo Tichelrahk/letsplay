@@ -16,3 +16,7 @@
   font-size: 70rpx;
   text-shadow: 1px 1px 20px rgba(0,0,0,1);
 }
+
+.butt-size {
+  width: 50%;
+}

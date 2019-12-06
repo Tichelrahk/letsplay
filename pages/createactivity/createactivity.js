@@ -186,7 +186,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({options: options})
+    this.setData({options: options,
+      login: app.globalData.login})
   },
 
 

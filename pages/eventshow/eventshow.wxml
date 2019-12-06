@@ -10,11 +10,11 @@
 
 <!-- JOIN BUTTON -->
 <view wx:if="{{joined}}">
-  <button class="joined bg-gray text-white">Joined</button>
+  <button class="joined bg-gray text-white butt-size">Joined</button>
 </view>
 
 <view wx:else>
-  <button class="join bg-green" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
+  <button class="join bg-green butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
 </view>
 
 <!-- ATTENDEES SECTION -->

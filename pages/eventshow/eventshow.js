@@ -3,7 +3,7 @@
 let app = getApp()
 Page({
     data: {
-      liked: false,
+ 
   },
   toastWelcome: function () {
     wx.showToast({
@@ -78,22 +78,6 @@ Page({
         console.log(res)
         page.setData({joined: true})
         page.toastWelcome()
-      }
-    })
-  },
-
-  makeFavorites : function (){
-    const page = this
-    let event_id= page.data.event.id
-    const favorite = { event_id: event_id}
-    wx.request({
-      url: app.globalData.url + `favorites?user_id=${app.globalData.userId}`,
-      method: 'POST',
-      data: favorite,
-      success(res){
-        console.log(32, res)
-        page.setData({ liked: true })
-       
       }
     })
   },

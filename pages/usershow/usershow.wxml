@@ -40,7 +40,7 @@
 </view>
 
 
-<view class="btnedit">
+<view>
 <button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
   Edit my Profile
 </button>

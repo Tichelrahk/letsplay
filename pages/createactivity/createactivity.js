@@ -40,15 +40,70 @@ Page({
     })
   },
 
+  bindStartDateChange: function(event){
+    this.setData({st_date: event.detail.value})
+  },
+
+  bindStartTimeChange: function(event){
+    this.setData({ st_time: event.detail.value })
+  },
+
+  bindEndDateChange: function (event) {
+    this.setData({ end_date: event.detail.value })
+  },
+
+  bindEndTimeChange: function (event) {
+    this.setData({ end_time: event.detail.value })
+  },
+  
+  updateUser: function (e) {
+    const page = this
+    const userId = app.globalData.userId
+
+    const info = {
+      name: e.detail.userInfo.nickName,
+
+      profile_picture: e.detail.userInfo.avatarUrl,
+      location: e.detail.userInfo.city
+    }
+
+    wx.request({
+      url: app.globalData.url + `users/${userId}`,
+      method: "PUT",
+      data: info,
+      success(res) {
+        console.log(res)
+        console.log(`Updated user ${userId}`)
+
+
+        page.setData({ login: true })
+
+
+      }
+    })
+  },
+
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    app.globalData.login = true
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+    this.updateUser(e)
+  },
+
+
+
 
   /**
    * Page initial data
    */
 
   data: {
-    st_date: '2019-11-27',
+    st_date: '2019-12-01',
     st_time: '12:00',
-    end_date: '2019-12-30',
+    end_date: '2019-12-01',
     end_time: '13:00',
 
     // map data use, start from here
@@ -234,13 +289,13 @@ Page({
     //   }
     // });
   },
-  ViewImage(e) {
+  viewImage(e) {
     wx.previewImage({
       urls: this.data.imgList,
       current: e.currentTarget.dataset.url
     });
   },
-  DelImg(e) {
+  delImg(e) {
     wx.showModal({
       title: 'abc',
       content: 'are you sure to delete',

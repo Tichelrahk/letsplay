@@ -6,13 +6,9 @@
 
 <view wx:if ="{{login}}">
 
-  
-
- 
-
 <view class="swiper-tab bg-white">  
-      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">Attending</view>  
-      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">Organizing</view> 
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">Attending</view>  
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
 </view>  
 
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight  - 31}}px" bindchange="bindChange">  

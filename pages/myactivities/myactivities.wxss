@@ -9,8 +9,9 @@
     width: 33.33%;  
     color: #777777;  
 }  
-.on{ color: #da7c0c;  
-    border-bottom: 5rpx solid #da7c0c;}  
+.on{ color:red;  
+    border-bottom: 8rpx solid red;
+    }  
   
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
 .swiper-box view{  

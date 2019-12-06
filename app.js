@@ -6,7 +6,7 @@ const config = require('./keys')
 App({
 
   onLaunch: function () {
-    const url = 'http://localhost:3000/api/v1/'
+    const url = this.globalData.url
     console.log('beginning login')
 
     AV.init({
@@ -51,7 +51,8 @@ App({
   },
 
   globalData: {
-    url: "http://localhost:3000/api/v1/",
+    // url: "http://localhost:3000/api/v1/",
+    url: "https://letsplay.wogengapp.cn/api/v1/",
     userInfo: null,
     events: [
       {

@@ -61,7 +61,7 @@
   <view class='cuIcon-titles mc-title'>Event Location</view> 
   <view>{{event.location.address}}</view>
 </view>
-<map id="map" longitude="{{event.location.longitude}}" latitude="{{event.location.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" show-location style="width: 100%;"></map>
+<map id="map" longitude="{{event.location.longitude}}" latitude="{{event.location.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" show-location style="width: 100%;"></map>
 <view class="bg-white space-3"></view>
 
 <view class="space-4"></view>

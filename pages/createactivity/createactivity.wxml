@@ -3,7 +3,6 @@
 </cu-custom>
 
 
-<view class="header">Create My Activity</view>
 <view>
 
 <!-- <form bindsubmit="formSubmit" class="form">
@@ -25,7 +24,7 @@
 <form bindsubmit="formSubmit">
 	<view class="cu-form-group margin-top">
 		<view class="title">Activity Name</view>
-		<input placeholder="write a good activity name" name="name"></input>
+		<input placeholder="Write a good activity name" name="name"></input>
 	</view>
 
 	<!-- <view class="cu-form-group">

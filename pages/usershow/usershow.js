@@ -4,43 +4,43 @@ Page({
 
  
   goToIndex: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/eventsindex/eventsindex',
     })
   },
 
   goToBrowse: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/browse/browse',
     })
   },
 
   goToAbout: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/about/about',
     })
   },
 
   goToCreate: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/createactivity/createactivity',
     })
   },
 
   goToProfile: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/usershow/usershow',
     })
   },
 
   goToEdit: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/useredit/useredit',
     })
   },
 
   goToMyActivities: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/myactivities/myactivities',
     })
   },

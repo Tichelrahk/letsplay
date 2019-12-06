@@ -3,8 +3,57 @@
 let app = getApp()
 Page({
     data: {
- 
+
+      // markers: [{
+      //   iconPath: "https://image.flaticon.com/icons/svg/787/787535.svg",
+      //   id: 0,
+      //   latitude: event.location.latitude,
+      //   longitude: event.location.longitude,
+      //   width: 30,
+      //   height: 30
+      // }],
+
+    // polyline: [{
+    //   points: [{
+    //     longitude: event.location.longitude,
+    //     latitude: event.location.latitude
+    //   }, {
+    //       longitude: event.location.longitude,
+    //       latitude: event.location.latitude
+    //   }],
+    //   color: "#FF0000DD",
+    //   width: 2,
+    //   dottedLine: true
+    // }],
+
+
+    controls: [{
+      id: 1,
+      iconPath: '/images/pin.png',
+      position: {
+        left: 0,
+        top: 300 - 50,
+        width: 50,
+        height: 50
+      },
+      clickable: true
+    }]
+
   },
+
+  regionchange(e) {
+    console.log(e.type)
+  },
+
+  markertap(e) {
+    console.log(e.markerId)
+  },
+
+  controltap(e) {
+    console.log(e.controlId)
+  },
+
+
   toastWelcome: function () {
     wx.showToast({
       title: 'Joined!',
@@ -116,10 +165,18 @@ Page({
 
         console.log(res)
         const event = res.data.event
-
+        const markers = [{
+        iconPath: "/images/pin.png",
+        id: 0,
+        latitude: event.location.latitude,
+        longitude: event.location.longitude,
+        width: 30,
+        height: 30
+      }];
         // Update local data
         page.setData({
-          event: event
+          event: event,
+          markers
         });
 
         console.log(event)

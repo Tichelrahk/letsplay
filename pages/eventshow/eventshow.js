@@ -3,7 +3,6 @@
 let app = getApp()
 Page({
     data: {
-
       // markers: [{
       //   iconPath: "https://image.flaticon.com/icons/svg/787/787535.svg",
       //   id: 0,
@@ -130,7 +129,26 @@ Page({
       }
     })
   },
-
+  
+// < !--favorite button start--do not delete -->
+  toggleFavorites : function (){
+    const page = this
+    page.setData({liked: !page.data.liked})
+    let event_id = page.data.event.id
+    const favorite = { event_id: event_id }
+    const userId = parseInt(app.globalData.userId);
+    console.log('userId', userId)
+    wx.request({
+      url: app.globalData.url + `favorites?user_id=${userId}`,
+      method: 'POST',
+      data: favorite,
+      success(res){
+        console.log(32, res)
+       
+      }
+    })
+  },
+// < !--favorite button start--do not delete -->
   /**
    * Page initial data
 

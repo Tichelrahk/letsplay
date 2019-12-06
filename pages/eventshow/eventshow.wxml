@@ -4,9 +4,17 @@
 </cu-custom>
 
 <view class="showbanner">
+  <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
+  <view class="text-white">{{event.name}}</view>
+  <!-- favorite button start--do not delete -->
+  <view class="favorites">
+      <button bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like"></button>
+  </view>
+  <!-- favorite button end-- do not delete -->
 <image src="{{event.image}}" style="width:100%;" mode="aspectFill"></image>
 <view class="showtitle text-white">{{event.name}}</view>
 </view>
+
 
 <!-- JOIN BUTTON -->
 <view wx:if="{{joined}}">
@@ -24,9 +32,10 @@
 </view>
 
 <view class="bg-white solid-bottom mc-content flex scroll align-center">
+
   <!-- <view class="flex align-center scroll">
     <view>
-      Organiser:
+      Organizer:
       <text class="text-bold">{{event.organizer.name}}</text>
 
 <!-- <button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button> -->

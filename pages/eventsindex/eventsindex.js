@@ -16,13 +16,13 @@ Page({
   },
 
   goToBrowse: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/browse/browse',
     })
   },
 
   goToAbout: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/about/about',
     })
   },
@@ -40,7 +40,7 @@ Page({
   },
 
   goToMyActivities: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/myactivities/myactivities',
     })
   },

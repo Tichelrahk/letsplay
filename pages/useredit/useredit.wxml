@@ -1,25 +1,50 @@
 <!--pages/useredit/useredit.wxml-->
 <!-- <view class="modify-form"> -->
-    <form bindsubmit="formSubmit" bindreset="formReset">
 
-<view>
+<cu-custom bgColor="bg-black" isCustom="{{true}}">
+  <view slot="content">My Profile</view>
+</cu-custom>
 
-        <view class="label-list label-lists">
-            <view class="label">Profile Picture</view>
-            <image src="{{user.profile_picture}}" bindtap="uploadFn"></image>
-        </view>
-         <view class="label-list">
-            <view class="label">Nickname</view>
-            <input placeholder="Please input your nickname"  placeholder-class="place" name="name" value="{{user.name}}"/>
-        </view>
-
-         <view class="label-list">
-            <view class="label">Bio</view>
-            <input placeholder="Please Input your Bio" value='{{user.description}}' placeholder-class="place" name='bio'/>
-        </view>
-        <button form-type='submit' class="submit">Submit</button>
-        <button form-type="reset" class="reset">Reset</button>
+<view class="padding bg-white solid-bottom text-black">
+  <view class='cuIcon-titles mc-title'>Edit Basic Information</view> 
 </view>
 
-    </form>
-<!-- </view> -->
+ <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="bg-white flex padding">
+    <view class="cu-avatar xl round">
+        <view class="label">Profile Picture</view>
+        <image src="{{userInfo.avatarUrl}}" bindtap="uploadFn"></image>
+    </view>
+
+    <view class="padding-left text-black flex-grow">
+      <input placeholder="Change your profile picture"  placeholder-class="place"/>
+    </view>
+  </view>
+
+  <view class="bg-white flex padding">
+    <view class="padding-left text-black w-100">
+      <view class="label">Nickname</view>
+      <input placeholder="Please input your nickname"  placeholder-class="place" name="name" value="{{userInfo.nickName}}"/>
+    </view>
+  </view>
+
+  <view class="bg-white flex padding">
+    <view class="padding-left text-black w-100">
+      <view class="label">Bio</view>
+      <input placeholder="Please Input your Bio" value='{{user.user.description}}' placeholder-class="place" name='bio'/>
+    </view>
+  </view>
+</form>
+
+
+  <button form-type='submit' class="submit btn-cust">Submit</button>
+  <button form-type="reset" class="reset btn-cust">Reset</button>
+
+
+<!-- <view class="bg-white flex padding">
+  <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+  <view class="padding-left text-black">
+    <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
+    <view>Bio: {{user.user.description}}</view>
+  </view>
+</view> -->

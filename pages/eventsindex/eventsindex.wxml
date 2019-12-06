@@ -38,14 +38,6 @@
           <view>Location: {{event.location.address}}</view>
         </view>
       </view>
-      <!-- <view class="favorites">
-        <view wx:if="liked">
-          <view  class="cuIcon-likefill lg text-red"></view>
-        </view>
-        <view wx:else>
-          <view  class="cuIcon-like lg text-red"></view>
-        </view>
-      </view> -->
     </view>
 
 <!-- CARD TAGS -->

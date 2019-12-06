@@ -3,37 +3,37 @@ const app = getApp()
 Page({
 
   goToIndex: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/eventsindex/eventsindex',
     })
   },
 
   goToBrowse: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/browse/browse',
     })
   },
 
   goToAbout: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/about/about',
     })
   },
 
   goToCreate: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/createactivity/createactivity',
     })
   },
 
   goToProfile: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/usershow/usershow',
     })
   },
 
   goToMyActivities: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/myactivities/myactivities',
     })
   },
@@ -43,7 +43,7 @@ Page({
     console.log(20, event)
     let id = event.currentTarget.dataset.id
     console.log(21, id)
-    wx.navigateTo({
+    wx.redirectTo({
       url: `/pages/eventshow/eventshow?id=${id}`,
     })
   },

@@ -29,12 +29,20 @@
 .label-lists {
     justify-content: space-between;
 }
-.submit {
-    margin-top: 45rpx;
-    background-color: #ea3333;
-    color: #fff;
-}
+
 .radio-group label{
     padding-left: 30rpx;
     font-size: 36rpx;
+}
+
+.btn2{
+  margin:50%;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.w-100 {
+  width: 100%;
 }

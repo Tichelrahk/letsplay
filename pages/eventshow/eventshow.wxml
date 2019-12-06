@@ -4,8 +4,16 @@
 </cu-custom>
 
 <view class="showbanner">
-<image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
-<view class="text-white">{{event.name}}</view>
+  <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
+  <view class="text-white">{{event.name}}</view>
+  <view class="favorites">
+    <view wx:if="{{liked}}">
+      <button bindtap="makeFavorites"  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cuIcon-likefill lg text-red like"></button>
+    </view>
+    <view wx:else>
+      <button bindtap="makeFavorites" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cuIcon-like lg text-red"></button>
+    </view>
+  </view>
 </view>
 
 <view class="padding bg-white solid-bottom margin-top text-black">
@@ -13,12 +21,6 @@
 </view>
 <view class="bg-white solid-bottom mc-content flex scroll align-center">
 
-  <!-- <view class="flex align-center scroll">
-    <view>
-      Organiser:
-      <text class="text-bold">{{event.organizer.name}}</text>
-
-<!-- <button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button> -->
 <view wx:if="{{joined}}">
   <button class="joined" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Joined</button>
 </view>
@@ -26,7 +28,7 @@
 <view wx:else>
   <button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
 </view>
-
+ 
     </view>
     <view class="cu-avatar lg round margin-left" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);">
     </view>

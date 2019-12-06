@@ -2,3 +2,17 @@
 .joined{
   background-color: green;
 }
+
+.favorites{
+  display: block;
+  float: right;
+  margin-right: 70rpx;
+}
+
+.showbanner{
+  height: 582rpx;
+}
+
+button{
+  background-color: transparent;
+}

@@ -4,14 +4,14 @@
 </cu-custom>
 
 <view class="showbanner">
-  <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
-  <view class="text-white">{{event.name}}</view>
+  <!-- <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
+  <view class="text-white">{{event.name}}</view> -->
+<image src="{{event.image}}" style="width:100%;" mode="aspectFill"></image>
   <!-- favorite button start--do not delete -->
   <view class="favorites">
       <button bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like"></button>
   </view>
   <!-- favorite button end-- do not delete -->
-<image src="{{event.image}}" style="width:100%;" mode="aspectFill"></image>
 <view class="showtitle text-white">{{event.name}}</view>
 </view>
 

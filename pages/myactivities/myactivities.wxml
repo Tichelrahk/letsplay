@@ -88,7 +88,7 @@
 </swiper>  
 </view>
 <view wx:else>
-    <button class="log" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
+    <button class="log btn-cust" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
 </view>
 
 <!-- BOTTOM NAVBAR START -->

@@ -190,6 +190,7 @@ page{
   font-weight: heavy;
   transition: opacity 0.3s ease;
   margin-top: 20px;
+  width: 50%;
 }
 
 .btn-cust:hover{
@@ -217,6 +218,3 @@ background-color: rgba(0, 0, 0, 0.253);
   box-sizing: border-box; 
   }
 
-.log {
-  margin:20px;
-}

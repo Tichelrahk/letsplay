@@ -7,15 +7,11 @@
 
   <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
   <view class="text-white">{{event.name}}</view>
+  <!-- favorite button start--do not delete -->
   <view class="favorites">
-    <view wx:if="{{liked}}">
-      <button bindtap="makeFavorites"  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cuIcon-likefill lg text-red like"></button>
-    </view>
-    <view wx:else>
-      <button bindtap="makeFavorites" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="cuIcon-like lg text-red"></button>
-    </view>
+      <button bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like"></button>
   </view>
-
+  <!-- favorite button end-- do not delete -->
 
 <!-- JOIN BUTTON -->
 <view wx:if="{{joined}}">
@@ -43,7 +39,7 @@
  
     </view>
 
-<view class="bg-white solid-bottom mc-content flex scroll align-center">
+<!-- <view class="bg-white solid-bottom mc-content flex scroll align-center"> -->
   <!-- <view class="flex align-center scroll">
     <view>
       Organiser:

@@ -13,13 +13,13 @@
 
 button{
   background-color: transparent;
-
-.showbanner {
-  position: relative;
+}
+.showbanner{
+position: relative;
   height: 300rpx;
   width: 100vw;
 }
-
+ 
 .showtitle {
   position: absolute;
   bottom: 50rpx;

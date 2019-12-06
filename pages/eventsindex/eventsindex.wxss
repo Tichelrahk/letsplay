@@ -3,3 +3,7 @@
   border: solid black 1px;
   padding-left: 20rpx;
 }
+
+/* .favorites{
+  float: right;
+} */

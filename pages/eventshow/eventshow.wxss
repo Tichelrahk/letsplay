@@ -3,6 +3,17 @@
   background-color: green;
 }
 
+
+.favorites{
+  display: block;
+  float: right;
+  margin-right: 70rpx;
+}
+
+
+button{
+  background-color: transparent;
+
 .showbanner {
   position: relative;
   height: 300rpx;
@@ -15,4 +26,5 @@
   left: 35rpx;
   font-size: 70rpx;
   text-shadow: 1px 1px 20px rgba(0,0,0,1);
+
 }

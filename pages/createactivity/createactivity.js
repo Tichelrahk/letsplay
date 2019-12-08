@@ -243,6 +243,7 @@ Page({
   },
 
   chooseLocation: function () {
+    console.log("choosing location")
     const page = this
     wx.chooseLocation({
       success: function(res) {

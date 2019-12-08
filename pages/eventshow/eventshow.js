@@ -194,6 +194,7 @@ Page({
         // Update local data
         page.setData({
           event: event,
+          attendees: event.confirmations.length + 1,
           markers
         });
 

@@ -126,11 +126,13 @@ Page({
       data: join,
       success(res) {
         console.log(res)
-        page.setData({joined: true})
         page.toastWelcome()
+        page.onShow()
       }
     })
   },
+
+  
   
 // < !--favorite button start--do not delete -->
   toggleFavorites : function (){
@@ -146,7 +148,7 @@ Page({
       data: favorite,
       success(res){
         console.log(32, res)
-       
+       page.onShow()
       }
     })
   },
@@ -198,6 +200,7 @@ Page({
           event: event,
           attendees: event.confirmations.length + 1,
           joined: (event.joined || event.organized),
+          favorited: event.favorited,
           markers
         });
 

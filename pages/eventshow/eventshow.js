@@ -69,7 +69,9 @@ Page({
   },
 
    logInUser: function () {
-      this.setData({ loggedIn: true })
+      wx.setStorage({ 
+        key: "loggedIn",
+       value: "true" })
     },
 
 
@@ -125,11 +127,13 @@ Page({
       data: join,
       success(res) {
         console.log(res)
-        page.setData({joined: true})
         page.toastWelcome()
+        page.onShow()
       }
     })
   },
+
+  
   
 // < !--favorite button start--do not delete -->
   toggleFavorites : function (){
@@ -145,7 +149,7 @@ Page({
       data: favorite,
       success(res){
         console.log(32, res)
-       
+       page.onShow()
       }
     })
   },
@@ -179,7 +183,7 @@ Page({
     console.log(1, page.options)
 
     wx.request({
-      url: app.globalData.url+`events/${page.options.id}`,
+      url: app.globalData.url+`events/${page.options.id}?user_id=${app.globalData.userId}`,
       success(res) {
 
         console.log(res)
@@ -196,6 +200,8 @@ Page({
         page.setData({
           event: event,
           attendees: event.confirmations.length + 1,
+          joined: (event.joined || event.organized),
+          favorited: event.favorited,
           markers
         });
 

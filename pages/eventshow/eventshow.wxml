@@ -7,21 +7,17 @@
   <!-- <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
   <view class="text-white">{{event.name}}</view> -->
 <!-- <view style="width:100%; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url({{event.image}});" mode="aspectFill"></view> -->
-  <!-- favorite button start--do not delete -->
-
-
-  <!-- favorite button end-- do not delete -->
   <view style="padding-left: 40rpx;">
     <view class="showtitle text-white">{{event.name}}</view>
     <!-- JOIN BUTTON -->
     <view wx:if="{{joined}}">
-      <view class="joined bg-gray text-white butt-size">Joined</view>
+      <button  bindtap="deleteConfirmation" class="joined bg-gray text-red butt-size">Cancel</button>
     </view>
 
     <view wx:else>
       <view class="join bg-green butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</view>
     </view>
-    
+
 </view>
   <!-- <view bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view> -->
 
@@ -35,7 +31,7 @@
 <view class="padding bg-white solid-bottom margin-top text-black">
 
   <view class='cuIcon-titles mc-title'>Attendees <text>{{attendees}}</text></view> 
-  <view bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view>
+  <view bindtap="toggleFavorites" class="{{favorited ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view>
 
   
 

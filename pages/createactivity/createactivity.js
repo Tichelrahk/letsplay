@@ -76,17 +76,23 @@ Page({
         console.log(`Updated user ${userId}`)
 
 
-        page.setData({ login: true })
+        page.login
 
 
       }
     })
   },
 
+  logInUser: function () {
+    wx.setStorage({
+      key: "loggedIn",
+      data: "true"
+    })
+  },
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    app.globalData.login = true
     this.setData({
       userInfo: e.detail.userInfo
     })
@@ -158,6 +164,7 @@ Page({
     form.event = {}
     form.location = {}
     form.event.name = event.detail.value.name
+    form.event.description = event.detail.value.description
     form.event.start = `${event.detail.value.start_date} ${event.detail.value.start_time}`
     form.event.end = `${event.detail.value.end_date} ${event.detail.value.end_time}`
     form.location.address = page.data.location.address
@@ -186,8 +193,16 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({options: options,
-      login: app.globalData.login})
+    const page = this
+    wx.getStorage({
+      key: 'loggedIn',
+      success(res) {
+        page.setData({
+          userInfo: app.globalData.userInfo,
+          login: res
+        })
+      }
+    })
   },
 
 

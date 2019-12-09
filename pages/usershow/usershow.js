@@ -103,20 +103,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const page = this
-    wx.getStorage({
-      key: 'loggedIn',
-      success(res) {
-        page.setData({
-          userInfo: app.globalData.userInfo,
-          login: res
-        })
-      }
-    })
-    // this.setData({
-    //   userInfo: app.globalData.userInfo,
-    //   login: login
-    // })
+    
   },
 
   updateUser: function (e) {
@@ -180,6 +167,15 @@ Page({
    */
   onShow: function () {
     const page = this
+    wx.getStorage({
+      key: 'loggedIn',
+      success(res) {
+        page.setData({
+          userInfo: app.globalData.userInfo,
+          login: res
+        })
+      }
+    })
     wx.request({
       url: app.globalData.url + "users/" + `${app.globalData.userId}`,
       method: 'GET',

@@ -111,6 +111,7 @@ Page({
     st_time: '12:00',
     end_date: '2019-12-01',
     end_time: '13:00',
+    arr_of_tags: [ 'badminton', 'tennis', 'soccer', 'football', 'ultimate', 'running' ],
 
     // map data use, start from here
 

@@ -11,7 +11,7 @@
     <view class="showtitle text-white">{{event.name}}</view>
     <!-- JOIN BUTTON -->
     <view wx:if="{{joined}}">
-      <button  bindtap="deleteConfirmation" class="joined bg-gray text-red butt-size">Cancel</button>
+      <button  bindtap="deleteConfirmation" class="joined bg-white text-red butt-size">Cancel</button>
     </view>
 
     <view wx:else>

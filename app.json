@@ -8,8 +8,13 @@
     "pages/browse/browse",
     "s-ministrap/components/components",
     "pages/createactivity/createactivity",
-    "pages/useredit/useredit"
+    "pages/useredit/useredit",
+    "pages/activitynearby/activitynearby"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你"
+    }},
   "window": {
     "navigationStyle": "custom",
     "backgroundTextStyle": "light",

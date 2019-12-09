@@ -25,6 +25,10 @@
 		<view class="title">Activity Name</view>
 		<input placeholder="Write a good activity name" name="name"></input>
 	</view>
+  <view class="cu-form-group">
+  <view class="title">Activity Description</view>
+    <textarea placeholder="Write a good activity description" name="description"></textarea>
+  </view>
 
 	<!-- <view class="cu-form-group">
 		<view class="title">Input your phone number</view>

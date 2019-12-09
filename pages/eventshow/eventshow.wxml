@@ -9,19 +9,18 @@
 <!-- <view style="width:100%; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url({{event.image}});" mode="aspectFill"></view> -->
   <!-- favorite button start--do not delete -->
 
-
   <!-- favorite button end-- do not delete -->
   <view style="padding-left: 40rpx;">
     <view class="showtitle text-white">{{event.name}}</view>
     <!-- JOIN BUTTON -->
     <view wx:if="{{joined}}">
-      <view class="joined bg-gray text-white butt-size">Joined</view>
+      <button disabled="true" class="joined bg-gray text-dark butt-size">Joined</button>
     </view>
 
     <view wx:else>
       <view class="join bg-green butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</view>
     </view>
-    
+
 </view>
   <!-- <view bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view> -->
 

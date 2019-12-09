@@ -8,10 +8,8 @@
   <view class="text-white">{{event.name}}</view> -->
 <!-- <view style="width:100%; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url({{event.image}});" mode="aspectFill"></view> -->
   <!-- favorite button start--do not delete -->
-   
-  <!-- <view class="favorites">
-     
-  </view> -->
+
+
   <!-- favorite button end-- do not delete -->
   <view style="padding-left: 40rpx;">
     <view class="showtitle text-white">{{event.name}}</view>
@@ -35,8 +33,12 @@
 <!-- ATTENDEES SECTION -->
 
 <view class="padding bg-white solid-bottom margin-top text-black">
-  <view class='cuIcon-titles mc-title'>Attendees</view> 
+
+  <view class='cuIcon-titles mc-title'>Attendees <text>{{attendees}}</text></view> 
   <view bindtap="toggleFavorites" class="{{liked ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view>
+
+  
+
 </view>
 
 <view class="bg-white solid-bottom mc-content flex scroll align-center">
@@ -47,14 +49,15 @@
       <text class="text-bold">{{event.organizer.name}}</text>
 
 <!-- <button class="join" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button> -->
-
-    <view class="cu-avatar lg round margin-left" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);">
+    <view class="cu-avatar lg round margin-left" style="background-image:url({{event.organizer.profile_picture}});">
     </view>
 
+  <block>  
     <view class="cu-avatar-group scroll">
-      <view class="cu-avatar round lg" wx:for="{{4}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);">
+      <view class="cu-avatar round lg" wx:for="{{event.confirmations}}" wx:key style="background-image:url({{item.user.profile_picture}});">
       </view>
     </view>
+  </block>
 
   </view>
 

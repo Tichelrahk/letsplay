@@ -58,12 +58,12 @@ Page({
    */ 
   data: {
     markers: [{
-      iconPath: "https://image.flaticon.com/icons/svg/787/787535.svg",
+      iconPath: "/images/pin.png",
       id: 0,
       latitude: 31.2235,
       longitude: 121.4453,
-      width: 30,
-      height: 30
+      width: 25,
+      height: 25
     }],
     polyline: [{
       points: [{

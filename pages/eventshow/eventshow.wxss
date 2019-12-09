@@ -1,33 +1,41 @@
 /* pages/eventshow/eventshow.wxss */
 .joined{
-  background-color: green;
+  background-color:gray;
 }
 
 .favorites{
   display: block;
-  float: right;
   margin-right: 70rpx;
+  position: absolute;
+  bottom: 23px;
+  right: -10px;
+  font-size: 26px;
 }
+
 
 
 button{
   background-color: transparent;
+ 
 }
 
 .showbanner {
   position: relative;
-  height: 300rpx;
+  height: 400rpx;
   width: 100vw;
 }
  
 .showtitle {
-  position: absolute;
+  /* position: absolute;
   bottom: 50rpx;
-  left: 35rpx;
+  left: 35rpx; */
   font-size: 70rpx;
   text-shadow: 1px 1px 20px rgba(0,0,0,1);
 }
 
 .butt-size {
-  width: 50%;
+  text-align: center;
+  border-radius: 8rpx;
+  padding: 8rpx 16rpx;
+
 }

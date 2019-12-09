@@ -10,7 +10,7 @@ Page({
 
   goToBrowse: function () {
     wx.redirectTo({
-      url: '/pages/browse/browse',
+      url: '/pages/activitynearby/activitynearby',
     })
   },
 

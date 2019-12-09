@@ -69,9 +69,14 @@ Page({
         });
       },
     });
-    this.setData({
-      userInfo: app.globalData.userInfo,
-      login: app.globalData.login
+    wx.getStorage({
+      key: 'loggedIn',
+      success(res) {
+        that.setData({
+          userInfo: app.globalData.userInfo,
+          login: res
+        })
+      }
     })
   },
 

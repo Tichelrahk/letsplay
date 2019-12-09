@@ -103,10 +103,20 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo: app.globalData.userInfo,
-      login: app.globalData.login
+    const page = this
+    wx.getStorage({
+      key: 'loggedIn',
+      success(res) {
+        page.setData({
+          userInfo: app.globalData.userInfo,
+          login: res
+        })
+      }
     })
+    // this.setData({
+    //   userInfo: app.globalData.userInfo,
+    //   login: login
+    // })
   },
 
   updateUser: function (e) {
@@ -136,16 +146,23 @@ Page({
     })
   },
 
+  logInUser: function () {
+    wx.setStorage({
+      key: "loggedIn",
+      data: "true"
+    })
+  },
 
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    app.globalData.login = true
+    this.logInUser()
     this.setData({
       userInfo: e.detail.userInfo
     })
     this.updateUser(e)
   },
+
 
  
 
@@ -164,16 +181,15 @@ Page({
   onShow: function () {
     const page = this
     wx.request({
-      url: app.globalData.url + "users/" + `${"1"}`,
+      url: app.globalData.url + "users/" + `${app.globalData.userId}`,
       method: 'GET',
       success(res) {
         console.log(11, res)
-        const user = res.data
-        // page.setData({events})
+        const user = res.data.user
         page.setData({
           user: user
         });
-        console.log(10, user)
+        // console.log(10, user)
       }
     })
   },

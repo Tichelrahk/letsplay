@@ -76,17 +76,23 @@ Page({
         console.log(`Updated user ${userId}`)
 
 
-        page.setData({ login: true })
+        page.login
 
 
       }
     })
   },
 
+  logInUser: function () {
+    wx.setStorage({
+      key: "loggedIn",
+      data: "true"
+    })
+  },
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    app.globalData.login = true
     this.setData({
       userInfo: e.detail.userInfo
     })
@@ -186,8 +192,16 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({options: options,
-      login: app.globalData.login})
+    const page = this
+    wx.getStorage({
+      key: 'loggedIn',
+      success(res) {
+        page.setData({
+          userInfo: app.globalData.userInfo,
+          login: res
+        })
+      }
+    })
   },
 
 

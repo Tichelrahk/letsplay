@@ -11,10 +11,10 @@
 </view>
 
 <view class="bg-white flex padding">
-  <view class="cu-avatar xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+  <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
   <view class="padding-left text-black">
-    <view>Name: <text class="text-bold">{{userInfo.nickName}}</text></view>
-    <view>Bio: {{user.user.description}}</view>
+    <view>Name: <text class="text-bold">{{user.name}}</text></view>
+    <view>Bio: {{user.description}}</view>
   </view>
 </view>
 

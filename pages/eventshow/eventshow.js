@@ -69,7 +69,9 @@ Page({
   },
 
    logInUser: function () {
-      this.setData({ loggedIn: true })
+      wx.setStorage({ 
+        key: "loggedIn",
+       value: "true" })
     },
 
 

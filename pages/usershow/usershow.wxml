@@ -2,7 +2,7 @@
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
   <view slot="content">My Profile</view>
 </cu-custom>
- 
+  
 <view wx:if ="{{login}}">
 
 <!-- BASIC INFORMATION CARD -->
@@ -11,11 +11,14 @@
 </view>
 
 <view class="bg-white flex padding">
+<view class="info_profile">
   <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
   <view class="padding-left text-black">
     <view>Name: <text class="text-bold">{{user.name}}</text></view>
     <view>Bio: {{user.description}}</view>
   </view>
+</view>
+  <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view>
 </view>
 
 
@@ -34,17 +37,24 @@
 <view class="padding bg-white solid-bottom mc-content">Events Oranised:</view>  
 <view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>   -->
 
+<view class="padding bg-white solid-bottom margin-top text-black">
+  <view class='cuIcon-titles mc-title'>My Likes</view> 
+</view>
+
+<view class="bg-white space-3"></view>
+
 </view>
 <view wx:else>
     <button class="log btn-cust" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
 </view>
 
 
-<view>
-<button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
+<!-- <view> -->
+<!-- <button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
   Edit my Profile
-</button>
-</view>
+</button> -->
+<!-- <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view> -->
+<!-- </view> -->
 
 
 <!-- BOTTOM NAVBAR START -->

@@ -4,34 +4,37 @@
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
   <view slot="content">My Profile</view>
 </cu-custom>
-
+ 
 <view class="padding bg-white solid-bottom text-black">
   <view class='cuIcon-titles mc-title'>Edit Basic Information</view> 
 </view>
 
- <form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="bg-white flex padding">
-    <view class="cu-avatar xl round">
+ <form bindsubmit="formSubmit" class="center" bindreset="formReset">
+  <view class="bg-white flex padding center">
+    <!-- <view class="cu-avatar xl round">
         <view class="label">Profile Picture</view>
         <image src="{{userInfo.avatarUrl}}" bindtap="uploadFn"></image>
-    </view>
+    </view> -->
+    
+    <view class="cu-avatar xl round " style="background-image:url({{user.profile_picture}});"></view>
+    <view class="cuIcon-add add"></view>
 
-    <view class="padding-left text-black flex-grow">
+    <!-- <view class="padding-left text-black flex-grow">
       <input placeholder="Change your profile picture"  placeholder-class="place"/>
-    </view>
+    </view> -->
   </view>
 
   <view class="bg-white flex padding">
     <view class="padding-left text-black w-100">
-      <view class="label">Nickname</view>
-      <input placeholder="Please input your nickname"  placeholder-class="place" name="name" value="{{userInfo.nickName}}"/>
+      <view class="label">Name</view>
+      <input placeholder="{{user.name}}"  placeholder-class="place" name="name" value="{{userInfo.nickName}}"/>
     </view>
   </view>
 
   <view class="bg-white flex padding">
     <view class="padding-left text-black w-100">
       <view class="label">Bio</view>
-      <input placeholder="Please Input your Bio" value='{{user.user.description}}' placeholder-class="place" name='bio'/>
+      <input placeholder="{{user.description}}" value='{{user.user.description}}' placeholder-class="place" name='bio'/>
     </view>
   </view>
 </form>

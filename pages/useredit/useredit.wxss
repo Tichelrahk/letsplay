@@ -46,3 +46,20 @@
 .w-100 {
   width: 100%;
 }
+
+.add{
+font-size: 25px;
+position: absolute;
+left: 195px;
+color: rgb(43, 43, 43);
+/* top: -49px; */
+top: 162px;
+}
+
+.cu-avatar{
+  opacity: .6;
+}
+
+.center{
+  justify-content: center;
+}

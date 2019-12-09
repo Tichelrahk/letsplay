@@ -8,7 +8,7 @@ Page({
       url: '/pages/eventsindex/eventsindex',
     })
   },
-
+ 
   goToBrowse: function () {
     wx.redirectTo({
       url: '/pages/browse/browse',
@@ -140,7 +140,7 @@ Page({
 
        
           page.setData({ login: true })
-        
+          page.onShow()
 
       }
     })

@@ -3,3 +3,16 @@
   margin:10px;
   padding:10px;
 }
+
+.edit{
+  font-size: 21px;
+}
+
+.info_profile{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex{
+  justify-content: space-between;
+}

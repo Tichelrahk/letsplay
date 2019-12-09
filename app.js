@@ -1,6 +1,7 @@
 //app.js
 const AV = require('./utils/av-weapp-min.js')
 const config = require('./keys')
+
 // Initialization of the app
 
 App({
@@ -53,6 +54,8 @@ App({
   globalData: {
     url: "http://localhost:3000/api/v1/",
     // url: "https://letsplay.wogengapp.cn/api/v1/",
+
+  
     userInfo: "",
     // events: [
     //   {
@@ -92,6 +95,7 @@ App({
     //     level: "Beginner"
     //   },
     // ]
+
     // logInUser: function () {
     //   this.setData({ loggedIn: true })
     // },

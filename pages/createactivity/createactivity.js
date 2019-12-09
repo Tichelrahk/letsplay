@@ -164,6 +164,7 @@ Page({
     form.event = {}
     form.location = {}
     form.event.name = event.detail.value.name
+    form.event.description = event.detail.value.description
     form.event.start = `${event.detail.value.start_date} ${event.detail.value.start_time}`
     form.event.end = `${event.detail.value.end_date} ${event.detail.value.end_time}`
     form.location.address = page.data.location.address

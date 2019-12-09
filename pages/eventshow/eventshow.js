@@ -180,7 +180,7 @@ Page({
     console.log(1, page.options)
 
     wx.request({
-      url: app.globalData.url+`events/${page.options.id}`,
+      url: app.globalData.url+`events/${page.options.id}?user_id=${app.globalData.userId}`,
       success(res) {
 
         console.log(res)
@@ -197,6 +197,7 @@ Page({
         page.setData({
           event: event,
           attendees: event.confirmations.length + 1,
+          joined: (event.joined || event.organized),
           markers
         });
 

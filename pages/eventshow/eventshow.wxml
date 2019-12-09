@@ -18,7 +18,7 @@
 
 <!-- JOIN BUTTON -->
 <view wx:if="{{joined}}">
-  <button class="joined bg-gray text-white butt-size">Joined</button>
+  <button disabled="true" class="joined bg-gray text-dark butt-size">Joined</button>
 </view>
 
 <view wx:else>

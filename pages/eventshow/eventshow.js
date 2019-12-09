@@ -133,7 +133,16 @@ Page({
     })
   },
 
-  
+  deleteConfirmation: function () {
+    const page = this
+    wx.request({
+      url: app.globalData.url + `events/${page.data.event.id}/confirmations?user_id=${app.globalData.userId}`,
+      method: 'DELETE',
+      success(res){
+        page.onShow()
+      }
+    })
+  },
   
 // < !--favorite button start--do not delete -->
   toggleFavorites : function (){

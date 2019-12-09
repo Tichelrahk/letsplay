@@ -3,7 +3,7 @@ const AV = require('../../utils/av-weapp-min.js')
 const config = require('../../keys')
 // pages/useredit/useredit.js
 Page({
-
+ 
   /**
    * Page initial data
    */
@@ -48,6 +48,15 @@ Page({
    */
   onReady: function () {
 
+  },
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.logInUser()
+    this.setData({
+      userInfo: e.detail.userInfo
+    })
+    this.updateUser(e)
   },
 
   /**

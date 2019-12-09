@@ -6,7 +6,40 @@ Page({
    * Page initial data
    */
   data: {
- 
+    cardCur: 0,
+    swiperList: [{
+      id: 0,
+      type: 'image',
+      url: '/images/swiper1.jpeg'
+    }, {
+      id: 1,
+      type: 'image',
+      url: '/images/8.jpg',
+    }, {
+      id: 2,
+      type: 'image',
+      url: '/images/3.jpeg'
+    }, {
+      id: 3,
+      type: 'image',
+      url: '/images/4.jpeg'
+    }, {
+      id: 4,
+        type: 'image',
+      url: '/images/5.jpeg'
+    }, {
+      id: 5,
+      type: 'image',
+      url: '/images/6.jpeg'
+    }, {
+      id: 6,
+      type: 'image',
+      url: '/images/7.jpeg'
+    }],
+  },
+  onLoad() {
+    this.towerSwiper('swiperList');
+    // 初始化towerSwiper 传已有的数组名即可
   },
 
   goToIndex: function () {
@@ -17,13 +50,13 @@ Page({
 
   goToBrowse: function () {
     wx.redirectTo({
-      url: '/pages/browse/browse',
+      url: '/pages/activitynearby/activitynearby',
     })
   },
 
   goToAbout: function () {
     wx.redirectTo({
-      url: '/pages/about/about',
+      url: '/pages/activitynearby/activitynearby',
     })
   },
 
@@ -79,6 +112,18 @@ Page({
    */
   onLoad: function (options) {
     
+  },
+
+  DotStyle(e) {
+    this.setData({
+      DotStyle: e.detail.value
+    })
+  },
+
+  cardSwiper(e) {
+    this.setData({
+      cardCur: e.detail.current
+    })
   },
   /**
    * Lifecycle function--Called when page is initially rendered

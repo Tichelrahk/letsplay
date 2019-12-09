@@ -167,13 +167,13 @@ Page({
 
   goToBrowse: function () {
     wx.navigateTo({
-      url: '/pages/browse/browse',
+      url: '/pages/activitynearby/activitynearby',
     })
   },
 
   goToAbout: function () {
     wx.navigateTo({
-      url: '/pages/about/about',
+      url: '/pages/activitynearby/activitynearby',
     })
   },
 

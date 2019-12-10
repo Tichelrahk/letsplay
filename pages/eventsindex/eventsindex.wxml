@@ -31,7 +31,7 @@
 <!-- CARD TITLE -->
     <view class="item">
       <view class="flex">
-        <view class="cuIcon-activity text-green"></view>
+        <view class="cuIcon-activity bluev1"></view>
         <view class="text-bold text-cut padding-left">{{event.name}}</view>
       </view>
       <view class="action">

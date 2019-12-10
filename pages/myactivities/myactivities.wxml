@@ -3,7 +3,9 @@
   <view slot="content">My Activities</view>
 </cu-custom>
 
+
 <view wx:if ="{{login}}">
+
 
 <view class="swiper-tab bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">Attending</view>  
@@ -25,7 +27,7 @@
     <view class="cu-item">
     <view>{{confirmaion.start}}</view>
           <view class="flex">
-            <view class="cuIcon-activity text-green"></view>
+            <view class="cuIcon-activity bluev1"></view>
             <view class="text-bold text-cut padding-left">
             {{confirmation.event.name}}           
             </view>
@@ -78,7 +80,7 @@
     <!-- CARD TITLE -->
         <view class="cu-item">
           <view class="flex">
-            <view class="cuIcon-activity text-green"></view>
+            <view class="cuIcon-activity bluev1"></view>
             <view class="text-bold text-cut padding-left">
             {{event.name}}           
             </view>
@@ -122,7 +124,20 @@
 
 </view>
 <view wx:else>
-    <button class="log btn-cust" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
+<view>
+<view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.jpg');height: 100vh;">
+  <view class="padding-xl text-white loginp">
+    <view class="padding-xs text-xl login-font">
+      Lets Play
+    </view>
+    <view class="padding-xs">
+      Fun activities with your friends
+    </view>
+  </view>
+  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join Our Community</button>
+</view>
+    
+</view>
 </view>
 
 <!-- BOTTOM NAVBAR START -->

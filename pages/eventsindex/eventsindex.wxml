@@ -43,7 +43,7 @@
 <!-- CARD INFO -->
 
 
-    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url({{event.image}}); background-size: cover">
+    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{event.image}}); background-size: cover">
       <view class="item">
         <view class="flex">
           <view class="cuIcon-activity text-flag flag"></view>
@@ -81,6 +81,7 @@
           <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
         </view>
       </view>
+      <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
       <view class=" cuIcon-right"></view>
     </view>
   </view>
@@ -102,9 +103,9 @@
     <view class="cuIcon-info"></view> 
     About
   </view>
-
+ 
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <view class="cu-btn cuIcon-add bg-red"></view>
+    <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">

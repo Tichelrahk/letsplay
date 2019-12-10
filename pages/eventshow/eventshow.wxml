@@ -2,7 +2,7 @@
 <cu-custom bgColor="bg-black" isCustom="{{true}}">
   <view slot="content">Let's Play!</view>
 </cu-custom>
-
+ 
 <view class="showbanner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url({{event.image}}); background-size: cover; display:flex; align-items: center">
   <!-- <image src="{{event.image}}" style="height: 400rpx;" mode="aspectFill"></image>
   <view class="text-white">{{event.name}}</view> -->
@@ -13,9 +13,9 @@
     <view wx:if="{{joined}}">
       <button class="bg-cancelgrey butt-size" bindtap="deleteConfirmation">Cancel</button>
     </view>
-
+ 
     <view wx:else>
-      <button class="bg-green butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
+      <button class="bg_brand butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
     </view>
 
 </view>
@@ -93,7 +93,7 @@
     Browse
   </view>
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <view class="cu-btn cuIcon-add bg-green"></view>
+    <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">

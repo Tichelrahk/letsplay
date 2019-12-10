@@ -11,9 +11,11 @@
     <view class="showtitle text-white">{{event.name}}</view>
     <!-- JOIN BUTTON -->
     <view wx:if="{{joined}}">
-      <button class="bg-cancelgrey butt-size" bindtap="deleteConfirmation">Cancel</button>
+      <button class="bg-cancelred butt-size" bindtap="deleteConfirmation">Cancel</button>
     </view>
- 
+
+    <view wx:elif="{{full}}"><button disabled="true" class="butt-size">Full</button></view>
+
     <view wx:else>
       <button class="bg_brand butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
     </view>

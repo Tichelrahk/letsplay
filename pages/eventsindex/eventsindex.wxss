@@ -53,10 +53,10 @@
 }
 
 .btn_red{
-  background-color: rgb(180, 3, 3);
+  background-color: #1e8bff;
   color: var(--white);
-  padding: 7px;
-  border-radius: 11px;
+  padding: 5px;
+  border-radius: 17px;
   width: 74px;
   text-align: center;
 }
@@ -100,6 +100,7 @@ bg_red{
   white-space: nowrap;
   overflow: hidden;
   font-size: 19px;
+  text-shadow: 1px 1px 20px rgba(0,0,0,1);
 }
 
 .text-scope{
@@ -131,3 +132,4 @@ bg_red{
 .set_width{
   width: 289px;
 }
+

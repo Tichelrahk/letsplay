@@ -3,3 +3,24 @@
   border: solid black 1px;
   padding-left: 20rpx;
 }
+
+.card-img-big {
+  width: 100%;
+  height: 200rpx;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.card {
+  color: white;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+}

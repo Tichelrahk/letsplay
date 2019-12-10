@@ -46,7 +46,7 @@ button{
   flex-grow: 0 !important;
 }
 
-.bg-cancelgrey {
+.bg-cancelred {
   background: #dc3545;
   color: white;
   /* border: 1px solid #dc3545; */

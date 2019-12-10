@@ -134,7 +134,17 @@
 
 </view>
  <view wx:else>
-  <button class="log btn-cust" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>
+  <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.jpg');height: 100vh;">
+  <view class="padding-xl text-white loginp">
+    <view class="padding-xs text-xl login-font">
+      Lets Play
+    </view>
+    <view class="padding-xs">
+      Fun activities with your friends
+    </view>
+  </view>
+  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join Our Community</button>
+</view>
 </view>
 
 

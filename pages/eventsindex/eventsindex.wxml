@@ -6,7 +6,7 @@
 <view >
 <text class="play">Let's Play</text>
 <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
-  <swiper-item wx:for="{{swiperList}}" wx:key style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url({{item.url}}); background-size: cover; display:flex; align-items: center" mode="aspectFill">
+  <swiper-item wx:for="{{swiperList}}" wx:key style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url({{item.url}}); background-size: cover; display:flex; align-items: center" mode="aspectFill">
   
   </swiper-item>
 </swiper>
@@ -14,7 +14,7 @@
 
 <!-- Swiper card ends -->
 <!-- SEARCH BAR -->
-<view class="cu-bar search dark">
+<view class="cu-bar dark lighter">
   <view class="search-form round">
     <view class="cuIcon-search"></view>
     <input type="text" placeholder="Search for a name, sport or location" confirm-type="search" bindinput="searchAPICall"></input>
@@ -26,10 +26,10 @@
 
 <!-- CARDS SECTION -->
 <view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
-  <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
+  <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
 
 <!-- CARD TITLE -->
-    <view class="item">
+    <!-- <view class="item">
       <view class="flex">
         <view class="cuIcon-activity text-green"></view>
         <view class="text-bold text-cut padding-left">{{event.name}}</view>
@@ -38,31 +38,50 @@
         <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
       </view>
     </view>
+    {{event.image}} -->
 
 <!-- CARD INFO -->
 
-    <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{event.image}}); background-size: cover">
+
+    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url({{event.image}}); background-size: cover">
+      <view class="item">
+        <view class="flex">
+          <view class="cuIcon-activity text-green flag"></view>
+            <view class="text-head set_width">
+              {{event.name}}
+            </view>
+        </view>
+        <view class="action scope-info">
+          <view class="cuIcon-friend people"></view>
+          <view class=" text-scope">{{event.attendees}}/{{event.slots}}</view>  
+        </view>
+      </view>
 
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
-          <view>
+          <!-- <view>
             <view>{{event.date}}</view>
             <view>{{event.start}}-{{event.end}}</view>
           </view>
-          <view class="cu-item">Location: {{event.location.address}}</view>
+          <view class="cu-item">Location: {{event.location.address}}</view> -->
         </view>
       </view>
     </view>
 
 <!-- CARD TAGS -->
-    <view class="item tags">
+    <view class="item-down tags">
       <view class="content">
+        <view>
+          <view class="info">{{event.date}}</view>
+          <view class="info">{{event.start}}-{{event.end}}</view>
+        </view>
+          <view class="info">Location: {{event.location.address}}</view>
         <view>
           <view class="cu-tag bg-red light round">Jing An District</view>
           <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
         </view>
       </view>
-      <view class="action cuIcon-right"></view>
+      <view class=" cuIcon-right"></view>
     </view>
   </view>
 </view>

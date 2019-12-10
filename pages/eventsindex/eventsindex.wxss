@@ -16,7 +16,8 @@
 }
 
 .dark{
-  background-color: black;
+  background-color: white;
+  box-shadow: 0px 1px 8px rgb(177, 176, 176);
 }
 
 /* .gray_dark{
@@ -27,12 +28,25 @@
   color: white;
 } */
 
+.item-down{
+ position: relative;
+  display: flex;
+  padding: 0 30rpx 10rpx 50rpx;
+  min-height: 100rpx;
+  background-color: rgb(252, 252, 252);
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  height: 127px;
+  box-shadow: 0px 1px 8px rgb(177, 176, 176);
+}
+
 .item{
  position: relative;
   display: flex;
-  padding: 0 30rpx;
+  padding: 0 20rpx;
   min-height: 100rpx;
-  background-color: rgb(44, 44, 44);
+  background-color: rgba(65, 64, 64, 0.171);
   justify-content: space-between;
   align-items: center;
   color: white;
@@ -53,7 +67,7 @@ bg_red{
 
   /* border: 1px solid black; */
   /* font-family: 'Satisfy', cursive; */
- }
+ /* } */
 
 .card-img-big {
   width: 100%;
@@ -75,3 +89,48 @@ bg_red{
   flex-direction: column;
   align-content: left;
  }
+
+.card-info{
+  overflow: hidden;
+  height: 250px;
+  margin-top: 21px;
+}
+
+.text-head{
+  font-weight: bold;
+  padding-left: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 19px;
+}
+
+.text-scope{
+  font-size: 15px;
+}
+
+.info{
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.flag{
+  font-size: 19px;
+}
+
+.ligher{
+  font-weight: lighter;
+}
+
+.people{
+  font-size: 17px;
+}
+
+.scope-info{
+  display: flex;
+  align-items: center;
+}
+
+.set_width{
+  width: 289px;
+}

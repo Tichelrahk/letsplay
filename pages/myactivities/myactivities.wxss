@@ -51,3 +51,26 @@
   flex-direction: column;
   align-content: left;
  }
+
+.head {
+  position: absolute;
+  z-index: 1;
+  top: 129px;
+  left: 132px;
+  color: whitesmoke;
+  font-size: 41px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.btn-login {
+  justify-content: center;
+  align-items: center;
+}
+
+.position {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+  

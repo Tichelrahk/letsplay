@@ -93,8 +93,9 @@ Page({
               bgColor: "#ffc55c",
               borderWidth: 1,
               textAlign: "center",
-              color: "#ee4540",
+              color: "black",
               borderColor:"#ffc55c"
+        
             
             }
 

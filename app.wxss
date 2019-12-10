@@ -3,6 +3,10 @@
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
 
+.bluev1 {
+  color: #1E8BFF;
+}
+
 .scroll {
   overflow: scroll !important;
 }
@@ -186,7 +190,7 @@ page{
 }
 
 .btn-cust{
-  color:black;
+  color:#2f85a6;
   border: 1px solid ;
   border-radius:10px;
   font-weight: heavy;
@@ -224,3 +228,36 @@ background-color: rgba(0, 0, 0, 0.253);
   background-color: #1e8bff;
   color: white;
 }
+
+.login-font {
+  position: absolute;
+  z-index: 1;
+  top: 129px;
+  left: 132px;
+  color: whitesmoke;
+  font-size: 41px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.btn-login {
+  justify-content: center;
+  align-items: center;
+}
+
+.position {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.loginp {
+  color: white;
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 45rpx;
+  font-weight: 600;
+  width: 100%;
+  line-height: 50rpx;
+  box-sizing: border-box; 
+  font-family: 'Kaushan Script', cursive;
+  }

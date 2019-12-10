@@ -14,7 +14,7 @@ Page({
     }, {
       id: 1,
       type: 'image',
-      url: '/images/8.jpg',
+      url: '/images/2.jpeg',
     }, {
       id: 2,
       type: 'image',
@@ -23,19 +23,7 @@ Page({
       id: 3,
       type: 'image',
       url: '/images/4.jpeg'
-    }, {
-      id: 4,
-        type: 'image',
-      url: '/images/5.jpeg'
-    }, {
-      id: 5,
-      type: 'image',
-      url: '/images/6.jpeg'
-    }, {
-      id: 6,
-      type: 'image',
-      url: '/images/7.jpeg'
-    }],
+    }], 
   },
   onLoad() {
     this.towerSwiper('swiperList');

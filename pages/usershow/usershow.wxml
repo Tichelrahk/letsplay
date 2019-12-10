@@ -15,10 +15,10 @@
   <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
   <view class="padding-left text-black">
     <view>Name: <text class="text-bold">{{user.name}}</text></view>
-    <view>Bio: {{user.description}}</view>
+    <view wx:if="{{user.description}}">Bio: {{user.description}}</view>
   </view>
 </view>
-  <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view>
+  <!-- <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view> -->
 </view>
 
 

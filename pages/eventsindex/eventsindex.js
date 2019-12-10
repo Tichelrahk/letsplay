@@ -1,7 +1,7 @@
 const app = getApp()
 // pages/eventsindex/eventsindex.js
 Page({
-
+ 
   /**
    * Page initial data
    */

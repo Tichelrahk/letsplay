@@ -3,3 +3,13 @@
   border: solid black 1px;
   padding-left: 20rpx;
 }
+
+.play{
+  position: absolute;
+  z-index: 1;
+  top: 206px;
+  left: 176px;
+  color: whitesmoke;
+  /* border: 1px solid black; */
+  /* font-family: 'Satisfy', cursive; */
+}

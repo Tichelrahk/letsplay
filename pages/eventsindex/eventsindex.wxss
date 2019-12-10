@@ -7,9 +7,45 @@
 .play{
   position: absolute;
   z-index: 1;
-  top: 206px;
-  left: 176px;
+  top: 129px;
+  left: 132px;
   color: whitesmoke;
-  /* border: 1px solid black; */
-  /* font-family: 'Satisfy', cursive; */
+  font-size: 41px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.dark{
+  background-color: black;
+}
+
+/* .gray_dark{
+  background-color: rgb(66, 66, 66);
+}
+
+.text_white{
+  color: white;
+} */
+
+.item{
+ position: relative;
+  display: flex;
+  padding: 0 30rpx;
+  min-height: 100rpx;
+  background-color: rgb(44, 44, 44);
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.btn_red{
+  background-color: rgb(180, 3, 3);
+  color: var(--white);
+  padding: 7px;
+  border-radius: 11px;
+  width: 74px;
+  text-align: center;
+}
+
+bg_red{
+  background-color:rgb(180, 3, 3);
 }

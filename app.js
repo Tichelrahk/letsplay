@@ -45,10 +45,18 @@ App({
           success: (res) => {
             console.log(25, res)
             this.globalData.userId = res.data.userId
+            wx.loadFontFace({
+              family: "Kaushan Script",
+              source: 'url("http://lc-dnc55p3h.cn-e1.lcfile.com/09e1fc0896d8febebfa9/KaushanScript-Regular.ttf")',
+              success: (res) => {
+                console.log('font load sucess', res)
+              }
+            })
           }
         })
       }
     })
+    
   },
 
   globalData: {

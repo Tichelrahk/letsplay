@@ -17,75 +17,109 @@
   <view>
 
     <!-- Panel Body Start -->
+    <!-- CARDS SECTION -->
+<view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation">
+  <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{confirmation.event.id}}">
+
+<!-- CARD TITLE -->
+    <view class="cu-item">
+    <view>{{confirmaion.start}}</view>
+          <view class="flex">
+            <view class="cuIcon-activity text-green"></view>
+            <view class="text-bold text-cut padding-left">
+            {{confirmation.event.name}}           
+            </view>
+          </view>
+          <view class="action">
+            <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
+          </view>
+        </view>
+
+<!-- CARD INFO -->
+    <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{confirmation.event.image}}); background-size: cover">
+      <view class="content flex padding-top padding-bottom">
+        <view class="mc-content card-content"> 
+          <view>
+            <view>{{confirmation.date}}</view>
+            <view>{{confirmation.start}}-{{confirmation.end}}</view>
+          </view>
+          <view class="cu-item">Location:{{confirmation.location.address}}</view>
+        </view>
+      </view>
+    </view>
+
+
+<!-- CARD TAGS -->
+    <view class="cu-item tags">
+            <view class="content">
+              <view>
+                <view class="cu-tag bg-red light round">Jing An District</view>
+                <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
+        </view>
+      </view>
+      <view class="action cuIcon-right"></view>
+    </view>
+  </view>
+</view>
+
+<!-- OLD CARD -->
+ </view>
+</swiper-item> 
+
+
+<!-- organizing card starts here -->
+<swiper-item> 
+<view>
 
     <!-- CARDS SECTION -->
-    <view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation">
-      <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{confirmation.event.id}}">
+    <view wx:for="{{user.events}}" wx:key wx:for-item="event">
+      <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
 
     <!-- CARD TITLE -->
         <view class="cu-item">
           <view class="flex">
             <view class="cuIcon-activity text-green"></view>
-            <view class="text-bold text-cut padding-left">{{confirmation.event.name}}           </view>
+            <view class="text-bold text-cut padding-left">
+            {{event.name}}           
+            </view>
           </view>
           <view class="action">
-            <view class="text-bold">8/12</view>  
+            <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
           </view>
         </view>
 
     <!-- CARD INFO -->
-        <view class="cu-item">
-          <view class="flex padding-top padding-bottom">
-            <image src="{{confirmation.event.image}}" style="height: 200rpx; width: 200rpx;" class="rounded" mode="aspectFill"></image>
-            <view class="padding-left">
-              <view>Date: {{confirmation.date}}</view>
-              <view>Time: {{confirmation.start}}-{{confirmation.end}}</view>
-            </view>
+        <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{confirmation.event.image}}); background-size: cover">
+      <view class="content flex padding-top padding-bottom">
+        <view class="mc-content card-content"> 
+          <view>
+            <view>{{event.date}}</view>
+            <view>{{event.start}}-{{event.end}}</view>
           </view>
+          <view class="cu-item">Location:{{event.location.address}}</view>
         </view>
+      </view>
+    </view>
+
 
     <!-- CARD TAGS -->
-        <view class="cu-item tags">
-          <view class="content">
-            <view>
-              <view class="cu-tag bg-red light round">Jing An District</view>
-              <view class="cu-tag bg-green light round">Beginners</view>
+            <view class="cu-item tags">
+            <view class="content">
+              <view>
+                <view class="cu-tag bg-red light round">Jing An District</view>
+                <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
+              </view>
             </view>
+            <view class="action cuIcon-right"></view>
           </view>
-          <view class="action cuIcon-right"></view>
         </view>
       </view>
     </view>
-    </view>
-<!-- OLD CARD -->
   </swiper-item>  
-
-<!-- attending ends here -->
-  
-  <swiper-item>  
-    <!-- organize starts here -->
-    <view>
-    <!-- Panel Body Start -->
-    <view wx:for="{{user.events}}" wx:key wx:for-item="event">     
-      <view bindtap="goToEventsShow" data-id="{{event.id}}">     
-        <view>
-          <image src="{{event.image}}" />
-        </view>   
-        <view>     
-          <view>
-            {{event.name}}
-          </view>      
-          <view>
-            <view>{{event.start}}</view>
-            <view>{{event.end}}</view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>  
-</swiper-item>  
-  <!-- organize host ends here -->
 </swiper>  
+
+<!-- organize ends here -->
+
 </view>
 <view wx:else>
     <button class="log btn-cust" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in!</button>

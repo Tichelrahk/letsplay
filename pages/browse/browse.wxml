@@ -2,6 +2,52 @@
   <view slot="content">Browse</view>
 </cu-custom>
 
+<view class="space-3"></view>
+
+<view>
+  <view class="">Slider</view>
+</view>
+
+  <view class="space-3"></view>
+
+<view class="bg-white"> 
+  <view class="padding solid-bottom text-black">
+    <view class='cuIcon-titles mc-title'>BROWSE BY CATEGORY</view> 
+  </view>
+  <view class="padding">Categories Buttons</view>
+</view>
+
+<view class="space-3"></view>
+
+
+<view class="bg-white"> 
+  <view class="padding solid-bottom text-black">
+    <view class='cuIcon-titles mc-title'>BROWSE BY LOCATION</view> 
+  </view>
+  <view class="padding">Horizontal Slider</view>
+</view>
+
+<view class="space-3"></view>
+
+<view class="bg-white">
+  <view class="padding solid-bottom text-black">
+    <view class='cuIcon-titles mc-title'>ALMOST FULL</view> 
+  </view>
+
+  <view class="bg-white padding">
+    <view class="grid col-{{index+1}} margin-bottom text-center" wx:for="{{5}}" wx:key>
+      <view class="{{index%2==0?'bg-cyan':'bg-blue'}} padding" wx:for="{{(index+1)*2}}" wx:key>{{index+1}}</view>
+    </view>
+  </view>
+  
+  <view class="padding">See More</view>
+</view>
+
+<view class="space-3"></view>
+
+<view class="space-3"></view>
+<view>HAPPENING SOON</view>
+<view>BEGINNER FRIENDLY</view>
 
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>

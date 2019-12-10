@@ -33,6 +33,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+
 }
 
 /**app.wxss**/
@@ -223,6 +224,10 @@ background-color: rgba(0, 0, 0, 0.253);
   box-sizing: border-box; 
   }
 
+.bg_brand{
+  background-color: #1e8bff;
+  color: white;
+}
 
 .login-font {
   position: absolute;

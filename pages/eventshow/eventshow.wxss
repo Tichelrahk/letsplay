@@ -1,7 +1,5 @@
 /* pages/eventshow/eventshow.wxss */
-.joined{
-  background-color:gray;
-}
+
 
 .favorites{
   display: block;
@@ -12,7 +10,7 @@
   font-size: 26px;
 }
 
-
+  
 
 button{
   background-color: transparent;
@@ -21,14 +19,11 @@ button{
 
 .showbanner {
   position: relative;
-  height: 400rpx;
+  height: 500rpx;
   width: 100vw;
 }
  
 .showtitle {
-  /* position: absolute;
-  bottom: 50rpx;
-  left: 35rpx; */
   font-size: 70rpx;
   text-shadow: 1px 1px 20px rgba(0,0,0,1);
 }

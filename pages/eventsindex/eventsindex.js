@@ -14,7 +14,10 @@ Page({
     }, {
       id: 1,
       type: 'image',
+
         url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/b4caf34d221f1f21a992',
+
+
     }, {
       id: 2,
       type: 'image',
@@ -22,6 +25,7 @@ Page({
     }, {
       id: 3,
       type: 'image',
+
         url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/d555fd134a6edbbba43e'
     }, {
       id: 4,
@@ -36,6 +40,7 @@ Page({
       type: 'image',
         url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/b9546a70488f6adc2628'
     }],
+
   },
   onLoad() {
     this.towerSwiper('swiperList');

@@ -35,18 +35,21 @@
         <view class="text-bold text-cut padding-left">{{event.name}}</view>
       </view>
       <view class="action">
-        <view class="text-bold">8/12</view>  
+        <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
       </view>
     </view>
 
 <!-- CARD INFO -->
-    <view class="item">
+
+    <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{event.image}}); background-size: cover">
+
       <view class="content flex padding-top padding-bottom">
-        <image src="{{event.image}}" style="height: 200rpx; width: 200rpx;" class="rounded" mode="aspectFill"></image>
-        <view class="mc-content"> 
-          <view>Date: {{event.date}}</view>
-          <view>To: {{event.start}}-{{event.end}}</view>
-          <view>Location: {{event.location.address}}</view>
+        <view class="mc-content card-content"> 
+          <view>
+            <view>{{event.date}}</view>
+            <view>{{event.start}}-{{event.end}}</view>
+          </view>
+          <view class="cu-item">Location: {{event.location.address}}</view>
         </view>
       </view>
     </view>
@@ -56,7 +59,7 @@
       <view class="content">
         <view>
           <view class="cu-tag bg-red light round">Jing An District</view>
-          <view class="cu-tag bg-green light round">Beginners</view>
+          <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
         </view>
       </view>
       <view class="action cuIcon-right"></view>

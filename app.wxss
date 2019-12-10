@@ -256,3 +256,7 @@ background-color: rgba(0, 0, 0, 0.253);
   box-sizing: border-box; 
   font-family: 'Kaushan Script', cursive;
   }
+
+.text-flag{
+  color:#ffff;
+}

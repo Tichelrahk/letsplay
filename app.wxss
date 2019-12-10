@@ -46,7 +46,8 @@
 /* WeUI STYLE */
 
 page{
-    background-color: #EDEDED;
+    /* background-color: #EDEDED; */
+    background-color: black;
     font-size: 16px;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }

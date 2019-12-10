@@ -3,7 +3,7 @@
 </cu-custom>
  
 <!-- Swiper card ends -->
-<view>
+<view >
 <text class="play">Let's Play</text>
 <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
   <swiper-item wx:for="{{swiperList}}" wx:key style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url({{item.url}}); background-size: cover; display:flex; align-items: center" mode="aspectFill">
@@ -14,22 +14,22 @@
 
 <!-- Swiper card ends -->
 <!-- SEARCH BAR -->
-<view class="cu-bar search bg-white">
+<view class="cu-bar search dark">
   <view class="search-form round">
     <view class="cuIcon-search"></view>
     <input type="text" placeholder="Search for a name, sport or location" confirm-type="search" bindinput="searchAPICall"></input>
   </view>
   <view class="action">
-    <view class="cu-btn bg-green round" bindinput="searchAPICall">Search</view>
+    <view class=" btn_red " bindinput="searchAPICall">Search</view>
   </view>
 </view>
 
 <!-- CARDS SECTION -->
-<view wx:for="{{events}}" wx:key wx:for-item="event">
+<view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
   <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
 
 <!-- CARD TITLE -->
-    <view class="cu-item">
+    <view class="item">
       <view class="flex">
         <view class="cuIcon-activity text-green"></view>
         <view class="text-bold text-cut padding-left">{{event.name}}</view>
@@ -40,7 +40,9 @@
     </view>
 
 <!-- CARD INFO -->
+
     <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{event.image}}); background-size: cover">
+
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
           <view>
@@ -53,7 +55,7 @@
     </view>
 
 <!-- CARD TAGS -->
-    <view class="cu-item tags">
+    <view class="item tags">
       <view class="content">
         <view>
           <view class="cu-tag bg-red light round">Jing An District</view>
@@ -83,7 +85,7 @@
   </view>
 
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <view class="cu-btn cuIcon-add bg-green"></view>
+    <view class="cu-btn cuIcon-add bg-red"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">

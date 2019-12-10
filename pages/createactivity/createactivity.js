@@ -76,8 +76,8 @@ Page({
         console.log(`Updated user ${userId}`)
 
 
-        page.login
-
+        page.setData({ login: true })
+        page.onShow()
 
       }
     })
@@ -93,11 +93,13 @@ Page({
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
+    this.logInUser()
     this.setData({
       userInfo: e.detail.userInfo
     })
     this.updateUser(e)
   },
+
 
 
 
@@ -200,7 +202,7 @@ Page({
       success(res) {
         page.setData({
           userInfo: app.globalData.userInfo,
-          login: res
+          login: res.data
         })
       }
     })

@@ -74,7 +74,7 @@ Page({
       success(res) {
         that.setData({
           userInfo: app.globalData.userInfo,
-          login: res
+          login: res.data
         })
       }
     })
@@ -122,17 +122,23 @@ Page({
 
 
         page.setData({ login: true })
-
+        page.onShow()
 
       }
     })
   },
 
+  logInUser: function () {
+    wx.setStorage({
+      key: "loggedIn",
+      data: "true"
+    })
+  },
 
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    app.globalData.login = true
+    this.logInUser()
     this.setData({
       userInfo: e.detail.userInfo
     })

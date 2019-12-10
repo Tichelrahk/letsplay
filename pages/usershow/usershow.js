@@ -172,7 +172,7 @@ Page({
       success(res) {
         page.setData({
           userInfo: app.globalData.userInfo,
-          login: res
+          login: res.data
         })
       }
     })

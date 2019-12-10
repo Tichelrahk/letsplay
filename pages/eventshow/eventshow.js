@@ -58,21 +58,51 @@ Page({
       title: 'Joined!',
     })
   },
+  
+  updateUser: function (e) {
+    const page = this
+    const userId = app.globalData.userId
+
+    const info = {
+      name: e.detail.userInfo.nickName,
+
+      profile_picture: e.detail.userInfo.avatarUrl,
+      location: e.detail.userInfo.city
+    }
+
+    wx.request({
+      url: app.globalData.url + `users/${userId}`,
+      method: "PUT",
+      data: info,
+      success(res) {
+        console.log(res)
+        console.log(`Updated user ${userId}`)
+
+
+        page.setData({ login: true })
+        page.onShow()
+
+      }
+    })
+  },
+
+
+  logInUser: function () {
+    wx.setStorage({
+      key: "loggedIn",
+      data: "true"
+    })
+  },
 
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    app.globalData.login = true
+    this.logInUser()
     this.setData({
       userInfo: e.detail.userInfo
     })
+    this.updateUser(e)
   },
-
-   logInUser: function () {
-      wx.setStorage({ 
-        key: "loggedIn",
-       value: "true" })
-    },
 
 
   goToIndex: function () {
@@ -190,7 +220,15 @@ Page({
   onShow: function (options) {
     let page = this;
     console.log(1, page.options)
-
+    wx.getStorage({
+      key: 'loggedIn',
+      success(res) {
+        page.setData({
+          userInfo: app.globalData.userInfo,
+          login: res.data
+        })
+      }
+    })
     wx.request({
       url: app.globalData.url+`events/${page.options.id}?user_id=${app.globalData.userId}`,
       success(res) {

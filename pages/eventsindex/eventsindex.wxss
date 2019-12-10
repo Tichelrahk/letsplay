@@ -53,7 +53,7 @@ bg_red{
 
   /* border: 1px solid black; */
   /* font-family: 'Satisfy', cursive; */
- }
+ 
 
 .card-img-big {
   width: 100%;

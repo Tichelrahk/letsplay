@@ -249,6 +249,7 @@ Page({
           attendees: event.confirmations.length + 1,
           joined: (event.joined || event.organized),
           favorited: event.favorited,
+          full: event.full,
           markers
         });
 

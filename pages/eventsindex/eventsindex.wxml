@@ -28,20 +28,7 @@
 <view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
   <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
 
-<!-- CARD TITLE -->
-    <!-- <view class="item">
-      <view class="flex">
-        <view class="cuIcon-activity bluev1"></view>
-        <view class="text-bold text-cut padding-left">{{event.name}}</view>
-      </view>
-      <view class="action">
-        <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
-      </view>
-    </view>
-    {{event.image}} -->
-
 <!-- CARD INFO -->
-
 
     <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{event.image}}); background-size: cover">
       <view class="item">
@@ -59,18 +46,12 @@
 
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
-          <!-- <view>
-            <view>{{event.date}}</view>
-            <view>{{event.start}}-{{event.end}}</view>
-          </view>
-          <view class="cu-item">Location: {{event.location.address}}</view> -->
         </view>
       </view>
     </view>
 
 <!-- CARD TAGS -->
     <view class="item-down tags">
-
       <view class="flexing">
         <view class="content">
           <view>
@@ -79,19 +60,15 @@
           </view>
             <view class="info">Location: {{event.location.address}}</view>
           <view>
-            <view class="cu-tag bg-blue light round">Jing An District</view>
-           <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
+            
+           
           </view>
         </view>
         <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
         <view class="icon_right cuIcon-right"></view>
       </view>
       <view class="tag_swiper">
-        <view class="cu-tag bg-red light tag">Jing An District</view>
-        <view class="cu-tag bg-green light tag">Beginner</view>
-        <view class="cu-tag bg-blue light tag">Fun</view>
-        <view class="cu-tag bg-yellow light tag">Diversity</view>
-        <view class="cu-tag bg-orange light tag">Outdoor</view>
+        <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
         
       </view>
     </view>

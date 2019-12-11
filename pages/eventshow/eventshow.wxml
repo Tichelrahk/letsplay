@@ -14,7 +14,7 @@
       <button class="bg-cancelred butt-size" bindtap="deleteConfirmation">Cancel</button>
     </view>
 
-
+ 
     <view wx:elif="{{full}}"><button disabled="true" class="butt-size">Full</button></view>
 
 

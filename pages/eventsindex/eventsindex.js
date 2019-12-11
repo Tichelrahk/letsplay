@@ -45,6 +45,13 @@ Page({
   onLoad() {
     this.towerSwiper('swiperList');
     // 初始化towerSwiper 传已有的数组名即可
+    wx.loadFontFace({
+      family: "Kaushan Script",
+      source: 'url("http://lc-dnc55p3h.cn-e1.lcfile.com/09e1fc0896d8febebfa9/KaushanScript-Regular.ttf")',
+      success: (res) => {
+        console.log('font load sucess', res)
+      }
+    })
   },
 
  

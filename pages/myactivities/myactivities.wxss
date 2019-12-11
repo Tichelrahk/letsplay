@@ -51,15 +51,17 @@
   flex-direction: column;
   align-content: left;
  }
-
+ 
 .head {
-  position: absolute;
-  z-index: 1;
-  top: 129px;
-  left: 132px;
-  color: whitesmoke;
-  font-size: 41px;
   font-family: 'Kaushan Script', cursive;
+  font-size: 55px;
+  margin-bottom: 78px;
+}
+
+.head_content{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+  margin-bottom: 82px;
 }
 
 .btn-login {
@@ -73,4 +75,14 @@
   padding: 150px 0;
 }
 
+.logs{
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 45rpx;
+  font-weight: 600;
+  width: 100%;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  font-family: 'Kaushan Script', cursive;
+}
   

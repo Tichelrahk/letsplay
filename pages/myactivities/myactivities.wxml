@@ -6,7 +6,7 @@
 
 <view wx:if ="{{login}}">
 
-
+ 
 <view class="swiper-tab bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">Attending</view>  
       <view class="swiper-tab-list {{currentTab==1 ? 'on' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
@@ -126,15 +126,15 @@
 <view wx:else>
 <view>
 <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.jpg');height: 100vh;">
-  <view class="padding-xl text-white loginp">
-    <view class="padding-xs text-xl login-font">
+  <view class="text-white logs">
+    <view class="head">
       Lets Play
     </view>
-    <view class="padding-xs">
-      Fun activities with your friends
+    <view class="head_content">
+      Create or Join Fun activities with your friends
     </view>
   </view>
-  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join Our Community</button>
+  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
 </view>
     
 </view>

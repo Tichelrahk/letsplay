@@ -10,7 +10,7 @@
   font-size: 26px;
 }
 
-  
+   
 
 button{
   background-color: transparent;
@@ -45,4 +45,39 @@ button{
   background: #dc3545;
   color: white;
   /* border: 1px solid #dc3545; */
+}
+
+.title{
+  font-size: 23px;
+}
+
+.lighter{
+  font-weight: lighter;
+}
+
+.time{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.align{
+  text-align: center;
+  display: flex;
+  padding: 7px;
+  margin-left: 74px;
+}
+
+.spacing{
+  padding-left: 11px;
+}
+
+.attendee{
+  display: flex;
+  justify-content: row;
+  align-items: center;
+}
+
+.bar{
+  font-size: 23px;
 }

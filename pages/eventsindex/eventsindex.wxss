@@ -154,4 +154,5 @@ bg_red{
   width: 100vw !important;
   flex-wrap: nowrap;
   display: flex;
+  margin-left: 10px;
 }

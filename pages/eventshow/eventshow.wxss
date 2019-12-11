@@ -10,7 +10,7 @@
   font-size: 26px;
 }
 
-   
+    
 
 button{
   background-color: transparent;
@@ -64,7 +64,6 @@ button{
 .align{
   text-align: center;
   display: flex;
-  padding: 7px;
   margin-left: 74px;
 }
 

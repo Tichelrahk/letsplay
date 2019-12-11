@@ -3,13 +3,13 @@
   <view slot="content">My Activities</view>
 </cu-custom>
 
-
+ 
 <view wx:if ="{{login}}">
 
  
-<view class="swiper-tab bg-white">  
+<view class="swiper-tab solid-bottom bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">Attending</view>  
-      <view class="swiper-tab-list {{currentTab==1 ? 'on' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
+      <view class="swiper-tab-list {{currentTab==1 ? 'on1' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
 </view>  
 
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
@@ -36,6 +36,64 @@
             <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
           </view>
         </view>
+
+
+<!-- customizing start -->
+
+
+<!-- <view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
+  <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
+
+
+    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{event.image}}); background-size: cover">
+      <view class="item">
+        <view class="flex">
+          <view class="cuIcon-activity text-flag flag"></view>
+            <view class="text-head set_width">
+              {{event.name}}
+            </view>
+        </view>
+        <view class="action scope-info">
+          <view class="cuIcon-friend people"></view>
+          <view class=" text-scope">{{event.attendees}}/{{event.slots}}</view>  
+        </view>
+      </view>
+
+      <view class="content flex padding-top padding-bottom">
+        <view class="mc-content card-content"> 
+        </view>
+      </view>
+    </view>
+
+    <view class="item-down tags">
+      <view class="flexing">
+        <view class="content">
+          <view>
+            <view class="info">{{event.date}}</view>
+            <view class="info">{{event.start}}-{{event.end}}</view>
+          </view>
+            <view class="info">Location: {{event.location.address}}</view>
+          <view>
+            
+           
+          </view>
+        </view>
+        
+        <view class="icon_right cuIcon-right"></view>
+      </view>
+      <view class="tag_swiper">
+        <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
+        
+      </view>
+    </view>
+  </view>
+</view> -->
+
+
+
+<!-- customizing end -->
+
+        
 
 <!-- CARD INFO -->
     <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{confirmation.event.image}}); background-size: cover">

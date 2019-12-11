@@ -113,7 +113,7 @@
     <view class="cu-item tags">
             <view class="content">
               <view>
-                <view class="cu-tag bg-red light round">Jing An District</view>
+                <view class="cu-tag bg-blue light round">Jing An District</view>
                 <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
         </view>
       </view>
@@ -211,23 +211,21 @@
     Browse
   </view> -->
   <view class="action text-gray" bindtap="goToAbout">
-    <view class="cuIcon-info"></view> 
-    About
+    <view class="cuIcon-global"></view> 
+    Nearby
   </view>
-
+ 
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <view class="cu-btn cuIcon-add bg-blue"></view>
+    <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">
     <view class="cuIcon-activity">
-      <view class="cu-tag badge">2</view>
     </view>
     My Activities
   </view>
   <view class="action text-gray" bindtap="goToProfile">
     <view class="cuIcon-my">
-      <view class="cu-tag badge"></view>
     </view>
     Profile
   </view>

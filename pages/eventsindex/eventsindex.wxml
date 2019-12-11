@@ -88,8 +88,10 @@
     Browse
   </view> -->
   <view class="action text-gray" bindtap="goToAbout">
+
     <view class="cuIcon-global"></view> 
     Nearby
+
   </view>
  
   <view class="action text-gray add-action" bindtap="goToCreate">

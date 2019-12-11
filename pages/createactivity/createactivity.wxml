@@ -29,6 +29,10 @@
   <view class="title">Activity Description</view>
     <textarea placeholder="Write a good activity description" name="description"></textarea>
   </view>
+  <view class="cu-form-group">
+    <view class="title">How many people?</view>
+    <input placeholder="Enter the amount of people" name="slots"></input>
+  </view>
 
 	<!-- <view class="cu-form-group">
 		<view class="title">Input your phone number</view>
@@ -122,8 +126,18 @@
 			</view>
     </view>
 	</view> -->
-  <view class="btn-area">
-    <button class="submit btn-cust" form-type="submit">Submit</button>
+  
+  <view class="margin-top">
+		<view class="title">Tag your activity!</view>
+    <view>
+      <block wx:for="{{arr_of_tags}}" wx:key wx:for-item="tag">
+        <text bindtap="deselectTag" data-tag="{{tag.key}}" wx:if="{{tag.selected}}" class="bg-blue light round tag-cloud cu-tag">{{tag.key}} </text>
+        <text bindtap="selectTag"  data-tag="{{tag.key}}" wx:else class="round tag-cloud cu-tag">{{tag.key}}</text>
+      </block>
+    </view>
+    </view>
+    <view class="btn-area">
+      <button class="submit btn-cust" form-type="submit">Submit</button>
   </view>
 
 

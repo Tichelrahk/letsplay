@@ -71,3 +71,11 @@ justify-content: space-between;
 padding-top: 70rpx;
 box-sizing: border-box;
 }
+
+.bg-brand{
+  background-color: #1e8bff;
+}
+
+.tag-cloud{
+  margin: 10rpx;
+}

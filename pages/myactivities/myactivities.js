@@ -16,7 +16,7 @@ Page({
 
   goToAbout: function () {
     wx.redirectTo({
-      url: '/pages/about/about',
+      url: '/pages/activitynearby/activitynearby',
     })
   },
 

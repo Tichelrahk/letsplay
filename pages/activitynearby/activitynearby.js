@@ -90,11 +90,11 @@ Page({
               padding: 2,
               borderRadius: 5,
               fontSize: 14,
-              bgColor: "#ffc55c",
+              bgColor: "#d3f4ff",
               borderWidth: 1,
               textAlign: "center",
-              color: "black",
-              borderColor:"#ffc55c"
+              color: "#1E8BFF",
+              borderColor:"#1E8BFF"
         
             
             }

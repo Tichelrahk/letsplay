@@ -108,8 +108,8 @@
             <view class="cu-item tags">
             <view class="content">
               <view>
-                <view class="cu-tag bg-red light round">Jing An District</view>
-                <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
+                <view class="cu-tag bg-blue light round">Jing An District</view>
+                <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
               </view>
             </view>
             <view class="action cuIcon-right"></view>
@@ -158,7 +158,7 @@
   </view>
 
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <view class="cu-btn cuIcon-add bg-green"></view>
+    <view class="cu-btn cuIcon-add bg-blue"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">

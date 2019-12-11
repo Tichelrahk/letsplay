@@ -77,8 +77,8 @@
         </view>
           <view class="info">Location: {{event.location.address}}</view>
         <view>
-          <view class="cu-tag bg-red light round">Jing An District</view>
-          <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
+          <view class="cu-tag bg-blue light round">Jing An District</view>
+          <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
         </view>
       </view>
       <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->

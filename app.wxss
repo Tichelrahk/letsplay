@@ -200,10 +200,13 @@ page{
 }
 
 .btn-cust:hover{
-border: 1px solid #1E8BFF;
-color:#ffff;
-background-color: #e6dfc9;
+border: 1px solid white;
+color:white;
+background-color: #2f85a6;
+
 }
+
+
 
 .line {
   border-bottom: solid 2rpx rgba(100, 100, 100, .5);

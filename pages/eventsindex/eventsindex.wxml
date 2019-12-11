@@ -70,19 +70,30 @@
 
 <!-- CARD TAGS -->
     <view class="item-down tags">
-      <view class="content">
-        <view>
-          <view class="info">{{event.date}}</view>
-          <view class="info">{{event.start}}-{{event.end}}</view>
+
+      <view class="flexing">
+        <view class="content">
+          <view>
+            <view class="info">{{event.date}}</view>
+            <view class="info">{{event.start}}-{{event.end}}</view>
+          </view>
+            <view class="info">Location: {{event.location.address}}</view>
+          <view>
+            <view class="cu-tag bg-blue light round">Jing An District</view>
+           <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
+          </view>
         </view>
-          <view class="info">Location: {{event.location.address}}</view>
-        <view>
-          <view class="cu-tag bg-blue light round">Jing An District</view>
-          <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
-        </view>
+        <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
+        <view class="icon_right cuIcon-right"></view>
       </view>
-      <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
-      <view class=" cuIcon-right"></view>
+      <view class="tag_swiper">
+        <view class="cu-tag bg-red light tag">Jing An District</view>
+        <view class="cu-tag bg-green light tag">Beginner</view>
+        <view class="cu-tag bg-blue light tag">Fun</view>
+        <view class="cu-tag bg-yellow light tag">Diversity</view>
+        <view class="cu-tag bg-orange light tag">Outdoor</view>
+        
+      </view>
     </view>
   </view>
 </view>

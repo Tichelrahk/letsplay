@@ -14,7 +14,9 @@
       <button class="bg-cancelred butt-size" bindtap="deleteConfirmation">Cancel</button>
     </view>
 
+
     <view wx:elif="{{full}}"><button disabled="true" class="butt-size">Full</button></view>
+
 
     <view wx:else>
       <button class="bg_brand butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
@@ -31,12 +33,15 @@
 <!-- ATTENDEES SECTION -->
 
 <view class="padding bg-white solid-bottom margin-top text-black">
-
-  <view class='cuIcon-titles mc-title'>Attendees <text>{{attendees}}</text></view> 
-  <view bindtap="toggleFavorites" class="{{favorited ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view>
-
+  <view class="attendee">
+    <view class='cuIcon-titles text-blue bar '>
+    </view> 
+    <view class="title">Attendees
+      <text>{{attendees}}</text>
+    </view>
+  </view>
   
-
+  <view bindtap="toggleFavorites" class="{{favorited ? 'cuIcon-likefill' : 'cuIcon-like'}} lg text-red like favorites"></view>
 </view>
 
 <view class="bg-white solid-bottom mc-content flex scroll align-center">
@@ -63,20 +68,32 @@
 
 
 <view class="padding bg-white solid-bottom margin-top text-black">
-  <view class='cuIcon-titles mc-title'>Event Details</view> 
+  <view class="attendee">
+    <view class='cuIcon-titles text-blue bar'></view> 
+    <view class="title">Event Details</view>
+  </view>
 </view>
-<view class="bg-white solid-bottom mc-content">
+<view class=" mc-content">
   <view class="">{{event.description}}</view>
 </view>
 
-<view class="bg-white solid-bottom mc-content">
-  <view class="text-bold">{{event.date}}</view>
-  <view class="text-bold">{{event.start}}-{{event.end}}</view>
+<view class="mc-content time">
+  <view class="cuIcon-calendar text-blue align">
+  </view>
+  <view class="spacing">{{event.date}}</view>
+</view>
+<view class="mc-content time">
+  <view class="cuIcon-time text-blue align">
+  </view>
+    <view class="spacing">{{event.start}}-{{event.end}}</view>
 </view>  
 
 
 <view class="padding bg-white solid-bottom margin-top text-black">
-  <view class='cuIcon-titles mc-title'>Event Location</view> 
+  <view class="attendee">
+    <view class='cuIcon-titles text-blue bar'></view> 
+    <view class="title">Event Location</view>
+  </view>
   <view>{{event.location.address}}</view>
 </view>
 <map id="map" longitude="{{event.location.longitude}}" latitude="{{event.location.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" show-location style="width: 100%;"></map>

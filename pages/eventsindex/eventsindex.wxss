@@ -8,7 +8,7 @@
   position: absolute;
   z-index: 1;
   top: 129px;
-  left: 132px;
+  left: 113px;
   color: whitesmoke;
 
   font-size: 41px;

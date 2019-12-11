@@ -46,8 +46,8 @@ Component({
       });
     },
     toHome(){
-      wx.reLaunch({
-        url: '/pages/index/index',
+      wx.redirectTo({
+        url: '/pages/eventsindex/eventsindex',
       })
     }
   }

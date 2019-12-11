@@ -24,7 +24,7 @@
 
 .time_head{
   margin-bottom: 10px;
-  color:rgba(255, 8, 0, 0.76);
+  color:#1E8BFF;
 }
 picker{
   padding-top: 10px;

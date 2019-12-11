@@ -55,6 +55,24 @@ Page({
   bindEndTimeChange: function (event) {
     this.setData({ end_time: event.detail.value })
   },
+
+  selectTag: function (event) {
+    console.log('help', event)
+    let new_arr = this.data.arr_of_tags
+    const tag = event.currentTarget.dataset.tag
+
+    const selectedTag = new_arr.find((x) => x['key'] == tag)
+    selectedTag.selected = true
+    this.setData({arr_of_tags:  new_arr})
+  },
+
+  deselectTag: function (event) {
+    let new_arr = this.data.arr_of_tags
+    const tag = event.currentTarget.dataset.tag
+    const selectedTag = new_arr.find((x) => x['key'] == tag)
+    selectedTag.selected = false
+    this.setData({ arr_of_tags: new_arr })
+  },
   
   updateUser: function (e) {
     const page = this
@@ -62,7 +80,6 @@ Page({
 
     const info = {
       name: e.detail.userInfo.nickName,
-
       profile_picture: e.detail.userInfo.avatarUrl,
       location: e.detail.userInfo.city
     }
@@ -109,11 +126,35 @@ Page({
    */
 
   data: {
-    st_date: '2019-12-01',
+    st_date: '2019-12-11',
     st_time: '12:00',
-    end_date: '2019-12-01',
+    end_date: '2019-12-11',
     end_time: '13:00',
-    arr_of_tags: [ 'badminton', 'tennis', 'soccer', 'football', 'ultimate', 'running' ],
+    arr_of_tags: [ {key: "badminton", num: 0, selected: false },
+       {key: "baseball", num: 1, selected: false },
+       {key: "bowling", num: 2, selected: false },
+       {key: "boxing", num: 3, selected: false },
+       {key: "cricket", num: 4, selected: false },
+       {key: "cycling", num: 5, selected: false },
+       {key: "dancing", num: 6, selected: false },
+       {key: "exercise", num: 7, selected: false },
+       {key: "football", num: 8, selected: false },
+       {key: "gym", num: 9, selected: false },
+       {key: "health", num: 10, selected: false },
+       {key: "hiking", num: 11, selected: false },
+       {key: "hockey", num: 12, selected: false },
+       {key: "martial arts", num: 13, selected: false },
+       {key: "running", num: 14, selected: false },
+       {key: "skating", num: 15, selected: false },
+       {key: "skiing", num: 16, selected: false },
+       {key: "soccer", num: 17, selected: false },
+       {key: "swimming", num: 18, selected: false },
+       {key: "table tennis", num: 19, selected: false },
+       {key: "tennis", num: 20, selected: false },
+       {key: "ultimate", num: 21, selected: false },
+       {key: "volleyball", num: 22, selected: false },
+       {key: "yoga", num: 23, selected: false },
+       {key: "other", num: 24, selected: false }],
 
     // map data use, start from here
 
@@ -174,6 +215,8 @@ Page({
     form.location.latitude = page.data.location.latitude
     form.location.longitude = page.data.location.longitude
     form.event.image = page.data.pic
+    form.event.tag_list = page.data.arr_of_tags.filter((x) => x['selected'] == true).map((x) => x.key)
+    form.event.slots = parseInt(event.detail.value.slots)
     // console.log(10, form.user_id)
     console.log(77, form);
     wx.request({
@@ -184,7 +227,7 @@ Page({
         console.log(res)
         // redirect to index page when done
         wx.reLaunch({
-          url: `/pages/eventshow/eventshow?id=${res.data.event.id}`,
+          url: `/pages/eventshow/eventshow?id=${res.data.event}`,
         })
       }
     });

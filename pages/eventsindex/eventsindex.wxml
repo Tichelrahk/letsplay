@@ -89,7 +89,7 @@
   </view> -->
   <view class="action text-gray" bindtap="goToAbout">
     <view class="cuIcon-info"></view> 
-    About
+    Map
   </view>
  
   <view class="action text-gray add-action" bindtap="goToCreate">

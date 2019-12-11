@@ -25,7 +25,7 @@
 
 <!-- CARD TITLE -->
     <view class="cu-item">
-    <view>{{confirmaion.start}}</view>
+    <view>{{confirmation.start}}</view>
           <view class="flex">
             <view class="cuIcon-activity bluev1"></view>
             <view class="text-bold text-cut padding-left">

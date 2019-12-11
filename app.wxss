@@ -203,6 +203,7 @@ page{
 border: 1px solid white;
 color:white;
 background-color: #2f85a6;
+
 }
 
 
@@ -263,3 +264,7 @@ background-color: #2f85a6;
   box-sizing: border-box; 
   font-family: 'Kaushan Script', cursive;
   }
+
+.text-flag{
+  color:#ffff;
+}

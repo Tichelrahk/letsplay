@@ -46,7 +46,7 @@
     <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{event.image}}); background-size: cover">
       <view class="item">
         <view class="flex">
-          <view class="cuIcon-activity text-green flag"></view>
+          <view class="cuIcon-activity text-flag flag"></view>
             <view class="text-head set_width">
               {{event.name}}
             </view>
@@ -70,6 +70,7 @@
 
 <!-- CARD TAGS -->
     <view class="item-down tags">
+
       <view class="flexing">
         <view class="content">
           <view>
@@ -78,8 +79,8 @@
           </view>
             <view class="info">Location: {{event.location.address}}</view>
           <view>
-            
-            <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
+            <view class="cu-tag bg-blue light round">Jing An District</view>
+           <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
           </view>
         </view>
         <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->

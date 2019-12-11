@@ -200,9 +200,9 @@ page{
 }
 
 .btn-cust:hover{
-border: 1px solid rgba(255, 8, 0, 0.76);
-color:rgba(255, 8, 0, 0.76);
-background-color: rgba(0, 0, 0, 0.253);
+border: 1px solid #1E8BFF;
+color:#ffff;
+background-color: #e6dfc9;
 }
 
 .line {
@@ -261,3 +261,7 @@ background-color: rgba(0, 0, 0, 0.253);
   box-sizing: border-box; 
   font-family: 'Kaushan Script', cursive;
   }
+
+.text-flag{
+  color:#ffff;
+}

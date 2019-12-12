@@ -4,8 +4,7 @@
 </cu-custom>
 <map id="map" longitude="{{userLongitude}}" latitude="{{userLatitude}}" scale="14" markers="{{markers}}" bindmarkertap="markertap" bindcallouttap = "bindcallouttap" show-location style="width: 100%; height:100vh"></map>
 
-
-<view class="cu-bar tabbar bg-blue light">
+<view class="cu-bar tabbar bg-white light">
   <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search

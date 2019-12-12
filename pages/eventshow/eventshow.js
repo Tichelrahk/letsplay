@@ -95,13 +95,33 @@ Page({
   },
 
   getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.logInUser()
-    this.setData({
-      userInfo: e.detail.userInfo
+    let page = this
+    wx.getUserInfo({
+      success: function(res) {
+        console.log('entered success of getUserInfo')
+        page.joining()
+        page.logInUser()
+        page.setData({
+          userInfo: e.detail.userInfo
+        })
+        page.updateUser(e)
+      },
+      fail: function (res) {
+        console.log('failing getUserInfo', res)
+      }
     })
-    this.updateUser(e)
+    
+    // console.log(e)
+    // app.globalData.userInfo = e.detail.userInfo
+    // const userInfo = app.globalData.userInfo;
+    // if (userInfo != "") {
+    //   this.logInUser()
+    //   this.setData({
+    //     userInfo: e.detail.userInfo
+    //   })
+    //   this.updateUser(e)
+    // }
+
   },
 
 
@@ -147,7 +167,7 @@ Page({
     const page = this
     const join = {}
     console.log(55, page.data.event.id)
-    console.log(9, app.globalData)
+    // console.log(9, app.globalData)
     wx.request({
 
 

@@ -22,7 +22,7 @@
 
 
     <view wx:else>
-      <button class="bg_brand butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="joining">Join</button>
+      <button class="bg_brand butt-size" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join</button>
     </view>
 
 </view>
@@ -40,7 +40,10 @@
     <view class='cuIcon-titles text-blue bar '>
     </view> 
     <view class="title text-blue">Who's Playing
-      <text>{{attendees}}/{{event.slots}}</text>
+      <text wx:if="{{event.slots}}"><text class="cuIcon-friend people">
+</text>{{attendees}}/{{event.slots}}</text>
+      <text wx:else ><text class="cuIcon-friend people">
+</text>{{attendees}}</text>
     </view>
   </view>
   

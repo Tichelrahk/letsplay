@@ -61,8 +61,8 @@ App({
   },
 
   globalData: {
-    url: "http://localhost:3000/api/v1/",
-  // url: "https://letsplay.wogengapp.cn/api/v1/",  
+    // url: "http://localhost:3000/api/v1/",
+  url: "https://letsplay.wogengapp.cn/api/v1/",  
 
   
     userInfo: "",

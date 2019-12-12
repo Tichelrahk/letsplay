@@ -315,6 +315,7 @@ Page({
     wx.chooseLocation({
       success: function(res) {
         page.setData({location: res})
+        console.log(page.data.location)
       },
     })
   },

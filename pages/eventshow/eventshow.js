@@ -163,6 +163,18 @@ Page({
     })
   },
 
+  deleteEvent: function () {
+    const page = this
+    wx.request({
+      url: app.globalData.url + `events/${page.data.event.id}`,
+      method: 'DELETE',
+      success(res) {
+        wx.navigateBack({
+        })
+      }
+    })
+  },
+
   deleteConfirmation: function () {
     const page = this
     wx.request({
@@ -250,6 +262,7 @@ Page({
           joined: (event.joined || event.organized),
           favorited: event.favorited,
           full: event.full,
+          organized: event.organized,
           markers
         });
 

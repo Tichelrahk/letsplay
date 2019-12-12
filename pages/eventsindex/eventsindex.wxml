@@ -29,7 +29,7 @@
 
 <!-- CARD INFO -->
 
-    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{event.image}}); background-size: cover">
+    <view class=" card-info" style="background-image: url({{event.image}}); background-size: cover">
       <view class="item">
         <view class="flex">
           <view class="cuIcon-activity text-flag flag"></view>
@@ -41,7 +41,7 @@
           <view class="cuIcon-friend people"></view>
           <view class=" text-scope">{{event.attendees}}/{{event.slots}}</view>  
         </view>
-        <view wx:else>
+        <view wx:else class="action scope-info">
         <view class="cuIcon-friend people"></view>
           <view class="text-scope">{{event.attendees}}</view>
         </view>

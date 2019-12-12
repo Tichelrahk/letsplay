@@ -46,7 +46,7 @@
   display: flex;
   padding: 0 20rpx;
   min-height: 100rpx;
-  background-color: rgba(65, 64, 64, 0.171);
+  background-color: rgba(37, 37, 37, 0.212);
   justify-content: space-between;
   align-items: center;
   color: white;

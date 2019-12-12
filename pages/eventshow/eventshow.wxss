@@ -10,7 +10,7 @@
   font-size: 26px;
 }
 
-    
+
 
 button{
   background-color: transparent;
@@ -48,7 +48,7 @@ button{
 }
 
 .title{
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .lighter{
@@ -78,5 +78,5 @@ button{
 }
 
 .bar{
-  font-size: 23px;
+  font-size: 20px;
 }

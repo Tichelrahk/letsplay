@@ -23,11 +23,11 @@
 }
 
 .time_head{
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
   color:#1E8BFF;
 }
 picker{
-  padding-top: 10px;
   opacity: .5;
 }
 
@@ -112,4 +112,36 @@ box-sizing: border-box;
   line-height: 50rpx;
   box-sizing: border-box;
   font-family: 'Kaushan Script', cursive;
+}
+
+.attendee{
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  padding-left: 14px;
+}
+
+.attendee1{
+  height: 80px;
+}
+
+.add_pic{
+  /* border: 1px solid #1e8bff; */
+  width: 30px;
+  margin: 0 auto;
+
+}
+
+.title{
+  font-size: 20px;
+  padding-top: 16px;
+}
+
+.ic{
+  font-size: 24px;
+  padding-top: 16px;
+}
+
+.spacing{
+  padding: 0 25px;
 }

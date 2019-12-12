@@ -10,35 +10,35 @@ Page({
     swiperList: [{
       id: 0,
       type: 'image',
-      url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/561b2ab2b06846dd3cde'
-    }, {
-      id: 1,
-      type: 'image',
+      url: '/images/letsplay.jpg'
+    // }, {
+    //   id: 1,
+    //   type: 'image',
 
-        url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/b4caf34d221f1f21a992',
+    //     url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/b4caf34d221f1f21a992',
 
 
-    }, {
-      id: 2,
-      type: 'image',
-        url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/8b0df180e28b93f77bda'
-    }, {
-      id: 3,
-      type: 'image',
+    // }, {
+    //   id: 2,
+    //   type: 'image',
+    //     url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/8b0df180e28b93f77bda'
+    // }, {
+    //   id: 3,
+    //   type: 'image',
 
-        url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/d555fd134a6edbbba43e'
-    }, {
-      id: 4,
-        type: 'image',
-        url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/5822d9e7420e5e7496af'
-    }, {
-      id: 5,
-      type: 'image',
-        url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/c317eb224c2968d53d9b'
-    }, {
-      id: 6,
-      type: 'image',
-        url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/b9546a70488f6adc2628'
+    //     url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/d555fd134a6edbbba43e'
+    // }, {
+    //   id: 4,
+    //     type: 'image',
+    //     url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/5822d9e7420e5e7496af'
+    // }, {
+    //   id: 5,
+    //   type: 'image',
+    //     url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/c317eb224c2968d53d9b'
+    // }, {
+    //   id: 6,
+    //   type: 'image',
+    //     url: 'http://lc-dnc55p3h.cn-e1.lcfile.com/b9546a70488f6adc2628'
     }],
 
   },

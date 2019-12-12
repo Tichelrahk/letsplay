@@ -2,16 +2,10 @@
   <view slot="content">Let's Play!</view>
 </cu-custom>
  
-<!-- Swiper card ends -->
-<view >
-<text class="play">Let's Play</text>
-<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
-  <swiper-item wx:for="{{swiperList}}" wx:key style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url({{item.url}}); background-size: cover; display:flex; align-items: center" mode="aspectFill">
-  </swiper-item>
-</swiper>
+
+<view class="bg-img padding-tb-xl" style="background-image: url('/images/letsplay.jpg'); height: 240px;">
 </view>
 
-<!-- Swiper card ends -->
 <!-- SEARCH BAR -->
 <view class="cu-bar dark lighter">
   <view class="search-form round">

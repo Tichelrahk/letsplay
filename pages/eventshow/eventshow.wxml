@@ -1,5 +1,5 @@
 
-<cu-custom bgColor="bg-blue light" isCustom="{{true}}">
+<cu-custom bgColor="bg-new light" isCustom="{{true}}">
   <view slot="content">Let's Play!</view>
 </cu-custom>
  

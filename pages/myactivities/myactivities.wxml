@@ -1,5 +1,5 @@
 <!--pages/eventshow/eventshow.wxml-->
-<cu-custom bgColor="bg-white light" isCustom="{{true}}">
+<cu-custom bgColor="bg-new light" isCustom="{{true}}">
   <view slot="content">My Activities</view>
 </cu-custom>
 

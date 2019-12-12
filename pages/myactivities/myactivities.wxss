@@ -16,7 +16,7 @@
   border-radius: 0 70px 0 0;
   color: white;
 } 
-
+ 
 .on1{ 
   /* color: #1E8BFF;   */
   border-bottom: 8rpx solid#1E8BFF;
@@ -65,7 +65,7 @@
 }
 
 .card-content {
-  display: flex;
+  
   flex-direction: column;
   align-content: left;
  }
@@ -103,4 +103,46 @@
   box-sizing: border-box;
   font-family: 'Kaushan Script', cursive;
 }
-  
+
+.card_style{
+overflow: hidden;
+
+display: block;
+}
+
+.set_with1{
+max-width: 200px;
+} 
+
+.confirmation{
+  color: white;
+  text-shadow: 1px 1px 20px rgba(0,0,0,1);
+  background-color: rgba(65, 64, 64, 0.171);
+}
+/* 
+.item1{
+  position: relative;
+  padding: 0 20rpx;
+  min-height: 100rpx;
+  background-color: rgba(65, 64, 64, 0.171);
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.text_head1{
+  font-weight: bold;
+  padding-left: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 19px;
+  text-shadow: 1px 1px 20px rgba(0,0,0,1);
+}
+
+
+/* 
+flex1{
+  display: flex;
+  justify-content: row;
+} */

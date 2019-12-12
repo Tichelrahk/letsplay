@@ -10,7 +10,7 @@
 .scroll {
   overflow: scroll !important;
 }
-
+ 
 .mc-title {
   font-weight: 600;
   font-size: 40rpx;
@@ -267,5 +267,165 @@ background-color: #2f85a6;
 
 .text-flag{
   color:#ffff;
+}
+
+
+/* pages/eventsindex/eventsindex.wxss */
+.inp {
+  border: solid black 1px;
+  padding-left: 20rpx;
+}
+
+.play{
+  position: absolute;
+  z-index: 1;
+  top: 129px;
+  left: 132px;
+  color: whitesmoke;
+
+  font-size: 41px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.dark{
+  background-color: white;
+  box-shadow: 0px 1px 8px rgb(177, 176, 176);
+}
+
+/* .gray_dark{
+  background-color: rgb(66, 66, 66);
+}
+
+.text_white{
+  color: white;
+} */
+
+.item-down{
+ position: relative;
+  /* display: flex; */
+  /* padding: 0 30rpx 10rpx 50rpx; */
+  min-height: 100rpx;
+  background-color: rgb(252, 252, 252);
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  height: 127px;
+  box-shadow: 0px 1px 8px rgb(177, 176, 176);
+}
+ 
+.item{
+ position: relative;
+  display: flex;
+  padding: 0 20rpx;
+  min-height: 100rpx;
+  background-color: rgba(65, 64, 64, 0.171);
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+} 
+
+.btn_red{
+  background-color: #1e8bff;
+  color: var(--white);
+  padding: 5px;
+  border-radius: 17px;
+  width: 74px;
+  text-align: center;
+}
+
+bg_red{
+  background-color:rgb(180, 3, 3);
+}
+
+
+.card-img-big {
+  width: 100%;
+  height: 200rpx;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.card {
+  color: white;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+ }
+
+.card-info{
+  overflow: hidden;
+  height: 250px;
+  margin-top: 21px;
+}
+
+.text-head{
+  font-weight: bold;
+  padding-left: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 19px;
+  text-shadow: 1px 1px 20px rgba(0,0,0,1);
+}
+
+.text-scope{
+  font-size: 15px;
+}
+
+.info{
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.flag{
+  font-size: 19px;
+}
+
+.ligher{
+  font-weight: lighter;
+}
+
+.people{
+  font-size: 17px;
+}
+
+.scope-info{
+  display: flex;
+  align-items: center;
+}
+
+.set_width{
+  width: 289px;
+}
+
+.flexing{
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 30rpx 10rpx 50rpx;
+}
+
+.tag{
+  margin: 10px 8px;
+  border-radius: 9px;
+}
+
+.icon_right{
+  font-size: 13px;
+  margin-top: 48px;
+}
+
+.tag_swiper{
+  overflow: scroll;
+  width: 100vw !important;
+  flex-wrap: nowrap;
+  display: flex;
+  margin-left: 10px;
 }
 

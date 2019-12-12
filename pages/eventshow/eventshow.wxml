@@ -92,7 +92,9 @@
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar'></view> 
-    <view class="title">Find us here!</view>
+
+    <view class="title text-blue">Find us here!</view>
+
   </view>
   <view>{{event.location.address}}</view>
 </view>

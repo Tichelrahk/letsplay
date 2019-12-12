@@ -7,7 +7,6 @@
 <text class="play">Let's Play</text>
 <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
   <swiper-item wx:for="{{swiperList}}" wx:key style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url({{item.url}}); background-size: cover; display:flex; align-items: center" mode="aspectFill">
-  
   </swiper-item>
 </swiper>
 </view>
@@ -23,7 +22,7 @@
     <view class=" btn_red " bindinput="searchAPICall">Search</view>
   </view>
 </view>
-
+ 
 <!-- CARDS SECTION -->
 <view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
   <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
@@ -49,7 +48,7 @@
         </view>
       </view>
     </view>
-
+ 
 <!-- CARD TAGS -->
     <view class="item-down tags">
       <view class="flexing">

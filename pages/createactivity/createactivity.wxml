@@ -12,7 +12,7 @@
 
   <view class=" margin-top ">
     <view class=" bg-white text-blue">
-         <view class="attendee">
+      <view class="attendee">
         <view class='ic cuIcon-titles text-blue bar'></view> 
         <view class="title text-blue">Activity name*</view>
       </view>

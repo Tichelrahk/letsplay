@@ -22,17 +22,19 @@
   </view>
 </view>
 
-    
-
-  <view class="attendee">
-    <view class='ic cuIcon-titles text-blue bar'></view> 
-
-    <view>My Likes <text class='cuIcon-like lg text-red like'></text> </view>
+    <view class="attendee">
+      <view class='ic cuIcon-titles text-blue bar'></view> 
+      <view class="title text-blue">My Likes</view>
     </view>
+
+
   <view>
   <view>
     <view wx:if="{{noFavorites}}">
-      Click this <text class='cuIcon-like lg text-red like'></text> to save events here
+    <view class="like_info">
+     Click this <text class='cuIcon-like lg text-red like'></text> to save events here
+    </view>
+     
     </view>
     <view wx:for="{{user.favorited}}" wx:key wx:for-item="event" class="dark">
   <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
@@ -78,7 +80,7 @@
         <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
         <view class="icon_right cuIcon-right"></view>
       </view>
-      <view class="tag_swiper">
+      <view class="tag_swiper1">
         <view wx:for="{{event.tag_list}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
         
       </view>

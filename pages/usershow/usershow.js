@@ -45,6 +45,15 @@ Page({
     })
   },
 
+  goToEventsShow: function (event) {
+    console.log(20, event)
+    let id = event.currentTarget.dataset.id
+    console.log(21, id)
+    wx.navigateTo({
+      url: `/pages/eventshow/eventshow?id=${id}`,
+    })
+  },
+
 
   goToAddServ: function (e) {
     console.log(e)
@@ -182,8 +191,10 @@ Page({
       success(res) {
         console.log(11, res)
         const user = res.data.user
+        const noFavorites = res.data.user.favorited.length == 0
         page.setData({
-          user: user
+          user: user,
+          noFavorites: noFavorites
         });
         // console.log(10, user)
       }

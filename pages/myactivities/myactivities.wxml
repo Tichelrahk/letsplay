@@ -2,30 +2,22 @@
 <cu-custom bgColor="bg-new light" isCustom="{{true}}">
   <view slot="content">My Activities</view>
 </cu-custom>
-
  
 <view wx:if ="{{login}}">
-
  
 <view class="swiper-tab solid-bottom bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">Attending</view>  
       <view class="swiper-tab-list {{currentTab==1 ? 'on1' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
 </view>  
-
 <swiper current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
-
 <swiper-item>  
     <!-- Attending Cards -->
   <view class="height_view">
-
     <!-- Panel Body Start -->
     <!-- CARDS SECTION -->
-
 <view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation" class="dark">
   <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{confirmation.event.id}}">
-
 <!-- CARD INFO -->
-
     <view class=" card-info" style="background-image: url({{confirmation.event.image}}); background-size: cover">
       <!-- <view class="confirmation">{{confirmation.start}}</view> -->
       <view class="item">
@@ -46,16 +38,12 @@
           <view class="text-bold">{{confirmation.attendees}}</view>
           </view>
           </view>
-
       </view>
-
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
         </view>
       </view>
     </view>
-
-
 <!-- CARD TAGS -->
     <view class="item-down tags">
       <view class="flexing">
@@ -72,28 +60,21 @@
         <view class="icon_right cuIcon-right"></view>
       </view>
       <view class="tag_swiper">
-        <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
+        <view wx:for="{{confirmation.tag_list}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
         
       </view>
     </view>
   </view>
-
 </view>
-
 <!-- OLD CARD -->
  </view>
 </swiper-item> 
-
-
 <!-- organizing card starts here -->
 <swiper-item> 
 <view class="height_view">
-
     <!-- CARDS SECTION -->
     <view wx:for="{{user.events}}" wx:key wx:for-item="event" class="dark">
       <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
-
-
     <view class=" card-info" style="background-image: url({{event.image}}); background-size: cover">
       <!-- <view class="confirmation">{{confirmation.start}}</view> -->
       <view class="item">
@@ -114,16 +95,12 @@
           <view class="text-bold">{{event.attendees}}</view>
           </view>
           </view>
-
       </view>
-
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
         </view>
       </view>
     </view>
-
-
     <!-- CARD TAGS -->
             <!-- <view class="cu-item tags">
             <view class="content">
@@ -149,7 +126,7 @@
         <view class="icon_right cuIcon-right"></view>
       </view>
       <view class="tag_swiper">
-        <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
+        <view wx:for="{{event.tag_list}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
         
       </view>
     </view>
@@ -158,21 +135,18 @@
     </view>
   </swiper-item>  
 </swiper>  
-
 <!-- organize ends here -->
-
 </view>
 <view wx:else>
 <view>
 <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.png');height: 100vh;">
   <view class="text-white logs">
   </view>
-  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+  <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
 </view>
     
 </view>
 </view>
-
 <!-- BOTTOM NAVBAR START -->
 <!-- <view class="space-6"></view> -->
 <!-- <view class="space-6"></view> -->

@@ -9,7 +9,7 @@ Page({
       url: '/pages/eventsindex/eventsindex',
     })
   },
-
+ 
   goToBrowse: function () {
     wx.redirectTo({
       url: '/pages/browse/browse',

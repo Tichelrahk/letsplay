@@ -46,6 +46,14 @@ App({
           success: (res) => {
             console.log(25, res)
             this.globalData.user = res.data.user
+            console.log('hoho')
+            const application = this
+            if (this.globalData.user.profile_picture == null) {
+              console.log(222, application.globalData)
+              wx.setStorage({
+                key: 'loggedIn',
+                data: 'false',
+              })
             wx.loadFontFace({
               family: "Kaushan Script",
               source: 'url("http://lc-dnc55p3h.cn-e1.lcfile.com/09e1fc0896d8febebfa9/KaushanScript-Regular.ttf")',
@@ -53,11 +61,6 @@ App({
                 console.log('font load sucess', res)
               }
             })
-            if(this.gobalData.user.profile_picture == null) {
-              wx.setStorage({
-                key: 'loggedIn',
-                data: 'false',
-              })
             }
           }
         })

@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-black" isCustom="{{true}}">
+<cu-custom bgColor="bg-blue light" isCustom="{{true}}">
   <view slot="content">Create</view>
 </cu-custom>
 
@@ -31,8 +31,8 @@
 
   
 
-  <view class="cu-form-group">
-    <view class=" bg-white text-blue padding">
+  <view class="cu-form-group bg-white light">
+    <view class=" text-blue padding">
       <view class="cuIcon-titles mc-title">How many people?</view>
       <input type="number" placeholder="Enter the amount of people" name="slots"></input>
     </view>  
@@ -41,7 +41,7 @@
   <view class="cu-form-group">
     <view class="padding bg-white text-blue">
       <view class="cuIcon-titles mc-title">Activity Description</view>
-       <textarea placeholder="Write a good activity description" name="description"></textarea>
+       <input placeholder="Write a good activity description" name="description"></input>
     </view> 
   </view>
 
@@ -93,16 +93,16 @@
 			</view>
 		</picker>
 	</view> -->
-	<view bindtap="chooseLocation"  class="cu-form-group">
-      <view class=" padding bg-white text-blue">
-        <view class="cuIcon-titles mc-title"  >Choose Your Location</view>
-      </view>
-    <view class="cu-bar bg-white">
-    {{location.name}}
+	<view bindtap="chooseLocation"  class="cu-form-group light">
+      <view class=" padding text-blue">
+        <view class="cuIcon-titles mc-title">Choose Your Location</view>
+      <!-- </view>
+    <view class="cu-bar bg-white"> -->
+    <input>{{location.name}}</input> 
     </view>
   </view>
  
-<view class="cu-form-group">
+<view class="cu-form-group timecenter">
 <view class="cu-bar bg-white margin-top">
     <view class="time_form">
       <view class="time">
@@ -131,8 +131,8 @@
   </view>
 
   <view class="cu-form-group">
-	<view bindtap="chooseImage" class="cu-bar bg-white">
-  <view class="bg-white text-blue">
+	<view bindtap="chooseImage" class="cu-bar light">
+  <view class="text-blue">
 		<view class="action cuIcon-titles mc-title">
     Upload your pictures
     <text class="cuIcon-cameraadd"></text>
@@ -161,7 +161,7 @@
     </view>
 
     <view class="btn-area">
-      <button class="submit btn-cust" form-type="submit">Submit</button>
+      <button class="submit btn-cust light round" form-type="submit">Submit</button>
   </view>
 
 
@@ -194,8 +194,8 @@
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
 <view class="space-6"></view>
-<view class="cu-bar tabbar bg-black">
-  <view class="action text-gray" bindtap="goToIndex">
+<view class="cu-bar tabbar bg-white light">
+  <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>
@@ -203,21 +203,21 @@
     <view class="cuIcon-similar"></view> 
     Browse
   </view> -->
-  <view class="action text-gray" bindtap="goToAbout">
+  <view class="action text-blue" bindtap="goToAbout">
     <view class="cuIcon-global"></view> 
     Nearby
   </view>
  
-  <view class="action text-gray add-action" bindtap="goToCreate">
+  <view class="action text-blue add-action" bindtap="goToCreate">
     <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
-  <view class="action text-gray" bindtap="goToMyActivities">
+  <view class="action text-blue" bindtap="goToMyActivities">
     <view class="cuIcon-activity">
     </view>
     My Activities
   </view>
-  <view class="action text-gray" bindtap="goToProfile">
+  <view class="action text-blue" bindtap="goToProfile">
     <view class="cuIcon-my">
     </view>
     Profile

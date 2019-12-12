@@ -4,7 +4,7 @@
 </cu-custom>
   
 <view wx:if ="{{login}}">
-
+ 
 <!-- BASIC INFORMATION CARD -->
 
 <view class=" padding bg-white solid-bottom text-blue">

@@ -7,7 +7,6 @@
 <text class="play">Let's Play</text>
 <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
   <swiper-item wx:for="{{swiperList}}" wx:key style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)),url({{item.url}}); background-size: cover; display:flex; align-items: center" mode="aspectFill">
-  
   </swiper-item>
 </swiper>
 </view>
@@ -23,7 +22,7 @@
     <view class=" btn_red " bindinput="searchAPICall">Search</view>
   </view>
 </view>
-
+ 
 <!-- CARDS SECTION -->
 <view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
   <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
@@ -38,18 +37,23 @@
               {{event.name}}
             </view>
         </view>
-        <view class="action scope-info">
+        <view wx:if="{{event.slots}}" class="action scope-info">
           <view class="cuIcon-friend people"></view>
           <view class=" text-scope">{{event.attendees}}/{{event.slots}}</view>  
         </view>
+        <view wx:else>
+        <view class="cuIcon-friend people"></view>
+          <view class="text-scope">{{event.attendees}}</view>
+        </view>
       </view>
+
 
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
         </view>
       </view>
-    </view>
-
+    </view> 
+ 
 <!-- CARD TAGS -->
     <view class="item-down tags">
       <view class="flexing">

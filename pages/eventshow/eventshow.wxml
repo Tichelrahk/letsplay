@@ -36,7 +36,7 @@
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar '>
     </view> 
-    <view class="title">Who's Playing
+    <view class="title text-blue">Who's Playing
       <text>{{attendees}}/{{event.slots}}</text>
     </view>
   </view>
@@ -70,7 +70,7 @@
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar'></view> 
-    <view class="title">What's happening</view>
+    <view class="title text-blue">What's happening</view>
   </view>
 </view>
 <view class=" mc-content">
@@ -92,7 +92,9 @@
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar'></view> 
-    <view class="title">Find us here!</view>
+
+    <view class="title text-blue">Find us here!</view>
+
   </view>
   <view>{{event.location.address}}</view>
 </view>

@@ -6,6 +6,7 @@
 <view wx:if ="{{login}}">
 
 <!-- BASIC INFORMATION CARD -->
+
 <view class=" padding bg-white solid-bottom text-blue">
   <view class='cuIcon-titles mc-title'>My Basic Information</view> 
 </view>
@@ -14,7 +15,7 @@
 <view class="info_profile">
   <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
   <view class="padding-left text-black">
-    <view>Name: <text class="text-bold">{{user.name}}</text></view>
+    <view class="name">Name: <text class="text-bold">{{user.name}}</text></view>
     <view wx:if="{{user.description}}">Bio: {{user.description}}</view>
   </view>
 </view>
@@ -23,6 +24,7 @@
 
 
 <!-- LOCATION CARD -->
+
 <view class="padding bg-white solid-bottom margin-top text-blue">
   <view class='cuIcon-titles mc-title'>My Location</view> 
 </view>

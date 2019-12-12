@@ -12,7 +12,7 @@
       <view class="swiper-tab-list {{currentTab==1 ? 'on1' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
 </view>  
 
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+<swiper current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
 
 <swiper-item>  
     <!-- Attending Cards -->
@@ -20,43 +20,38 @@
 
     <!-- Panel Body Start -->
     <!-- CARDS SECTION -->
-<view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation">
-  <view class="cu-list menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{confirmation.event.id}}">
 
-<!-- CARD TITLE -->
-    <view class="cu-item">
-    <view>{{confirmation.start}}</view>
-          <view class="flex">
-            <view class="cuIcon-activity bluev1"></view>
-            <view class="text-bold text-cut padding-left">
-            {{confirmation.event.name}}           
-            </view>
-          </view>
-          <view class="action">
-            <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
-          </view>
-        </view>
+<view wx:for="{{user.confirmations}}" wx:key wx:for-item="confirmation" class="dark">
+  <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{confirmation.event.id}}">
 
+<!-- CARD INFO -->
 
-<!-- customizing start -->
-
-
-<!-- <view wx:for="{{events}}" wx:key wx:for-item="event" class="dark">
-  <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
-
-
-    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{event.image}}); background-size: cover">
+    <view class=" card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url({{confirmation.event.image}}); background-size: cover">
+      <!-- <view class="confirmation">{{confirmation.start}}</view> -->
       <view class="item">
         <view class="flex">
-          <view class="cuIcon-activity text-flag flag"></view>
-            <view class="text-head set_width">
-              {{event.name}}
+          <view class="cuIcon-activity text-blue"></view>
+            <view class="text-head set_with1">
+              {{confirmation.event.name}}
             </view>
-        </view>
-        <view class="action scope-info">
+          </view>
+
+
+          
+          
+        
+          <view wx:if="{{confirmation.event.slots}}"  class="action scope-info">
+            <view class="cuIcon-friend people"></view>
+            <view class=" text-scope">
+            {{confirmation.attendees}}/{{confirmation.event.slots}}</view>  
+          </view>
+          <view wx:else>
           <view class="cuIcon-friend people"></view>
-          <view class=" text-scope">{{event.attendees}}/{{event.slots}}</view>  
-        </view>
+            <view class=" text-scope">
+          <view class="text-bold">{{confirmation.attendees}}</view>
+          </view>
+          </view>
+
       </view>
 
       <view class="content flex padding-top padding-bottom">
@@ -65,20 +60,22 @@
       </view>
     </view>
 
+
+<!-- CARD TAGS -->
     <view class="item-down tags">
       <view class="flexing">
         <view class="content">
           <view>
-            <view class="info">{{event.date}}</view>
-            <view class="info">{{event.start}}-{{event.end}}</view>
+            <view class="info">{{confirmation.date}}</view>
+            <view class="info">{{confirmation.start}}-{{confirmation.end}}</view>
           </view>
-            <view class="info">Location: {{event.location.address}}</view>
+            <view class="info">Location: {{confirmation.location}}</view>
           <view>
             
            
           </view>
         </view>
-        
+        <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
         <view class="icon_right cuIcon-right"></view>
       </view>
       <view class="tag_swiper">
@@ -87,39 +84,7 @@
       </view>
     </view>
   </view>
-</view> -->
 
-
-
-<!-- customizing end -->
-
-        
-
-<!-- CARD INFO -->
-    <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{confirmation.event.image}}); background-size: cover">
-      <view class="content flex padding-top padding-bottom">
-        <view class="mc-content card-content"> 
-          <view>
-            <view>{{confirmation.date}}</view>
-            <view>{{confirmation.start}}-{{confirmation.end}}</view>
-          </view>
-          <view class="cu-item">Location:{{confirmation.location.address}}</view>
-        </view>
-      </view>
-    </view>
-
-
-<!-- CARD TAGS -->
-    <view class="cu-item tags">
-            <view class="content">
-              <view>
-                <view class="cu-tag bg-blue light round">Jing An District</view>
-                <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-green light round">{{tag}}</view>
-        </view>
-      </view>
-      <view class="action cuIcon-right"></view>
-    </view>
-  </view>
 </view>
 
 <!-- OLD CARD -->
@@ -143,13 +108,16 @@
             {{event.name}}           
             </view>
           </view>
-          <view class="action">
+          <view wx:if="{{event.slots}}"  class="action">
             <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
+          </view>
+          <view wx:else>
+          <view class="text-bold">{{event.attendees}}</view>
           </view>
         </view>
 
     <!-- CARD INFO -->
-        <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{confirmation.event.image}}); background-size: cover">
+        <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{event.image}}); background-size: cover">
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
           <view>

@@ -122,6 +122,9 @@ Page({
     this.updateUser(e)
   },
 
+  setStorage: function (e) {
+  },
+
 
 
 

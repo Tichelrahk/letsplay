@@ -45,7 +45,7 @@ App({
           // insert next code here
           success: (res) => {
             console.log(25, res)
-            this.globalData.userId = res.data.userId
+            this.globalData.user = res.data.user
             wx.loadFontFace({
               family: "Kaushan Script",
               source: 'url("http://lc-dnc55p3h.cn-e1.lcfile.com/09e1fc0896d8febebfa9/KaushanScript-Regular.ttf")',
@@ -53,6 +53,12 @@ App({
                 console.log('font load sucess', res)
               }
             })
+            if(this.gobalData.user.profile_picture == null) {
+              wx.setStorage({
+                key: 'loggedIn',
+                data: 'false',
+              })
+            }
           }
         })
       }
@@ -62,10 +68,7 @@ App({
 
   globalData: {
     // url: "http://localhost:3000/api/v1/",
-  url: "https://letsplay.wogengapp.cn/api/v1/",  
-
-  
-    userInfo: "",
+  url: "https://letsplay.wogengapp.cn/api/v1/",
     // events: [
     //   {
     //     id: 1,

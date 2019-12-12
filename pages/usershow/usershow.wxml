@@ -5,33 +5,28 @@
   
 <view wx:if ="{{login}}">
 <!-- BASIC INFORMATION CARD -->
-<view class=" padding bg-white solid-bottom text-blue">
-  <view class='cuIcon-titles mc-title'>My Basic Information</view> 
-</view>
-<view class="bg-white flex padding">
-<view class="info_profile">
-  <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
-  <view class="padding-left text-black">
-    <view class="name">Name: <text class="text-bold">{{user.name}}</text></view>
-    <view wx:if="{{user.description}}">Bio: {{user.description}}</view>
+
+
+    <view class="attendee">
+      <view class='ic cuIcon-titles text-blue bar'></view> 
+      <view class="title text-blue">My Basic Information</view>
+    </view>
+
+<view class="bg-white flex padding solid-bottom">
+  <view class="info_profile">
+    <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
+    <view class="padding-left text-black">
+      <view class="name">Name: <text class="text-bold">{{user.name}}</text></view>
+      <view wx:if="{{user.description}}">Bio: {{user.description}}</view>
+    </view>
   </view>
 </view>
-  <!-- <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view> -->
-</view>
-<!-- LOCATION CARD -->
-<view class="padding bg-white solid-bottom margin-top text-blue">
-  <view class='cuIcon-titles mc-title'>My Location</view> 
-</view>
-<map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
-<view class="bg-white space-3"></view>
-<!-- ACTIVITY SUMMARY CARD -->
-<!-- <view class="padding bg-white solid-bottom margin-top text-black">
-  <view class='cuIcon-titles mc-title'>My Activity Summary</view> 
-</view>
-<view class="padding bg-white solid-bottom mc-content">Events Attended:</view>
-<view class="padding bg-white solid-bottom mc-content">Events Oranised:</view>  
-<view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>   -->
-<view class="padding bg-white solid-bottom margin-top text-blue">
+
+    
+
+  <view class="attendee">
+    <view class='ic cuIcon-titles text-blue bar'></view> 
+
   <view class='cuIcon-titles mc-title'>My Likes <text class='cuIcon-like lg text-red like'></text> </view>
   <view>
     <view wx:if="{{noFavorites}}">
@@ -91,6 +86,7 @@
   </view>
 </view>
 <view class="bg-white space-3"></view>
+
 </view>
 <view wx:else>
 <view>

@@ -3,7 +3,7 @@
   margin:10px;
   padding:10px;
 }
-
+ 
 .edit{
   font-size: 21px;
 }
@@ -66,4 +66,48 @@
   box-sizing: border-box;
   font-family: 'Kaushan Script', cursive;
 }
+
+.btn-cust1{
+  color: #1e8bff;
+  border: 1px solid;
+  border-radius: 10px;
+  font-weight: heavy;
+  transition: opacity 0.3s ease;
+  margin-top: 20px;
+  width: 40%;
+  position: absolute;
+  top: 488px;
+  left: 122px;
+}
+
+.btn-cust1:hover{
+border: 1px solid white;
+color:white;
+background-color: #1e8bff;
+}
+
+.ic{
+  font-size: 24px;
+  padding-top: 16px;
+}
+
+.title{
+  font-size: 20px;
+  padding-top: 16px;
+}
+
+
+.attendee{
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  padding-left: 14px;
+}
+
+.like_info{
+  margin-left: 30px;
+}
+
+
+
 

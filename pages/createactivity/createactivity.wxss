@@ -9,11 +9,21 @@
   background-color: #EFF0F1;
 }
 
+.btn-cust1{
+  color:#1e8bff;
+  border: 1px solid ;
+  border-radius:10px;
+  font-weight: heavy;
+  transition: opacity 0.3s ease;
+  margin-top: 20px;
+  width: 50%;
+}
+
 .time_form{
   display: flex;
   background-color: white;
   border-radius: 5px;
-  padding: 40rpx;
+  margin-left: 45px;
   width: 100%;
   box-sizing: border-box;
   justify-content: space-between;
@@ -124,13 +134,13 @@ box-sizing: border-box;
 .attendee1{
   height: 80px;
   width: 40%;
+  margin-left: 104px;
+
 }
 
 .add_pic{
-  /* border: 1px solid #1e8bff; */
-  width: 30px;
-  margin: 0 auto;
-
+ margin-right: 64px;
+  font-size: 25px;
 }
 
 .title{
@@ -151,6 +161,10 @@ box-sizing: border-box;
   width: 100%;
   height: 100%;
   border: 1px solid #1E8BFF;
+  display: flex;
+  align-items: center;
+ 
+  border-radius: 4px;
 }
 .cu-form-group1 {
 background-color: var(--white);
@@ -195,26 +209,17 @@ background-color: #1e8bff;
 
 }
 
-/* .solids{
-padding-bottom: calc((100% - 60rpx)/4);
-height: 0;
-width: calc((100% - 60rpx)/4);
-margin-right: 20rpx;
-margin-bottom: 20rpx;
-border-radius: 6rpx;
+.attendee2{
+  height: 221px;
+  width: 100%;
+  margin-left: -7px;
+}
 
-overflow: hidden;
-font-size: 52rpx;
-position: absolute;
-color: var(--grey);
-margin: auto;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-
-} */
+.imagePlaceholder1 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #1E8BFF;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}

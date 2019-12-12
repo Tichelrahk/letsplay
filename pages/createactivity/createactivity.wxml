@@ -12,7 +12,7 @@
 
   <view class=" margin-top ">
     <view class=" bg-white text-blue">
-         <view class="attendee">
+      <view class="attendee">
         <view class='ic cuIcon-titles text-blue bar'></view> 
         <view class="title text-blue">Activity name*</view>
       </view>
@@ -94,11 +94,20 @@
       <view class='ic cuIcon-titles text-blue bar'></view> 
       <view class="title text-blue">Add a picture*</view>
     </view>
-    <view bindtap="chooseImage" class="attendee1">
-      <image class="imagePlaceholder" src="{{pic}}" mode='aspectFill'>
-      <view class="add_pic cuIcon-cameraadd text-blue"></view>
-      </image>
+    <view wx:if="{{pic}}">
+      <view bindtap="chooseImage" class="attendee2">
+        <image class="imagePlaceholder1" src="{{pic}}" mode='aspectFill'>
+        </image>
+      </view>
     </view>
+    <view wx:else>
+      <view bindtap="chooseImage" class="attendee1">
+        <image class="imagePlaceholder">
+        <view class="add_pic cuIcon-cameraadd text-blue"></view>
+        </image>
+      </view>
+    </view>
+    
     
 			<!-- <view class="solids" bindtap="ChooseImage">
 				<text class="cuIcon-cameraadd"></text>
@@ -124,7 +133,7 @@
       <view class="switch">Make it Private</view>
       <switch  bindchange="switch1Change"/>
     </view>
-      <view class="describe">Not visible by other, unless shared on wechat</view>
+      <view class="describe">Not visible by others, unless shared on wechat</view>
    
     <view class="btn-area">
       <button class="btn-cust1" form-type="submit">Create Activity</button>
@@ -147,7 +156,7 @@
       
     </view>
   </view>
-  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+  <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
 </view>
 </view>
 

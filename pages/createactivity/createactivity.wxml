@@ -49,7 +49,7 @@
         <view class="title text-blue">Choose Your Location*</view>
       </view>
       <view class="spacing bg-white solid-bottom margin-top text-black">
-        <input placeholder="Enter the activity location">{{location.name}}</input>
+        <view>{{location.name}}</view>
     </view>  
   </view>
 
@@ -91,30 +91,30 @@
   <view class="attendee">
     <view class='ic cuIcon-titles text-blue bar'></view> 
     <view class="title text-blue">Add a picture</view>
-  
+  </view>
 	<view bindtap="chooseImage" class="attendee1">
     
     <image class="image" src="{{pic}}" mode='aspectFill'>
     <view class="add_pic cuIcon-cameraadd text-blue"></view>
     </image>
 	  </view>
-  </view>
+  
   
 	
   
- <view class="cu-form-group">
-  <view class="padding bg-white ">
-		<view class="action cuIcon-titles mc-title text-blue">
-			Tag your activity*
-		</view>
-    <view class="padding">
-      <block wx:for="{{arr_of_tags}}" wx:key wx:for-item="tag">
-        <text bindtap="deselectTag" data-tag="{{tag.key}}" wx:if="{{tag.selected}}" class="bg-blue light round tag-cloud cu-tag">{{tag.key}} </text>
-        <text bindtap="selectTag"  data-tag="{{tag.key}}" wx:else class="round tag-cloud cu-tag">{{tag.key}}</text>
-      </block>
+  <view class="cu-form-group">
+    <view class="padding bg-white ">
+      <view class="action cuIcon-titles mc-title text-blue">
+        Tag your activity*
+      </view>
+      <view class="padding">
+        <block wx:for="{{arr_of_tags}}" wx:key wx:for-item="tag">
+          <text bindtap="deselectTag" data-tag="{{tag.key}}" wx:if="{{tag.selected}}" class="bg-blue light round tag-cloud cu-tag">{{tag.key}} </text>
+          <text bindtap="selectTag"  data-tag="{{tag.key}}" wx:else class="round tag-cloud cu-tag">{{tag.key}}</text>
+        </block>
       </view>
     </view>
-    </view>
+  </view>
 
     <view class="cu-form-group">
       <view class="padding bg-white ">

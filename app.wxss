@@ -269,6 +269,7 @@ background-color: #2f85a6;
   color:#ffff;
 }
 
+
 /* pages/eventsindex/eventsindex.wxss */
 .inp {
   border: solid black 1px;
@@ -427,3 +428,4 @@ bg_red{
   display: flex;
   margin-left: 10px;
 }
+

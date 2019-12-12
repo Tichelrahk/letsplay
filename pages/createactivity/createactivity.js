@@ -56,6 +56,11 @@ Page({
     this.setData({ end_time: event.detail.value })
   },
 
+  switch1Change: function (e) {
+    console.log(e)
+    this.setData({ private: e.detail.value })
+  },
+
   selectTag: function (event) {
     console.log('help', event)
     let new_arr = this.data.arr_of_tags
@@ -217,6 +222,7 @@ Page({
     form.event.image = page.data.pic
     form.event.tag_list = page.data.arr_of_tags.filter((x) => x['selected'] == true).map((x) => x.key)
     form.event.slots = parseInt(event.detail.value.slots)
+    form.event.private = page.data.private
     // console.log(10, form.user_id)
     console.log(77, form);
     wx.request({

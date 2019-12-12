@@ -6,7 +6,7 @@
 <view wx:if ="{{login}}">
 
 <!-- BASIC INFORMATION CARD -->
-<view class=" padding bg-white solid-bottom text-black">
+<view class=" padding bg-white solid-bottom text-blue">
   <view class='cuIcon-titles mc-title'>My Basic Information</view> 
 </view>
 
@@ -23,7 +23,7 @@
 
 
 <!-- LOCATION CARD -->
-<view class="padding bg-white solid-bottom margin-top text-black">
+<view class="padding bg-white solid-bottom margin-top text-blue">
   <view class='cuIcon-titles mc-title'>My Location</view> 
 </view>
 <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%;"></map>
@@ -37,7 +37,7 @@
 <view class="padding bg-white solid-bottom mc-content">Events Oranised:</view>  
 <view class="padding bg-white solid-bottom mc-content">Total Attendees:</view>   -->
 
-<view class="padding bg-white solid-bottom margin-top text-black">
+<view class="padding bg-white solid-bottom margin-top text-blue">
   <view class='cuIcon-titles mc-title'>My Likes</view> 
 </view>
 

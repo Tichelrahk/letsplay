@@ -4,7 +4,6 @@
 </cu-custom>
   
 <view wx:if ="{{login}}">
- 
 <!-- BASIC INFORMATION CARD -->
 
 
@@ -23,20 +22,70 @@
   </view>
 </view>
 
-
-<!-- LOCATION CARD -->
-
     
 
   <view class="attendee">
     <view class='ic cuIcon-titles text-blue bar'></view> 
-    <view class="title text-blue">My Likes</view>
+
+  <view class='cuIcon-titles mc-title'>My Likes <text class='cuIcon-like lg text-red like'></text> </view>
+  <view>
+    <view wx:if="{{noFavorites}}">
+      Click this <text class='cuIcon-like lg text-red like'></text> to save events here
+    </view>
+    <view wx:for="{{user.favorited}}" wx:key wx:for-item="event" class="dark">
+  <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">
+<!-- CARD INFO -->
+    <view class=" card-info" style="background-image: url({{event.image}}); background-size: cover">
+      <!-- <view class=">{{start}}</view> -->
+      <view class="item">
+        <view class="flex">
+          <view class="cuIcon-activity text-blue"></view>
+            <view class="text-head set_with1">
+              {{event.name}}
+            </view>
+          </view>
+          <view wx:if="{{event.slots}}"  class="action scope-info">
+            <view class="cuIcon-friend people"></view>
+            <view class=" text-scope">
+            {{event.attendees}}/{{event.slots}}</view>  
+          </view>
+          <view wx:else class="action scope-info">
+          <view class="cuIcon-friend people"></view>
+            <view class=" text-scope">
+          <view class="text-bold">{{event.attendees}}</view>
+          </view>
+          </view>
+      </view>
+      <view class="content flex padding-top padding-bottom">
+        <view class="mc-content card-content"> 
+        </view>
+      </view>
+    </view>
+<!-- CARD TAGS -->
+    <view class="item-down tags">
+      <view class="flexing">
+        <view class="content">
+          <view>
+            <view class="info">{{event.date}}</view>
+            <view class="info">{{event.start}}-{{event.end}}</view>
+          </view>
+            <view class="info">Location: {{event.location}}</view>
+          <view>
+          </view>
+        </view>
+        <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
+        <view class="icon_right cuIcon-right"></view>
+      </view>
+      <view class="tag_swiper">
+        <view wx:for="{{event.tag_list}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
+        
+      </view>
+    </view>
   </view>
-
-  <view class="bg-white space-3"></view>
-<view class="like_info">Press <text class="cuIcon-like text-red"></text> to save activities here</view>
-
-
+</view>
+  </view>
+</view>
+<view class="bg-white space-3"></view>
 
 </view>
 <view wx:else>
@@ -49,16 +98,12 @@
 </view>
 </view>
 </view>
-
-
 <!-- <view> -->
 <!-- <button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
   Edit my Profile
 </button> -->
 <!-- <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view> -->
 <!-- </view> -->
-
-
 <view class="space-6"></view>
 <view class="space-6"></view>
 <view class="cu-bar tabbar bg-white light">
@@ -91,3 +136,4 @@
   </view>
 </view>
 <!-- BOTTOM NAVBAR END -->
+

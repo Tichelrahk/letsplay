@@ -10,7 +10,10 @@
   <view style="padding-left: 40rpx;">
     <view class="showtitle text-white">{{event.name}}</view>
     <!-- JOIN BUTTON -->
-    <view wx:if="{{joined}}">
+    <view wx:if="{{organized}}">
+      <button class="bg-cancelred butt-size" bindtap="deleteEvent">Cancel Event</button>
+    </view>
+    <view wx:elif="{{joined}}">
       <button class="bg-cancelred butt-size" bindtap="deleteConfirmation">Cancel</button>
     </view>
 

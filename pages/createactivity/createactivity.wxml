@@ -135,13 +135,13 @@
 
 </view>
  <view wx:else>
-  <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.jpg');height: 100vh;">
+  <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.png');height: 100vh;">
   <view class="text-white logs">
     <view class="head">
-      Lets Play
+     
     </view>
     <view class="head_content">
-      Create or Join Fun activities with your friends
+      
     </view>
   </view>
   <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>

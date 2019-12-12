@@ -15,6 +15,7 @@
 
 .flex{
   justify-content: space-between;
+
 } 
 
 .flexed{
@@ -29,3 +30,40 @@
 .name{
   margin-top: 24px;
 }
+
+}
+
+.head {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 55px;
+  margin-bottom: 78px;
+}
+
+.head_content{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 30px;
+  margin-bottom: 82px;
+}
+
+.btn-login {
+  justify-content: center;
+  align-items: center;
+}
+
+.position {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.logs{
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 45rpx;
+  font-weight: 600;
+  width: 100%;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  font-family: 'Kaushan Script', cursive;
+}
+

@@ -48,16 +48,18 @@
 
 </view>
 <view wx:else>
+<view>
 <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.jpg');height: 100vh;">
-  <view class="padding-xl text-white loginp">
-    <view class="padding-xs text-xl login-font">
+  <view class="text-white logs">
+    <view class="head">
       Lets Play
     </view>
-    <view class="padding-xs">
-      Fun activities with your friends
+    <view class="head_content">
+      Create or Join Fun activities with your friends
     </view>
   </view>
-  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join Our Community</button>
+  <button class="log btn-cust btn-login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+</view>
 </view>
 </view>
 
@@ -83,23 +85,21 @@
     Browse
   </view> -->
   <view class="action text-gray" bindtap="goToAbout">
-    <view class="cuIcon-info"></view> 
-    About
+    <view class="cuIcon-global"></view> 
+    Nearby
   </view>
-
+ 
   <view class="action text-gray add-action" bindtap="goToCreate">
-    <view class="cu-btn cuIcon-add bg-green"></view>
+    <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">
     <view class="cuIcon-activity">
-      <view class="cu-tag badge">2</view>
     </view>
     My Activities
   </view>
   <view class="action text-gray" bindtap="goToProfile">
     <view class="cuIcon-my">
-      <view class="cu-tag badge"></view>
     </view>
     Profile
   </view>

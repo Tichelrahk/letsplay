@@ -36,8 +36,8 @@
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar '>
     </view> 
-    <view class="title">Attendees
-      <text>{{attendees}}</text>
+    <view class="title">Who's Playing
+      <text>{{attendees}}/{{event.slots}}</text>
     </view>
   </view>
   
@@ -70,7 +70,7 @@
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar'></view> 
-    <view class="title">Event Details</view>
+    <view class="title">What's happening</view>
   </view>
 </view>
 <view class=" mc-content">
@@ -92,7 +92,9 @@
 <view class="padding bg-white solid-bottom margin-top text-black">
   <view class="attendee">
     <view class='cuIcon-titles text-blue bar'></view> 
-    <view class="title text-blue">Event Location</view>
+
+    <view class="title text-blue">Find us here!</view>
+
   </view>
   <view>{{event.location.address}}</view>
 </view>
@@ -102,28 +104,32 @@
 <view class="space-4"></view>
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
+<view class="space-6"></view>
 <view class="cu-bar tabbar bg-black">
-  <view class="action {{isactive ? text-green : text-gray}}" bindtap="goToIndex">
+  <view class="action text-gray" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>
-  <view class="action text-gray" bindtap="goToBrowse">
+  <!-- <view class="action text-gray" bindtap="goToBrowse">
     <view class="cuIcon-similar"></view> 
     Browse
+  </view> -->
+  <view class="action text-gray" bindtap="goToAbout">
+    <view class="cuIcon-global"></view> 
+    Nearby
   </view>
+ 
   <view class="action text-gray add-action" bindtap="goToCreate">
     <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
   <view class="action text-gray" bindtap="goToMyActivities">
     <view class="cuIcon-activity">
-      <view class="cu-tag badge">2</view>
     </view>
     My Activities
   </view>
   <view class="action text-gray" bindtap="goToProfile">
     <view class="cuIcon-my">
-      <view class="cu-tag badge"></view>
     </view>
     Profile
   </view>

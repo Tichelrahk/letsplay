@@ -27,7 +27,9 @@
   <view class="attendee">
     <view class='ic cuIcon-titles text-blue bar'></view> 
 
-  <view class='cuIcon-titles mc-title'>My Likes <text class='cuIcon-like lg text-red like'></text> </view>
+    <view>My Likes <text class='cuIcon-like lg text-red like'></text> </view>
+    </view>
+  <view>
   <view>
     <view wx:if="{{noFavorites}}">
       Click this <text class='cuIcon-like lg text-red like'></text> to save events here

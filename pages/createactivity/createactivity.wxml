@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-black" isCustom="{{true}}">
+<cu-custom bgColor="bg-blue light" isCustom="{{true}}">
   <view slot="content">Create</view>
 </cu-custom>
 
@@ -21,20 +21,49 @@
   
   
 <form bindsubmit="formSubmit">
-	<view class="cu-form-group margin-top">
-		<view class="title">Activity Name</view>
-		<input placeholder="Write a good activity name" name="name"></input>
+
+	<view class="cu-form-group margin-top bg-white">
+    <view class="padding  bg-white text-blue">
+        <view class='cuIcon-titles mc-title'>Activity Name</view> 
+        	<input placeholder="Input the name" name="name"></input>
+    </view>  
 	</view>
-  <view class="cu-form-group">
-  <view class="title">Activity Description</view>
-    <textarea placeholder="Write a good activity description" name="description"></textarea>
-  </view>
-  <view class="cu-form-group">
-    <view class="title">How many people?</view>
-    <input placeholder="Enter the amount of people" name="slots"></input>
+
+  
+
+  <view class="cu-form-group bg-white light">
+    <view class=" text-blue padding">
+      <view class="cuIcon-titles mc-title">How many people?</view>
+      <input type="number" placeholder="Enter the amount of people" name="slots"></input>
+    </view>  
   </view>
 
+  <view class="cu-form-group">
+    <view class="padding bg-white text-blue">
+      <view class="cuIcon-titles mc-title">Activity Description</view>
+       <input placeholder="Write a good activity description" name="description"></input>
+    </view> 
+  </view>
+
+
+
+
 	<!-- <view class="cu-form-group">
+
+   <view class="weui-cells__title">表单报错</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell  weui-cell_warn">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">卡号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入卡号"/>
+                </view>
+                <view class="weui-cell__ft">
+                    <icon type="warn" size="23" color="#E64340"></icon>
+                </view>
+            </view>
+
 		<view class="title">Input your phone number</view>
 		<input placeholder="phone number"></input>
 		<view class="cu-capsule radius">
@@ -64,25 +93,20 @@
 			</view>
 		</picker>
 	</view> -->
-	<view bindtap="chooseLocation"  class="cu-form-group">
-		<view class="title"  >Choose Your Location</view>
-		<!-- <picker mode="region"  value="{{region}}" custom-item="{{customItem}}">
-			<view class="picker"> -->
-				<!-- {{region[0]}}，{{region[1]}}，{{region[2]}} -->
-			<!-- </view>
-		</picker> -->
-	
-    <view class="cu-bar bg-white">
-    {{location.name}}
-      <!-- <map id="map" longitude="121.4453" latitude="31.2235" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="height: 300px;"></map> -->
+	<view bindtap="chooseLocation"  class="cu-form-group light">
+      <view class=" padding text-blue">
+        <view class="cuIcon-titles mc-title">Choose Your Location</view>
+      <!-- </view>
+    <view class="cu-bar bg-white"> -->
+    <input>{{location.name}}</input> 
     </view>
   </view>
  
-
+<view class="cu-form-group timecenter">
 <view class="cu-bar bg-white margin-top">
     <view class="time_form">
       <view class="time">
-        <text class="time_head strong line">Start from</text>
+        <text class="time_head line">Start from</text>
         <picker mode="date" name="start_date" value="{{st_date}}" start="2019-12-01" end="2030-12-30" bindchange="bindStartDateChange">
           <view class="picker">{{st_date}}</view>
         </picker>
@@ -104,40 +128,40 @@
         </view>
       </view>
   </view>
-	<view bindtap="chooseImage" class="cu-bar bg-white margin-top">
-		<view class="action">
-			Upload your pictures
-		</view>
+  </view>
+
+  <view class="cu-form-group">
+	<view bindtap="chooseImage" class="cu-bar light">
+  <view class="text-blue">
+		<view class="action cuIcon-titles mc-title">
+    Upload your pictures
+    <text class="cuIcon-cameraadd"></text>
+    	</view>
+    </view>
     <image src="{{pic}}" mode='aspectFill'></image>
 		<view class="action">
 			<!-- {{imgList.length}}/4 -->
 		</view>
 	</view>
-	<!-- <view class="cu-form-group">
-		<view class="grid col-4 grid-square flex-sub">
-			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
-				<image src='{{imgList[index]}}' mode='aspectFill'></image>
-				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
-					<text class="cuIcon-close"></text>
-				</view>
-			</view>
-			<view class="solids" bindtap="chooseImage" wx:if="{{imgList.length<4}}">
-				<text class="cuIcon-cameraadd"></text>
-			</view>
-    </view>
-	</view> -->
+  </view> 
+	
   
-  <view class="margin-top">
-		<view class="title">Tag your activity!</view>
-    <view>
+ <view class="cu-form-group">
+  <view class="padding bg-white ">
+		<view class="action cuIcon-titles mc-title text-blue">
+			Tag your activity!
+		</view>
+    <view class="padding">
       <block wx:for="{{arr_of_tags}}" wx:key wx:for-item="tag">
         <text bindtap="deselectTag" data-tag="{{tag.key}}" wx:if="{{tag.selected}}" class="bg-blue light round tag-cloud cu-tag">{{tag.key}} </text>
         <text bindtap="selectTag"  data-tag="{{tag.key}}" wx:else class="round tag-cloud cu-tag">{{tag.key}}</text>
       </block>
+      </view>
     </view>
     </view>
+
     <view class="btn-area">
-      <button class="submit btn-cust" form-type="submit">Submit</button>
+      <button class="submit btn-cust light round" form-type="submit">Submit</button>
   </view>
 
 
@@ -170,8 +194,8 @@
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
 <view class="space-6"></view>
-<view class="cu-bar tabbar bg-black">
-  <view class="action text-gray" bindtap="goToIndex">
+<view class="cu-bar tabbar bg-white light">
+  <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>
@@ -179,21 +203,21 @@
     <view class="cuIcon-similar"></view> 
     Browse
   </view> -->
-  <view class="action text-gray" bindtap="goToAbout">
+  <view class="action text-blue" bindtap="goToAbout">
     <view class="cuIcon-global"></view> 
     Nearby
   </view>
  
-  <view class="action text-gray add-action" bindtap="goToCreate">
+  <view class="action text-blue add-action" bindtap="goToCreate">
     <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
-  <view class="action text-gray" bindtap="goToMyActivities">
+  <view class="action text-blue" bindtap="goToMyActivities">
     <view class="cuIcon-activity">
     </view>
     My Activities
   </view>
-  <view class="action text-gray" bindtap="goToProfile">
+  <view class="action text-blue" bindtap="goToProfile">
     <view class="cuIcon-my">
     </view>
     Profile

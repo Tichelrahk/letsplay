@@ -45,6 +45,7 @@ App({
           // insert next code here
           success: (res) => {
             console.log(25, res)
+            this.globalData.userId = res.data.userId
             this.globalData.user = res.data.user
             console.log('hoho')
             const application = this
@@ -52,7 +53,7 @@ App({
               console.log(222, application.globalData)
               wx.setStorage({
                 key: 'loggedIn',
-                data: 'false',
+                data: false,
               })
             wx.loadFontFace({
               family: "Kaushan Script",
@@ -70,8 +71,8 @@ App({
   },
 
   globalData: {
-    // url: "http://localhost:3000/api/v1/",
-  url: "https://letsplay.wogengapp.cn/api/v1/",
+    url: "http://localhost:3000/api/v1/",
+  // url: "https://letsplay.wogengapp.cn/api/v1/",
     // events: [
     //   {
     //     id: 1,

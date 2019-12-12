@@ -35,13 +35,23 @@
               {{confirmation.event.name}}
             </view>
           </view>
+
+
+          
           
         
-          <view class="action scope-info">
+          <view wx:if="{{confirmation.event.slots}}"  class="action scope-info">
             <view class="cuIcon-friend people"></view>
             <view class=" text-scope">
             {{confirmation.attendees}}/{{confirmation.event.slots}}</view>  
           </view>
+          <view wx:else>
+          <view class="cuIcon-friend people"></view>
+            <view class=" text-scope">
+          <view class="text-bold">{{confirmation.attendees}}</view>
+          </view>
+          </view>
+
       </view>
 
       <view class="content flex padding-top padding-bottom">
@@ -98,13 +108,16 @@
             {{event.name}}           
             </view>
           </view>
-          <view class="action">
+          <view wx:if="{{event.slots}}"  class="action">
             <view class="text-bold">{{event.attendees}}/{{event.slots}}</view>  
+          </view>
+          <view wx:else>
+          <view class="text-bold">{{event.attendees}}</view>
           </view>
         </view>
 
     <!-- CARD INFO -->
-        <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{confirmation.event.image}}); background-size: cover">
+        <view class="cu-item card" style="background-image: linear-gradient(45deg, rgba(0,0,0,0.7469188358937324) 0%, rgba(0,0,0,0) 65%), url({{event.image}}); background-size: cover">
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
           <view>

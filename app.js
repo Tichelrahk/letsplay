@@ -13,6 +13,7 @@ App({
     AV.init({
       appId: config.appId,
       appKey: config.appKey,
+      serverURLs: 'https://eliwct8i.lc-cn-n1-shared.com'
     });
 
     // Colour UI navbar

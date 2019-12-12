@@ -1,5 +1,5 @@
 <!--pages/activitynearby/activitynearby.wxml-->
-<cu-custom bgColor="bg-blue light" isCustom="{{true}}">
+<cu-custom bgColor="bg-new light" isCustom="{{true}}">
   <view slot="content">Let's Play!</view>
 </cu-custom>
 <map id="map" longitude="{{userLongitude}}" latitude="{{userLatitude}}" scale="14" markers="{{markers}}" bindmarkertap="markertap" bindcallouttap = "bindcallouttap" show-location style="width: 100%; height:80vh"></map>

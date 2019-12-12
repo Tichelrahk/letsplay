@@ -123,6 +123,7 @@ box-sizing: border-box;
 
 .attendee1{
   height: 80px;
+  width: 40%;
 }
 
 .add_pic{
@@ -144,4 +145,17 @@ box-sizing: border-box;
 
 .spacing{
   padding: 0 25px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+}
+.cu-form-group1 {
+background-color: var(--white);
+display: flex;
+align-items: center;
+min-height: 100rpx;
+justify-content: space-between;
+
 }

@@ -160,6 +160,13 @@
     </view>
     </view>
 
+    <view class="cu-form-group">
+      <view class="padding bg-white ">
+      <text>Private event: </text>
+        <switch bindchange="switch1Change"/>
+      </view>
+    </view>
+
     <view class="btn-area">
       <button class="submit btn-cust light round" form-type="submit">Submit</button>
   </view>

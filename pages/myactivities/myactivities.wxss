@@ -123,3 +123,13 @@ max-width: 200px;
   height: 90%;
   overflow: scroll;
 }
+
+.btn-cust1{
+  color:#1e8bff;
+  border: 1px solid ;
+  border-radius:10px;
+  font-weight: heavy;
+  transition: opacity 0.3s ease;
+  margin-top: 20px;
+  width: 50%;
+}

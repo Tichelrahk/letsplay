@@ -13,6 +13,7 @@ App({
     AV.init({
       appId: config.appId,
       appKey: config.appKey,
+      serverURLs: 'https://eliwct8i.lc-cn-n1-shared.com'
     });
 
     // Colour UI navbar
@@ -60,8 +61,8 @@ App({
   },
 
   globalData: {
-    url: "http://localhost:3000/api/v1/",
-  // url: "https://letsplay.wogengapp.cn/api/v1/",  
+    // url: "http://localhost:3000/api/v1/",
+  url: "https://letsplay.wogengapp.cn/api/v1/",  
 
   
     userInfo: "",

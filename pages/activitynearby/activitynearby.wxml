@@ -1,14 +1,12 @@
 <!--pages/activitynearby/activitynearby.wxml-->
-<cu-custom bgColor="bg-black" isCustom="{{true}}">
+<cu-custom bgColor="bg-blue light" isCustom="{{true}}">
   <view slot="content">Let's Play!</view>
 </cu-custom>
 <map id="map" longitude="{{userLongitude}}" latitude="{{userLatitude}}" scale="14" markers="{{markers}}" bindmarkertap="markertap" bindcallouttap = "bindcallouttap" show-location style="width: 100%; height:100vh"></map>
 
-<!-- BOTTOM NAVBAR START -->
-<view class="space-6"></view>
-<view class="space-6"></view>
-<view class="cu-bar tabbar bg-black">
-  <view class="action text-gray" bindtap="goToIndex">
+
+<view class="cu-bar tabbar bg-blue light">
+  <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search
   </view>
@@ -16,21 +14,21 @@
     <view class="cuIcon-similar"></view> 
     Browse
   </view> -->
-  <view class="action text-gray" bindtap="goToAbout">
+  <view class="action text-blue" bindtap="goToAbout">
     <view class="cuIcon-global"></view> 
     Nearby
   </view>
  
-  <view class="action text-gray add-action" bindtap="goToCreate">
+  <view class="action text-blue add-action" bindtap="goToCreate">
     <view class=" cuIcon-add bg_brand"></view>
     Create
   </view>
-  <view class="action text-gray" bindtap="goToMyActivities">
+  <view class="action text-blue" bindtap="goToMyActivities">
     <view class="cuIcon-activity">
     </view>
     My Activities
   </view>
-  <view class="action text-gray" bindtap="goToProfile">
+  <view class="action text-blue" bindtap="goToProfile">
     <view class="cuIcon-my">
     </view>
     Profile

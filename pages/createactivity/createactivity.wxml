@@ -194,7 +194,7 @@
 <!-- BOTTOM NAVBAR START -->
 <view class="space-6"></view>
 <view class="space-6"></view>
-<view class="cu-bar tabbar bg-white light">
+<view class="cu-bar tabbar bg-blue light">
   <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 
     Search

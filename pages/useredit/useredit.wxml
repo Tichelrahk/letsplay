@@ -1,7 +1,7 @@
 <!--pages/useredit/useredit.wxml-->
 <!-- <view class="modify-form"> -->
 
-<cu-custom bgColor="bg-black" isCustom="{{true}}">
+<cu-custom bgColor="bg-blue light" isCustom="{{true}}">
   <view slot="content">My Profile</view>
 </cu-custom>
  

@@ -49,7 +49,7 @@
         <view class="title text-blue">Choose Your Location*</view>
       </view>
       <view class="spacing bg-white solid-bottom margin-top text-black">
-        <input placeholder="Enter the activity location">{{location.name}}</input>
+        <input placeholder="Enter the activity location" value="{{location.name}}"></input>
     </view>  
   </view>
 
@@ -88,23 +88,23 @@
 
   
 
-  <view class="attendee">
-    <view class='ic cuIcon-titles text-blue bar'></view> 
-    <view class="title text-blue">Add a picture</view>
-  
-	<view bindtap="chooseImage" class="attendee1">
-    
-    <image class="image" src="{{pic}}" mode='aspectFill'>
-    <view class="add_pic cuIcon-cameraadd text-blue"></view>
-    </image>
-	  </view>
+  <view class="attendee" style="flex-direction: column; align-items: unset;">
+    <view class="display: flex;">
+      <view class='ic cuIcon-titles text-blue bar'></view> 
+      <view class="title text-blue">Add a picture</view>
+    </view>
+    <view bindtap="chooseImage" class="attendee1">
+      <image class="imagePlaceholder" src="{{pic}}" mode='aspectFill'>
+      <view class="add_pic cuIcon-cameraadd text-blue"></view>
+      </image>
+    </view>
   </view>
   
 	
   
- <view class="cu-form-group">
+ <view class="cu-form-group1">
   <view class="padding bg-white ">
-		<view class="action cuIcon-titles mc-title text-blue">
+		<view class="action cuIcon-titles title text-blue">
 			Tag your activity*
 		</view>
     <view class="padding">
@@ -117,7 +117,7 @@
     </view>
 
     <view class="cu-form-group">
-      <view class="padding bg-white ">
+      <view class="padding bg-white">
       <text>Private event: </text>
         <switch bindchange="switch1Change"/>
       </view>

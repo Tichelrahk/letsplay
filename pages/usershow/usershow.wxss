@@ -15,4 +15,17 @@
 
 .flex{
   justify-content: space-between;
+} 
+
+.flexed{
+  display: flex;
+  align-items: center;
+}
+
+.heads{
+  font-size: 20px;
+}
+
+.name{
+  margin-top: 24px;
 }

@@ -37,17 +37,22 @@
               {{event.name}}
             </view>
         </view>
-        <view class="action scope-info">
+        <view wx:if="{{event.slots}}" class="action scope-info">
           <view class="cuIcon-friend people"></view>
           <view class=" text-scope">{{event.attendees}}/{{event.slots}}</view>  
         </view>
+        <view wx:else>
+        <view class="cuIcon-friend people"></view>
+          <view class="text-scope">{{event.attendees}}</view>
+        </view>
       </view>
+
 
       <view class="content flex padding-top padding-bottom">
         <view class="mc-content card-content"> 
         </view>
       </view>
-    </view>
+    </view> 
  
 <!-- CARD TAGS -->
     <view class="item-down tags">

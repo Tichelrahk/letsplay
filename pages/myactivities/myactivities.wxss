@@ -119,30 +119,7 @@ max-width: 200px;
   text-shadow: 1px 1px 20px rgba(0,0,0,1);
   background-color: rgba(65, 64, 64, 0.171);
 }
-/* 
-.item1{
-  position: relative;
-  padding: 0 20rpx;
-  min-height: 100rpx;
-  background-color: rgba(65, 64, 64, 0.171);
-  justify-content: space-between;
-  align-items: center;
-  color: white;
+.height_view{
+  height: 90%;
+  overflow: scroll;
 }
-
-.text_head1{
-  font-weight: bold;
-  padding-left: 30rpx;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 19px;
-  text-shadow: 1px 1px 20px rgba(0,0,0,1);
-}
-
-
-/* 
-flex1{
-  display: flex;
-  justify-content: row;
-} */

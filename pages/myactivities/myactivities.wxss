@@ -131,7 +131,10 @@ max-width: 200px;
   font-weight: heavy;
   transition: opacity 0.3s ease;
   margin-top: 20px;
-  width: 50%;
+  width: 40%;
+  position: absolute;
+  top: 488px;
+  left: 122px;
 }
 
 .info{

@@ -134,10 +134,10 @@ Page({
    */
 
   data: {
-    st_date: '2019-12-11',
-    st_time: '12:00',
-    end_date: '2019-12-11',
-    end_time: '13:00',
+    st_date: '2019-12-13',
+    st_time: '19:00',
+    end_date: '2019-12-13',
+    end_time: '20:00',
     arr_of_tags: [ {key: "badminton", num: 0, selected: false },
        {key: "baseball", num: 1, selected: false },
        {key: "bowling", num: 2, selected: false },

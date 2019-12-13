@@ -4,11 +4,11 @@
 </cu-custom>
  
 <view wx:if ="{{login}}">
- 
+  
 <view class="swiper-tab solid-bottom bg-white">  
       <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" data-current="0" bindtap="swichNav">Attending</view>  
       <view class="swiper-tab-list {{currentTab==1 ? 'on1' : 'off'}}" data-current="1" bindtap="swichNav">Organizing</view> 
-</view>  
+</view>   
 <swiper current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
 <swiper-item>  
     <!-- Attending Cards -->
@@ -55,7 +55,7 @@
           </view>
             <view class="info">Location: {{confirmation.location}}</view>
           <view>
-          </view>
+          </view> 
         </view>
         <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
         <view class="icon_right cuIcon-right"></view>
@@ -102,16 +102,7 @@
         </view>
       </view>
     </view>
-    <!-- CARD TAGS -->
-            <!-- <view class="cu-item tags">
-            <view class="content">
-              <view>
-                <view class="cu-tag bg-blue light round">Jing An District</view>
-                <view wx:for="{{event.tags}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
-              </view>
-            </view>
-            <view class="action cuIcon-right"></view>
-          </view> -->
+
           <view class="item-down tags">
       <view class="flexing">
         <view class="content">
@@ -136,18 +127,21 @@
     </view>
   </swiper-item>  
 </swiper>  
+
 <!-- organize ends here -->
 </view>
+
+
+
 <view wx:else>
-<view>
-<view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.png');height: 100vh;">
-  <view class="text-white logs">
+    <view class="bg-img padding-tb-xl position" style="background-image: url('http://lc-dnC55P3H.cn-e1.lcfile.com/c2824ac960dfe28594e9/loginuse.png');height: 90vh;">
+      <view class="btn_cust3">
+        <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+      </view>
   </view>
-  <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
 </view>
     
-</view>
-</view>
+
 <!-- BOTTOM NAVBAR START -->
 <!-- <view class="space-6"></view> -->
 <!-- <view class="space-6"></view> -->

@@ -100,11 +100,9 @@
         </image>
       </view>
     </view>
-    <view wx:else>
+    <view wx:else style="display: flex; justify-content: center;">
       <view bindtap="chooseImage" class="attendee1">
-        <image class="imagePlaceholder">
-        <view class="add_pic cuIcon-cameraadd text-blue"></view>
-        </image>
+        <view class="add_pic cuIcon-cameraadd text-blue imagePlaceholder"></view>
       </view>
     </view>
     
@@ -144,20 +142,15 @@
   <!-- <view class="p-6"></view> -->
  
 </form>
-
+<view class="space-6"></view>
+<view class="space-6"></view>
 </view>
  <view wx:else>
-  <view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.png');height: 100vh;">
-  <view class="text-white logs">
-    <view class="head">
-     
-    </view>
-    <view class="head_content">
-      
-    </view>
+    <view class="bg-img padding-tb-xl position" style="background-image: url('http://lc-dnC55P3H.cn-e1.lcfile.com/c2824ac960dfe28594e9/loginuse.png');height: 90vh;">
+      <view class="btn_cust3">
+        <button class="log btn-cust2" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+      </view>
   </view>
-  <button class="log btn-cust2" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
-</view>
 </view>
 
 
@@ -167,8 +160,8 @@
 
 
 <!-- BOTTOM NAVBAR START -->
-<view class="space-6"></view>
-<view class="space-6"></view>
+<!-- <view class="space-6"></view>
+<view class="space-6"></view> -->
 <view class="cu-bar tabbar bg-white light">
   <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 

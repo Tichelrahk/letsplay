@@ -112,6 +112,23 @@ background-color: #1e8bff;
   margin-left: 30px;
 }
 
+.info{
+  font-weight: lighter;
+  font-size: 15px;
+  width: 286px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tag_swiper1{
+  overflow: scroll;
+width: 100vw !important;
+flex-wrap: nowrap;
+display: flex;
+margin-left: 25px;
+
+}
 
 
 

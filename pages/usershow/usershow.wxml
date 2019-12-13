@@ -22,8 +22,10 @@
   </view>
 </view>
 
-    
-
+    <view class="attendee">
+      <view class='ic cuIcon-titles text-blue bar'></view> 
+      <view class="title text-blue">My Likes</view>
+    </view>
   <view class="attendee">
       <view class='ic cuIcon-titles text-blue bar'></view> 
       <view class="title text-blue">My Likes</view>
@@ -77,7 +79,7 @@
         <!-- <view class="cu-tag bg-red light round">Jing An District</view> -->
         <view class="icon_right cuIcon-right"></view>
       </view>
-      <view class="tag_swiper">
+      <view class="tag_swiper1">
         <view wx:for="{{event.tag_list}}" wx:key wx:for-item="tag" class="cu-tag bg-blue light round">{{tag}}</view>
         
       </view>

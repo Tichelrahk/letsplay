@@ -120,7 +120,7 @@ max-width: 200px;
   background-color: rgba(65, 64, 64, 0.171);
 }
 .height_view{
-  height: 90%;
+  height: 94%;
   overflow: scroll;
 }
 

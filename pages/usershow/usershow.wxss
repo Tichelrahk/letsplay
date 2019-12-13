@@ -68,16 +68,20 @@
 }
 
 .btn-cust1{
-  color: #1e8bff;
-  border: 1px solid;
-  border-radius: 10px;
+ color:#1e8bff;
+  border: 1px solid ;
+  border-radius:10px;
   font-weight: heavy;
   transition: opacity 0.3s ease;
   margin-top: 20px;
   width: 40%;
+}
+
+.btn_cust3{
   position: absolute;
-  top: 488px;
-  left: 122px;
+  width: 100%;
+  display: flex;
+  bottom: 362rpx;
 }
 
 .btn-cust1:hover{
@@ -107,6 +111,7 @@ background-color: #1e8bff;
 .like_info{
   margin-left: 30px;
 }
+
 
 
 

@@ -18,7 +18,7 @@
   margin-top: 20px;
   width: 50%;
 }
-
+ 
 .btn-cust2{
   color:#1e8bff;
   border: 1px solid ;
@@ -27,9 +27,6 @@
   transition: opacity 0.3s ease;
   margin-top: 20px;
   width: 40%;
-  position: absolute;
-  top: 488px;
-  left: 122px;
 }
 
 .time_form{
@@ -147,12 +144,10 @@ box-sizing: border-box;
 .attendee1{
   height: 80px;
   width: 40%;
-  margin-left: 104px;
-
+  margin: 20px 0;
 }
 
 .add_pic{
- margin-right: 64px;
   font-size: 25px;
 }
 
@@ -176,7 +171,7 @@ box-sizing: border-box;
   border: 1px solid #1E8BFF;
   display: flex;
   align-items: center;
- 
+  justify-content: center;
   border-radius: 4px;
 }
 .cu-form-group1 {
@@ -205,15 +200,7 @@ justify-content: space-between;
   opacity: .6;
 }
 
-.btn-cust1{
-  color:#1e8bff;
-  border: 1px solid ;
-  border-radius:10px;
-  font-weight: heavy;
-  transition: opacity 0.3s ease;
-  margin-top: 20px;
-  width: 50%;
-}
+
 
 .btn-cust1:hover{
 border: 1px solid white;
@@ -235,4 +222,11 @@ background-color: #1e8bff;
   display: flex;
   align-items: center;
   border-radius: 4px;
+}
+
+.btn_cust3{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  bottom: 362rpx;
 }

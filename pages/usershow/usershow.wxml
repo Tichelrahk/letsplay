@@ -6,12 +6,12 @@
 <view wx:if ="{{login}}">
 <!-- BASIC INFORMATION CARD -->
 
-
+ 
     <view class="attendee">
       <view class='ic cuIcon-titles text-blue bar'></view> 
       <view class="title text-blue">My Basic Information</view>
     </view>
-
+ 
 <view class="bg-white flex padding solid-bottom">
   <view class="info_profile">
     <view class="cu-avatar xl round" style="background-image:url({{user.profile_picture}});"></view>
@@ -25,13 +25,12 @@
     
 
   <view class="attendee">
-    <view class='ic cuIcon-titles text-blue bar'></view> 
-
-    <view>My Likes <text class='cuIcon-like lg text-red like'></text> </view>
+      <view class='ic cuIcon-titles text-blue bar'></view> 
+      <view class="title text-blue">My Likes</view>
     </view>
   <view>
   <view>
-    <view wx:if="{{noFavorites}}">
+    <view wx:if="{{noFavorites}}" class="like_info">
       Click this <text class='cuIcon-like lg text-red like'></text> to save events here
     </view>
     <view wx:for="{{user.favorited}}" wx:key wx:for-item="event" class="dark">
@@ -88,17 +87,16 @@
   </view>
 </view>
 <view class="bg-white space-3"></view>
+<view class="space-6"></view>
+<view class="space-6"></view>
+</view>
 
-</view>
 <view wx:else>
-<view>
-<view class="bg-img padding-tb-xl position" style="background-image: url('/images/loginuse.png');height: 100vh;">
-  <view class="text-white logs">
-    
+    <view class="bg-img padding-tb-xl position" style="background-image: url('http://lc-dnC55P3H.cn-e1.lcfile.com/c2824ac960dfe28594e9/loginuse.png');height: 90vh;">
+      <view class="btn_cust3">
+        <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+      </view>
   </view>
-  <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
-</view>
-</view>
 </view>
 <!-- <view> -->
 <!-- <button bindtap="goToEdit" data-id="{{user.id}}" class="btn-cust">
@@ -106,8 +104,8 @@
 </button> -->
 <!-- <view bindtap="goToEdit" data-id="{{user.id}}" class="cuIcon-edit edit"></view> -->
 <!-- </view> -->
-<view class="space-6"></view>
-<view class="space-6"></view>
+<!-- <view class="space-6"></view>
+<view class="space-6"></view> -->
 <view class="cu-bar tabbar bg-white light">
   <view class="action text-blue" bindtap="goToIndex">
     <view class="cuIcon-search"></view> 

@@ -156,7 +156,7 @@
       
     </view>
   </view>
-  <button class="log btn-cust1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
+  <button class="log btn-cust2" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Get Started</button>
 </view>
 </view>
 

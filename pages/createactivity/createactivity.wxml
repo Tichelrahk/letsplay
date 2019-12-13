@@ -14,7 +14,7 @@
     <view class=" bg-white text-blue">
       <view class="attendee">
         <view class='ic cuIcon-titles text-blue bar'></view> 
-        <view class="title text-blue">Activity name*</view>
+        <view class="title text-blue">Give It a Name*</view>
       </view>
       <view class="spacing bg-white solid-bottom margin-top text-black">
       <input placeholder="Enter the activity name"name="name"></input>
@@ -24,7 +24,7 @@
 
       <view class="attendee">
         <view class='ic cuIcon-titles text-blue bar'></view> 
-        <view class="title text-blue">How many people?</view>
+        <view class="title text-blue">How Many Players?</view>
       </view>
       <view class="spacing bg-white solid-bottom margin-top text-black">
         <input type="number" placeholder="Enter the amount of people" name="slots"></input>
@@ -33,7 +33,7 @@
 
   <view class="attendee">
         <view class='ic cuIcon-titles text-blue bar'></view> 
-        <view class="title text-blue">Activity Description*</view>
+        <view class="title text-blue">What's Happening*</view>
       </view>
       <view class="spacing bg-white solid-bottom margin-top text-black">
         <input placeholder="Write a good activity description" name="description"></input>
@@ -46,7 +46,7 @@
     </view> -->
      <view class="attendee">
         <view class='ic cuIcon-titles text-blue bar'></view> 
-        <view class="title text-blue">Choose Your Location*</view>
+        <view class="title text-blue">Pick Your Playground!!!*</view>
       </view>
       <view class="spacing bg-white solid-bottom margin-top text-black">
         <view>{{location.name}}</view>
@@ -56,7 +56,7 @@
 
  <view class="attendee">
     <view class='ic cuIcon-titles text-blue bar'></view> 
-    <view class="title text-blue">Set up time*</view>
+    <view class="title text-blue">Game Time*</view>
   </view>
 <view class="cu-form-group timecenter solid-bottom">
   <view class="cu-bar bg-white ">

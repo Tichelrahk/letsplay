@@ -49,7 +49,7 @@ App({
             this.globalData.user = res.data.user
             console.log('hoho')
             const application = this
-            if (this.globalData.user.profile_picture == null) {
+            if (application.globalData.user.profile_picture == null) {
               console.log(222, application.globalData)
               wx.setStorage({
                 key: 'loggedIn',

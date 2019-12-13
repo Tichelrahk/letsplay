@@ -29,7 +29,7 @@
   <view>
   <view>
     <view wx:if="{{noFavorites}}" class="like_info">
-      Click this <text class='cuIcon-like lg text-red like'></text> to save events here
+      Click <text class='cuIcon-like lg text-red like'></text> to save events here
     </view>
     <view wx:for="{{user.favorited}}" wx:key wx:for-item="event" class="dark">
   <view class=" menu card-menu sm-border margin-top" bindtap="goToEventsShow" data-id="{{event.id}}">

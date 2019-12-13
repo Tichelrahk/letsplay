@@ -134,7 +134,7 @@ bg_red{
 }
 
 .set_width{
-  width: 289px;
+  width: 578rpx;
 }
 
 .flexing{

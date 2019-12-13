@@ -26,10 +26,6 @@
       <view class='ic cuIcon-titles text-blue bar'></view> 
       <view class="title text-blue">My Likes</view>
     </view>
-  <view class="attendee">
-      <view class='ic cuIcon-titles text-blue bar'></view> 
-      <view class="title text-blue">My Likes</view>
-    </view>
   <view>
   <view>
     <view wx:if="{{noFavorites}}" class="like_info">

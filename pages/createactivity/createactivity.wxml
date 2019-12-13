@@ -105,12 +105,7 @@
         <view class="add_pic cuIcon-cameraadd text-blue imagePlaceholder"></view>
       </view>
     </view>
-    
-    
-			<!-- <view class="solids" bindtap="ChooseImage">
-				<text class="cuIcon-cameraadd"></text>
-			</view> -->
-		
+ 
   </view>
   
 

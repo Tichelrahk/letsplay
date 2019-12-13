@@ -11,7 +11,7 @@
 </view>   
 <swiper current="{{currentTab}}" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
 <swiper-item>  
-    <!-- Attending Cards -->
+    <!-- Attending Cards --> 
   <view class="height_view">
     <!-- Panel Body Start -->
     <!-- CARDS SECTION -->
@@ -68,6 +68,7 @@
   </view>
 </view>
 <!-- OLD CARD -->
+<view class="space-6"></view>
  </view>
 </swiper-item> 
 <!-- organizing card starts here -->
@@ -124,10 +125,12 @@
     </view>
         </view>
       </view>
+      <view class="space-6"></view>
     </view>
   </swiper-item>  
-</swiper>  
 
+
+</swiper>  
 <!-- organize ends here -->
 </view>
 
